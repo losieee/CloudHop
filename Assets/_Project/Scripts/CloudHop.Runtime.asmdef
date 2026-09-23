@@ -1,0 +1,4 @@
+{
+  "name": "CloudHop.Runtime",
+  "references": ["Unity.InputSystem", "Unity.ugui"]
+}

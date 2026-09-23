@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802f0d0fa3c689947a9694940ac0c108, type: 3}
+  m_Name: PrototypeCharacter
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.CharacterData
+  displayName: Prototype
+  sprite: {fileID: -1296872883032265781, guid: f717e0478564d5442b1f4685e153d44d, type: 3}
+  animatorController: {fileID: 0}
+  tint: {r: 1, g: 0.75, b: 0.25, a: 1}

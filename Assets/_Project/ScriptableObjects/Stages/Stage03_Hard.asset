@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d909cd2ef9f2a4591a28e3f44fd7d8, type: 3}
+  m_Name: Stage03_Hard
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageDefinition
+  stageName: STAGE 3 - STORM SUMMIT
+  difficulty: HARD
+  skyColor: {r: 0.18, g: 0.17, b: 0.25, a: 1}
+  platformColor: {r: 0.96, g: 0.76, b: 0.82, a: 1}
+  platforms:
+  - position: {x: 0, y: -0.3}
+    width: 3.2
+    section: START
+  - position: {x: 3.6, y: 0}
+    width: 1.7
+    section: PRECISION
+  - position: {x: 7.7999997, y: -0.3}
+    width: 1.6
+    section: PRECISION
+  - position: {x: 11.299999, y: 0.39999998}
+    width: 1.5
+    section: PRECISION
+  - position: {x: 15.9, y: -0.10000001}
+    width: 1.6
+    section: PRECISION
+  - position: {x: 19.6, y: -0.8}
+    width: 1.5
+    section: PRECISION
+  - position: {x: 23.900002, y: -0.10000001}
+    width: 1.4
+    section: PRECISION
+  - position: {x: 27.300001, y: 0.19999999}
+    width: 1.5
+    section: PRECISION
+  - position: {x: 31.5, y: -0.3}
+    width: 2.8
+    section: PRECISION
+  - position: {x: 35.1, y: 0.5}
+    width: 1.7
+    section: HIGH STEPS
+  - position: {x: 38.899998, y: 1.3}
+    width: 1.5
+    section: HIGH STEPS
+  - position: {x: 42.399998, y: 0.19999999}
+    width: 1.5
+    section: HIGH STEPS
+  - position: {x: 46.8, y: -1}
+    width: 1.6
+    section: HIGH STEPS
+  - position: {x: 50.5, y: 0.099999994}
+    width: 1.5
+    section: HIGH STEPS
+  - position: {x: 54.3, y: 0.99999994}
+    width: 1.4
+    section: HIGH STEPS
+  - position: {x: 58.5, y: -0.10000001}
+    width: 1.5
+    section: HIGH STEPS
+  - position: {x: 62.6, y: -0.3}
+    width: 2.8
+    section: HIGH STEPS
+  - position: {x: 67.299995, y: -0.3}
+    width: 1.7
+    section: WIDE GAPS
+  - position: {x: 70.799995, y: 0.19999999}
+    width: 1.4
+    section: WIDE GAPS
+  - position: {x: 75.99999, y: -0.20000002}
+    width: 1.6
+    section: WIDE GAPS
+  - position: {x: 79.59999, y: -0.8}
+    width: 1.5
+    section: WIDE GAPS
+  - position: {x: 84.59999, y: -0.5}
+    width: 1.6
+    section: WIDE GAPS
+  - position: {x: 88.29999, y: 0.3}
+    width: 1.4
+    section: WIDE GAPS
+  - position: {x: 93.499985, y: -0.20000002}
+    width: 1.5
+    section: WIDE GAPS
+  - position: {x: 97.999985, y: -0.3}
+    width: 2.8
+    section: WIDE GAPS
+  - position: {x: 101.499985, y: 0.59999996}
+    width: 1.5
+    section: DOWNHILL CONTROL
+  - position: {x: 105.79999, y: -0.5}
+    width: 1.4
+    section: DOWNHILL CONTROL
+  - position: {x: 109.999985, y: -1.5}
+    width: 1.3
+    section: DOWNHILL CONTROL
+  - position: {x: 113.79999, y: -0.8}
+    width: 1.5
+    section: DOWNHILL CONTROL
+  - position: {x: 117.499985, y: 0.3}
+    width: 1.4
+    section: DOWNHILL CONTROL
+  - position: {x: 121.89999, y: -0.90000004}
+    width: 1.3
+    section: DOWNHILL CONTROL
+  - position: {x: 125.69999, y: 0.099999994}
+    width: 1.5
+    section: DOWNHILL CONTROL
+  - position: {x: 129.9, y: -0.3}
+    width: 2.8
+    section: DOWNHILL CONTROL
+  - position: {x: 133, y: 0.099999994}
+    width: 1.4
+    section: RHYTHM REVERSALS
+  - position: {x: 137.9, y: -0.3}
+    width: 1.6
+    section: RHYTHM REVERSALS
+  - position: {x: 141.09999, y: 0.39999998}
+    width: 1.3
+    section: RHYTHM REVERSALS
+  - position: {x: 146.2, y: -0.20000002}
+    width: 1.5
+    section: RHYTHM REVERSALS
+  - position: {x: 149.5, y: -0.70000005}
+    width: 1.4
+    section: RHYTHM REVERSALS
+  - position: {x: 154.3, y: -0.3}
+    width: 1.4
+    section: RHYTHM REVERSALS
+  - position: {x: 157.5, y: 0.19999999}
+    width: 1.3
+    section: RHYTHM REVERSALS
+  - position: {x: 162, y: -0.3}
+    width: 2.8
+    section: RHYTHM REVERSALS
+  - position: {x: 165.8, y: 0.3}
+    width: 1.3
+    section: NEEDLE RIDGE
+  - position: {x: 170, y: -0.20000002}
+    width: 1.2
+    section: NEEDLE RIDGE
+  - position: {x: 173.6, y: 0.59999996}
+    width: 1.3
+    section: NEEDLE RIDGE
+  - position: {x: 178, y: -0.10000001}
+    width: 1.1
+    section: NEEDLE RIDGE
+  - position: {x: 181.7, y: -0.90000004}
+    width: 1.3
+    section: NEEDLE RIDGE
+  - position: {x: 186, y: -0.20000002}
+    width: 1.2
+    section: NEEDLE RIDGE
+  - position: {x: 189.6, y: 0.5}
+    width: 1.3
+    section: NEEDLE RIDGE
+  - position: {x: 193.8, y: -0.3}
+    width: 2.8
+    section: NEEDLE RIDGE
+  - position: {x: 198.3, y: -0.10000001}
+    width: 1.5
+    section: FINAL EXAM
+  - position: {x: 201.90001, y: 0.90000004}
+    width: 1.3
+    section: FINAL EXAM
+  - position: {x: 206.6, y: -0.20000002}
+    width: 1.2
+    section: FINAL EXAM
+  - position: {x: 210.1, y: -1.1}
+    width: 1.4
+    section: FINAL EXAM
+  - position: {x: 215.20001, y: -0.70000005}
+    width: 1.5
+    section: FINAL EXAM
+  - position: {x: 218.90001, y: 0.39999998}
+    width: 1.2
+    section: FINAL EXAM
+  - position: {x: 223.40001, y: -0.10000001}
+    width: 1.3
+    section: FINAL EXAM
+  - position: {x: 228.20001, y: -0.3}
+    width: 3.4
+    section: FINAL EXAM
