@@ -16,12 +16,17 @@ namespace CloudHop
         [Header("Landing / fall")]
         [SerializeField, Range(0.1f, 1f)] private float minimumGroundNormal = 0.65f;
         [SerializeField] private float fallThreshold = -6f;
+        [Header("Hazards")]
+        [SerializeField, Min(0.1f)] private float hitProtectionTime = 1f;
 
         public event Action ChargeStarted;
         public event Action<Platform> Landed;
         public event Action Fell;
         public bool IsGrounded { get; private set; }
         public bool IsCharging { get; private set; }
+        public Platform GroundPlatform => ground;
+        public float HitProtectionRemaining { get; private set; }
+        public int HitsTaken { get; private set; }
         public float Charge01 => IsCharging ? Mathf.InverseLerp(minimumChargeTime, maximumChargeTime, chargeTime) : 0f;
         private Rigidbody2D body;
         private ChargeInput input;
@@ -79,6 +84,7 @@ namespace CloudHop
         private void FixedUpdate()
         {
             if (!playable) return;
+            HitProtectionRemaining = Mathf.Max(0, HitProtectionRemaining - Time.fixedDeltaTime);
             Platform support = FindSupport();
             // Ignore the launch contact until the player has actually left the surface.
             if (awaitingSeparation)
@@ -90,8 +96,9 @@ namespace CloudHop
             IsGrounded = support != null;
             if (IsGrounded && (!wasGrounded || support != ground))
             {
-                body.linearVelocity = Vector2.zero;
+                body.linearVelocity = SupportVelocity(support);
                 Landed?.Invoke(support);
+                if (!playable) return;
             }
             ground = support;
             if (!IsGrounded && IsCharging) CancelCharge();
@@ -104,17 +111,21 @@ namespace CloudHop
                 ground = null;
                 awaitingSeparation = true;
             }
-            else if (IsGrounded) body.linearVelocity = Vector2.zero;
+            else if (IsGrounded) body.linearVelocity = SupportVelocity(support);
+        }
+        private static Vector2 SupportVelocity(Platform platform)
+        {
+            if (platform != null && platform.TryGetComponent<MovingPlatform>(out var moving)) return moving.Velocity;
+            return Vector2.zero;
         }
         private Platform FindSupport()
         {
-            if (body.linearVelocity.y > 0.1f) return null;
             int count = body.GetContacts(contacts);
             for (int i = 0; i < count; i++)
             {
                 if (contacts[i].normal.y < minimumGroundNormal) continue;
                 var platform = contacts[i].collider.GetComponentInParent<Platform>();
-                if (platform != null) return platform;
+                if (platform != null && body.linearVelocity.y - SupportVelocity(platform).y <= 0.2f) return platform;
             }
             return null;
         }
@@ -129,6 +140,8 @@ namespace CloudHop
             ground = null;
             IsGrounded = false;
             awaitingSeparation = false;
+            HitProtectionRemaining = 0;
+            HitsTaken = 0;
             CancelCharge();
             input.ResetGesture();
             playable = true;
@@ -143,6 +156,31 @@ namespace CloudHop
                 body.linearVelocity = Vector2.zero;
                 body.simulated = false;
             }
+        }
+        public bool TryKnockback(Vector2 velocity)
+        {
+            if (!playable || HitProtectionRemaining > 0) return false;
+            CancelCharge();
+            IsGrounded = false;
+            ground = null;
+            awaitingSeparation = true;
+            body.linearVelocity = velocity;
+            HitProtectionRemaining = hitProtectionTime;
+            HitsTaken++;
+            return true;
+        }
+        // Wind supports the player even during hit protection; horizontal momentum is preserved.
+        public bool ApplyUpdraft(float liftSpeed)
+        {
+            if (!playable) return false;
+            CancelCharge();
+            IsGrounded = false;
+            ground = null;
+            awaitingSeparation = true;
+            Vector2 velocity = body.linearVelocity;
+            velocity.y = Mathf.Max(velocity.y, liftSpeed);
+            body.linearVelocity = velocity;
+            return true;
         }
         private void OnValidate()
         {

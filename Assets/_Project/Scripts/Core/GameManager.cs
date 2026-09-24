@@ -53,7 +53,12 @@ namespace CloudHop
         public void Retry()
         {
             scores.ResetScore();
-            if (stages != null) stages.ResetProgress();
+            if (stages != null)
+            {
+                stages.ResetProgress();
+                var mechanics = stages.CurrentCourse.GetComponent<StageMechanics>();
+                if (mechanics != null) mechanics.ResetCourse();
+            }
             player.ResetPlayer(stages != null ? stages.CurrentCourse.SpawnPosition : spawnPoint.position);
             followCamera.ResetPosition();
             SetState(GameState.Ready);

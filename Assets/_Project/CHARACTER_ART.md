@@ -1,0 +1,11 @@
+# Uploaded Cloud Adventurer
+- Original transparent PNGs are preserved without repainting.
+- Idle: 02_39_37-1; Charge: 02_39_59-4; Jump: 02_39_55-3; Fall: 02_40_05-5.
+- Skin: Assets/_Project/ScriptableObjects/CloudAdventurer.asset.
+- CharacterVisual switches still poses using charge, grounded state and vertical velocity.
+- Animator-based skins retain priority when an animator controller is assigned.
+- Sprite import: 1100 pixels/unit, bilinear, no mipmaps, alpha transparency. Per-pose bottom alignment.
+- Visual offset Y -0.45 aligns the feet with the original collider bottom. Physics is unchanged.
+- This is four pose switching, not multi-frame animation.
+- Test in any Cloud Hop scene: idle, hold Space/mouse, release, descend, land, Retry.
+- Future art can replace the four sprite references in CharacterData.

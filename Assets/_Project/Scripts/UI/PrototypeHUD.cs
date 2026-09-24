@@ -37,7 +37,9 @@ namespace CloudHop
             if (stages != null) stages.Changed -= RefreshStage;
             if (nextStageButton != null) nextStageButton.onClick.RemoveListener(game.ContinueStages);
         }
-        private void Update() => chargeText.text = player.IsCharging ? $"CHARGE  {player.Charge01:P0}" : "HOLD SPACE / LEFT CLICK  -  RELEASE TO JUMP";
+        private void Update() => chargeText.text = player.HitProtectionRemaining > 0
+            ? $"HIT - PROTECTED {player.HitProtectionRemaining:F1}s"
+            : player.IsCharging ? $"CHARGE  {player.Charge01:P0}" : "HOLD SPACE / LEFT CLICK  -  RELEASE TO JUMP";
         private void RefreshScore()
         {
             scoreText.text = $"SCORE : {scores.Score}";

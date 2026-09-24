@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d909cd2ef9f2a4591a28e3f44fd7d8, type: 3}
+  m_Name: Lab3
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageDefinition
+  stageName: LAB 3 - LIGHTNING
+  difficulty: TEST
+  skyColor: {r: 0.18, g: 0.17, b: 0.25, a: 1}
+  platformColor: {r: 0.96, g: 0.76, b: 0.82, a: 1}
+  platforms:
+  - position: {x: 0, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST
+  - position: {x: 3.8, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST
+  - position: {x: 7.6, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST
+  - position: {x: 11.4, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST
+  - position: {x: 15.2, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST
+  - position: {x: 19, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST
+  - position: {x: 22.8, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST
+  - position: {x: 26.6, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST
+  - position: {x: 30.4, y: -0.3}
+    width: 3.2
+    section: GIMMICK TEST

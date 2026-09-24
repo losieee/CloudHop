@@ -1,5 +1,8 @@
 # CLOUD HOP — 1차 플레이 프로토타입
 
+> 기믹 테스트는 `Scenes/CloudHopGimmickLab.unity`, 전체 적용 맵은 `Scenes/CloudHopGimmicks.unity`에서 실행한다.
+> 새·바람·사라지는 구름·이동 발판·번개의 표시와 조절 방법은 [GIMMICKS.md](GIMMICKS.md)를 참고한다.
+
 > 2차 고정 스테이지 레벨링은 `Scenes/CloudHopStages.unity`에서 실행한다.
 > 쉬움 40 / 보통 48 / 어려움 56점프의 3개 맵과 선택·클리어·다음 스테이지를 추가했다.
 > 상세 구간과 편집 방법은 [STAGES.md](STAGES.md)를 참고한다. 아래 설명은 기존 1차 씬 기준이다.
