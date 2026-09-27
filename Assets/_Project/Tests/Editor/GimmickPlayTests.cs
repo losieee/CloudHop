@@ -32,6 +32,41 @@ namespace CloudHop.Tests
             Time.timeScale = 2;
             yield return Wait(0.3f);
         }
+        [UnityTest]
+        public IEnumerator MotionEffectsMoveAndSwitchOffWithHazards()
+        {
+            var wind = stages.CurrentCourse.GetComponentInChildren<WindZone>();
+            yield return null;
+            yield return null;
+            var effect = wind.GetComponent<GimmickMotionEffects>();
+            Assert.AreEqual(10, effect.VisibleLineCount);
+            var line = effect.GetComponentInChildren<LineRenderer>();
+            float y = line.GetPosition(7).y;
+            yield return Wait(0.04f);
+            Assert.Greater(line.GetPosition(7).y,y);
+            yield return Until(() => !wind.IsBlowing,6);
+            yield return null;
+            yield return null;
+            Assert.AreEqual(0,effect.VisibleLineCount);
+            game.SelectStage(2);
+            yield return Wait(0.3f);
+            var bolt = stages.CurrentCourse.GetComponentInChildren<LightningZone>();
+            var strike = bolt.GetComponent<GimmickMotionEffects>();
+            Assert.AreEqual(0,strike.VisibleLineCount);
+            yield return Until(() => bolt.Phase == HazardPhase.Active,6);
+            yield return Wait(0.08f);
+            Assert.AreEqual(3,strike.VisibleLineCount);
+            var stroke = strike.GetComponentInChildren<LineRenderer>();
+            Assert.Less(stroke.GetPosition(12).y,stroke.GetPosition(0).y-5);
+            yield return Until(() => bolt.Phase != HazardPhase.Active,1);
+            yield return null;
+            yield return null;
+            Assert.AreEqual(0,strike.VisibleLineCount);
+            game.Retry();
+            yield return null;
+            yield return null;
+            Assert.AreEqual(0,strike.VisibleLineCount);
+        }
         [UnityTearDown]
         public IEnumerator TearDown()
         {

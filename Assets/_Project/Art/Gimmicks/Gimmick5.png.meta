@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 9054f99442249944fa6098ad7e779172
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -977244246828763874
+    second: Gimmick5_0
+  - first:
+      213: 460886719503687622
+    second: Gimmick5_1
+  - first:
+      213: 7998672760527682030
+    second: Gimmick5_2
+  - first:
+      213: -7559420630726015887
+    second: Gimmick5_3
+  - first:
+      213: 6028747706630704967
+    second: Gimmick5_4
+  - first:
+      213: -8083874068225369287
+    second: Gimmick5_5
+  - first:
+      213: 1991403062102909961
+    second: Gimmick5_6
+  - first:
+      213: 2927667570865559376
+    second: Gimmick5_7
+  - first:
+      213: -6074321891605418654
+    second: Gimmick5_8
+  - first:
+      213: 2154849084031424126
+    second: Gimmick5_9
+  - first:
+      213: -5003854627739160546
+    second: Gimmick5_10
+  - first:
+      213: 3155639013491334437
+    second: Gimmick5_11
+  - first:
+      213: 847208389105449519
+    second: Gimmick5_12
+  - first:
+      213: 1297609165934600195
+    second: Gimmick5_13
+  - first:
+      213: -518034179246833793
+    second: Gimmick5_14
+  - first:
+      213: 1724473942516182929
+    second: Gimmick5_15
+  - first:
+      213: 1157699204751999710
+    second: Gimmick5_16
+  - first:
+      213: -3429377189514978536
+    second: Gimmick5_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.50241715, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gimmick5_0
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 891
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e153af009812072f0800000000000000
+      internalID: -977244246828763874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_1
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 886
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf56bd8706656600800000000000000
+      internalID: 460886719503687622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 1417
+        height: 861
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee978d53f7ef00f60800000000000000
+      internalID: 7998672760527682030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 840
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17401d5ecfa871790800000000000000
+      internalID: -7559420630726015887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_4
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 771
+        width: 89
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f8c26f81a6aa350800000000000000
+      internalID: 6028747706630704967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_5
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 834
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b5f6a7d5f40df80800000000000000
+      internalID: -8083874068225369287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_6
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 828
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904e449b882e2ab10800000000000000
+      internalID: 1991403062102909961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_7
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 645
+        width: 145
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0575fdde42a21a820800000000000000
+      internalID: 2927667570865559376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_8
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 114
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26dea773c6ca3bba0800000000000000
+      internalID: -6074321891605418654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_9
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 127
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76d44633df87ed10800000000000000
+      internalID: 2154849084031424126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_10
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 102
+        width: 37
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e10b9e54abcbe8ab0800000000000000
+      internalID: -5003854627739160546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_11
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 62
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52dd386a6f41bcb20800000000000000
+      internalID: 3155639013491334437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_12
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 64
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a7c5b8a83e1cb00800000000000000
+      internalID: 847208389105449519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_13
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 72
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300a2d059a8020210800000000000000
+      internalID: 1297609165934600195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_14
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 66
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f3b7c98a29fc8f0800000000000000
+      internalID: -518034179246833793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_15
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 15
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f28100aef8ee710800000000000000
+      internalID: 1724473942516182929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_16
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 7
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2cefffa49f01010800000000000000
+      internalID: 1157699204751999710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gimmick5_17
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 19
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81bd122ad976860d0800000000000000
+      internalID: -3429377189514978536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Gimmick5_0: -977244246828763874
+      Gimmick5_1: 460886719503687622
+      Gimmick5_10: -5003854627739160546
+      Gimmick5_11: 3155639013491334437
+      Gimmick5_12: 847208389105449519
+      Gimmick5_13: 1297609165934600195
+      Gimmick5_14: -518034179246833793
+      Gimmick5_15: 1724473942516182929
+      Gimmick5_16: 1157699204751999710
+      Gimmick5_17: -3429377189514978536
+      Gimmick5_2: 7998672760527682030
+      Gimmick5_3: -7559420630726015887
+      Gimmick5_4: 6028747706630704967
+      Gimmick5_5: -8083874068225369287
+      Gimmick5_6: 1991403062102909961
+      Gimmick5_7: 2927667570865559376
+      Gimmick5_8: -6074321891605418654
+      Gimmick5_9: 2154849084031424126
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
