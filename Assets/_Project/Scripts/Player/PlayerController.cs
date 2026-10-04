@@ -22,6 +22,7 @@ namespace CloudHop
         public event Action ChargeStarted;
         public event Action<Platform> Landed;
         public event Action Fell;
+        public event Action ResetPerformed;
         public bool IsGrounded { get; private set; }
         public bool IsCharging { get; private set; }
         public Platform GroundPlatform => ground;
@@ -146,6 +147,7 @@ namespace CloudHop
             input.ResetGesture();
             playable = true;
             body.simulated = true;
+            ResetPerformed?.Invoke();
         }
         public void SetPlayable(bool value)
         {

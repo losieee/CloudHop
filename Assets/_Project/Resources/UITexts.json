@@ -1,0 +1,237 @@
+{
+    "sourceHash": "C8C579FB51576D44886D8E3328EBEC2EFD82E1C219F81A91C7B75B0C7835B94F",
+    "entries": [
+        {
+            "key": "common.start",
+            "text": "시작하기"
+        },
+        {
+            "key": "common.back",
+            "text": "뒤로"
+        },
+        {
+            "key": "common.settings",
+            "text": "설정"
+        },
+        {
+            "key": "common.home",
+            "text": "로비"
+        },
+        {
+            "key": "common.retry",
+            "text": "다시 도전"
+        },
+        {
+            "key": "common.next",
+            "text": "다음"
+        },
+        {
+            "key": "common.next_stage",
+            "text": "다음 스테이지"
+        },
+        {
+            "key": "common.rankings",
+            "text": "순위 보기"
+        },
+        {
+            "key": "lobby.title",
+            "text": "클라우드 홉"
+        },
+        {
+            "key": "lobby.practice",
+            "text": "연습하기"
+        },
+        {
+            "key": "lobby.ranking",
+            "text": "기록 순위"
+        },
+        {
+            "key": "character.title",
+            "text": "캐릭터 선택"
+        },
+        {
+            "key": "character.select",
+            "text": "선택"
+        },
+        {
+            "key": "character.selected",
+            "text": "선택 완료"
+        },
+        {
+            "key": "stage.title",
+            "text": "스테이지 선택"
+        },
+        {
+            "key": "stage.name.0",
+            "text": "하늘 초원"
+        },
+        {
+            "key": "stage.name.1",
+            "text": "바람 능선"
+        },
+        {
+            "key": "stage.name.2",
+            "text": "폭풍 정상"
+        },
+        {
+            "key": "stage.level.0",
+            "text": "쉬움"
+        },
+        {
+            "key": "stage.level.1",
+            "text": "보통"
+        },
+        {
+            "key": "stage.level.2",
+            "text": "어려움"
+        },
+        {
+            "key": "hud.jump",
+            "text": "점프 : 스페이스바"
+        },
+        {
+            "key": "pause.title",
+            "text": "잠시 쉬는 중"
+        },
+        {
+            "key": "pause.resume",
+            "text": "계속하기"
+        },
+        {
+            "key": "settings.volume",
+            "text": "전체 음량"
+        },
+        {
+            "key": "settings.muted",
+            "text": "소리 꺼짐"
+        },
+        {
+            "key": "settings.sound_on",
+            "text": "소리 켜짐"
+        },
+        {
+            "key": "result.clear",
+            "text": "완주 성공!"
+        },
+        {
+            "key": "result.over",
+            "text": "도전 종료"
+        },
+        {
+            "key": "result.all_clear",
+            "text": "\n모든 스테이지 완주!"
+        },
+        {
+            "key": "result.new_run",
+            "text": "새 도전"
+        },
+        {
+            "key": "result.outside_top",
+            "text": "완주 성공 · 10위 밖의 기록"
+        },
+        {
+            "key": "result.retry_hint",
+            "text": "시간은 계속 흐릅니다 · 재도전 가능"
+        },
+        {
+            "key": "name.title",
+            "text": "닉네임을 입력하세요"
+        },
+        {
+            "key": "name.subtitle",
+            "text": "1~3스테이지 전체 기록에 도전!"
+        },
+        {
+            "key": "name.error",
+            "text": "한글·영문·숫자·공백·-·_를 사용해 1~12자로 입력해 주세요."
+        },
+        {
+            "key": "name.rules",
+            "text": "캐릭터를 고르고 시작하면 시간이 측정됩니다.\n일시정지·재도전·스테이지 사이 대기 시간도 포함됩니다.\n3스테이지까지 완주한 기록만 이 기기에 저장됩니다."
+        },
+        {
+            "key": "hud.practice",
+            "text": "연습 모드 · 순위에 기록되지 않습니다"
+        },
+        {
+            "key": "ranking.title",
+            "text": "완주 기록 상위 10위"
+        },
+        {
+            "key": "ranking.rank",
+            "text": "순위"
+        },
+        {
+            "key": "ranking.nickname",
+            "text": "닉네임"
+        },
+        {
+            "key": "ranking.time",
+            "text": "완주 시간"
+        },
+        {
+            "key": "ranking.note",
+            "text": "빠르게 완주한 순서로 기록됩니다 · 이 기기에만 저장"
+        },
+        {
+            "key": "ranking.empty_name",
+            "text": "---"
+        },
+        {
+            "key": "ranking.empty_time",
+            "text": "--:--.---"
+        },
+        {
+            "key": "character.name.0",
+            "text": "남자 모험가"
+        },
+        {
+            "key": "character.name.1",
+            "text": "여자 모험가"
+        },
+        {
+            "key": "character.name.2",
+            "text": "구름 여우"
+        },
+        {
+            "key": "hud.score",
+            "text": "점수  <size=130%><color=#FFC83D>{0}</color></size>"
+        },
+        {
+            "key": "hud.best",
+            "text": "최고  <size=130%><color=#FFC83D>{0}</color></size>"
+        },
+        {
+            "key": "hud.stage",
+            "text": "스테이지 {0} / {1}"
+        },
+        {
+            "key": "hud.progress",
+            "text": "{0} / {1}"
+        },
+        {
+            "key": "hud.run",
+            "text": "{0}  |  {1}"
+        },
+        {
+            "key": "result.score",
+            "text": "점수  {0}     최고 점수  {1}{2}"
+        },
+        {
+            "key": "result.rank",
+            "text": "이 기기 {0}위"
+        },
+        {
+            "key": "result.run",
+            "text": "{0}\n{1}\n{2}"
+        },
+        {
+            "key": "stage.number",
+            "text": "{0:00}"
+        },
+        {
+            "key": "ranking.number",
+            "text": "{0:00}"
+        }
+    ]
+}

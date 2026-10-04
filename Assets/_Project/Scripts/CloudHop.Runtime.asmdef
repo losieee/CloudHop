@@ -1,4 +1,4 @@
 {
   "name": "CloudHop.Runtime",
-  "references": ["Unity.InputSystem", "Unity.ugui"]
+  "references": ["Unity.InputSystem", "Unity.ugui", "Unity.TextMeshPro"]
 }

@@ -12,6 +12,46 @@ namespace CloudHop
         private Vector3 originalScale;
         private Vector3 originalPosition;
         private bool initialized;
+        private bool touchedGround;
+        private bool airborne;
+        private float landingUntil;
+
+        private void OnEnable()
+        {
+            Initialize();
+            if (player == null) return;
+            player.Landed += OnLanded;
+            player.ResetPerformed += ResetPose;
+            ResetPose();
+        }
+
+        private void OnDisable()
+        {
+            if (player == null) return;
+            player.Landed -= OnLanded;
+            player.ResetPerformed -= ResetPose;
+        }
+
+        private void ResetPose()
+        {
+            touchedGround = false;
+            airborne = false;
+            landingUntil = 0;
+            if (character != null && spriteRenderer != null) spriteRenderer.sprite = character.sprite;
+        }
+
+        private void OnLanded(Platform platform)
+        {
+            // Spawn/reset contacts are not landings from a jump.
+            if (touchedGround && airborne && character != null && character.animatorController == null)
+            {
+                landingUntil = Time.time + character.landingPoseDuration;
+                if (character.landingSprite != null && character.landingPoseDuration > 0)
+                    spriteRenderer.sprite = character.landingSprite;
+            }
+            touchedGround = true;
+            airborne = false;
+        }
 
         private void Awake()
         {
@@ -43,6 +83,7 @@ namespace CloudHop
                 animator.runtimeAnimatorController = data.animatorController;
                 animator.enabled = data.animatorController != null;
             }
+            ResetPose();
         }
 
         private void LateUpdate()
@@ -50,9 +91,18 @@ namespace CloudHop
             if (character == null || player == null || body == null ||
                 character.animatorController != null || !body.simulated) return;
             Sprite pose = character.sprite;
-            if (player.IsCharging) pose = character.chargeSprite;
+            if (player.IsCharging)
+            {
+                landingUntil = 0;
+                pose = character.chargeSprite;
+            }
             else if (!player.IsGrounded)
+            {
+                airborne = true;
+                landingUntil = 0;
                 pose = body.linearVelocity.y < -0.1f ? character.fallSprite : character.jumpSprite;
+            }
+            else if (Time.time < landingUntil) pose = character.landingSprite;
             spriteRenderer.sprite = pose != null ? pose : character.sprite;
         }
     }

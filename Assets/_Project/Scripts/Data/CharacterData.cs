@@ -10,6 +10,8 @@ namespace CloudHop
         public Sprite chargeSprite;
         public Sprite jumpSprite;
         public Sprite fallSprite;
+        public Sprite landingSprite;
+        [Min(0)] public float landingPoseDuration = 0.16f;
         [Tooltip("Apply skin-specific visual transform without changing the player collider.")]
         public bool overrideVisualTransform;
         public Vector3 visualScale = Vector3.one;
