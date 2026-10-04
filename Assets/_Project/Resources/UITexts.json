@@ -35,11 +35,11 @@
         },
         {
             "key": "lobby.title",
-            "text": "클라우드 홉"
+            "text": "Cloud Hop"
         },
         {
             "key": "lobby.practice",
-            "text": "연습하기"
+            "text": "스테이지 선택"
         },
         {
             "key": "lobby.ranking",
@@ -191,7 +191,7 @@
         },
         {
             "key": "character.name.2",
-            "text": "구름 여우"
+            "text": "여우 모험가"
         },
         {
             "key": "hud.score",
