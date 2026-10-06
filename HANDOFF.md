@@ -8,7 +8,7 @@
 5. **Assets/_Project/Scenes/CloudHop.unity**를 열어 Play합니다. 기존 SampleScene/실험 씬과 구분합니다. 원본 다운로드 폴더나 이전 컴퓨터의 임시 검증 프로젝트를 복사할 필요는 없습니다.
 6. Codex에서 이 저장소를 프로젝트로 열고 이 문서를 읽도록 요청합니다.
 
-주의: 현재 `ProjectSettings/EditorBuildSettings.asset`의 기본 씬 목록에는 `Assets/Scenes/SampleScene.unity`가 들어 있습니다. 실제 배포 전 Build Profiles의 Scene List에서 `Assets/_Project/Scenes/CloudHop.unity`를 첫 실행 씬으로 지정하고 SampleScene을 제외해야 합니다. 이번 인계에서는 게임 빌드를 새로 만들지 않았습니다.
+`ProjectSettings/EditorBuildSettings.asset`의 기본 씬 목록은 `Assets/_Project/Scenes/CloudHop.unity`만 활성화하도록 정리했습니다. 별도 Build Profile에서 씬 목록을 재정의한다면 같은 설정인지 확인합니다. 게임 빌드는 아직 새로 만들지 않았습니다.
 
 ## 현재 구현 상태
 게임 변경 기준 커밋: `06c2427` (`[Feat] 재미요소 추가`).
@@ -43,8 +43,17 @@
 1. 실제 조작으로 1스테이지의 콤보 획득 난도, 부스트 타이밍, 지름길 시간 이득을 플레이테스트.
 2. 결과에 따라 판정 폭/충전 횟수/부스트 지속 시간과 경로 간격 조절.
 3. 2·3스테이지에 기존 바람·이동 발판·번개와 선택 경로를 단계적으로 결합.
-4. Build Profiles 씬 목록 정리 후 Windows 빌드에서 한글 IME, 전체 3스테이지 완주, 재실행 후 로컬 기록 유지 확인.
+4. Windows 빌드에서 한글 IME, 전체 3스테이지 완주, 재실행 후 로컬 기록 유지 확인. 기본 씬 목록 정리는 완료했으며 별도 Build Profile의 재정의 여부는 빌드 시 확인.
 새 Windows 배포 빌드와 사람의 전체 코스 완주 테스트는 이번 검증에 포함하지 않았습니다.
+
+## 새 컴퓨터에서 이어서 확인한 결과 — 2026-10-06
+- 시작 상태: `main`, `1c4df23`, 작업 트리 변경 없음.
+- Unity 6000.3.16f1에서 패키지 복원과 스크립트 컴파일 성공.
+- 위의 5개 테스트 클래스 실행 결과 **11개 통과, 실패 0개**. 자동 물리/화면/UI 흐름 검증이며 사람의 실제 조작감 검증은 아님.
+- 로컬 결과: `Logs/handoff-tests.xml`, 실행 로그: `Logs/handoff-tests.log`, 화면 캡처: `Logs/handoff-preview/`. Logs는 Git에 포함하지 않음.
+- 기본 빌드 씬을 CloudHop으로 수정. 테스트에서 자동 생성된 폰트 아틀라스와 설정 직렬화 변경은 원복함.
+- 부스트 수치와 스테이지 배치는 유지. 실제 플레이에 따른 밸런싱, 2·3스테이지 경로 확장, Windows 배포 빌드 검증은 아직 남아 있음.
+- 다음 플레이에서는 1스테이지 초반 3연속 중앙 착지 성공률, 부스트 발동 시점, 안전 경로 대비 지름길의 도착 시간과 실패 횟수를 같은 시작 위치에서 비교할 것. 자동 테스트 통과만으로 난이도가 적절하다고 판단하지 않음.
 
 ## 데이터와 Git
 - Assets(메타 포함), Packages, ProjectSettings가 Git으로 이동합니다. Library/Temp/Logs는 재생성되며 커밋하지 않습니다.

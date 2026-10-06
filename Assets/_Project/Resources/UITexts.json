@@ -35,11 +35,11 @@
         },
         {
             "key": "lobby.title",
-            "text": "클라우드 홉"
+            "text": "Cloud Hop"
         },
         {
             "key": "lobby.practice",
-            "text": "연습하기"
+            "text": "스테이지 선택"
         },
         {
             "key": "lobby.ranking",
