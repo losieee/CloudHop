@@ -64,6 +64,10 @@ namespace CloudHop
             { "result.run", 3 },
             { "stage.number", 1 },
             { "ranking.number", 1 },
+            { "combo.count", 1 }, { "combo.ready", 0 }, { "combo.progress", 2 },
+            { "combo.use_hint", 0 }, { "combo.landing_hint", 0 }, { "combo.perfect", 1 },
+            { "combo.broken", 0 }, { "combo.used", 0 }, { "combo.shortcut", 0 },
+            { "combo.safe_route", 0 }, { "combo.rejoin", 0 },
         };
     }
 }

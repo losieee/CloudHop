@@ -23,6 +23,16 @@ namespace CloudHop
         public event Action<Platform> Landed;
         public event Action Fell;
         public event Action ResetPerformed;
+        public event Action<ComboLanding> ComboLanded;
+        public event Action BoostUsed;
+        public ComboChain Combo { get; } = new ComboChain();
+        public bool IsBoosting => boostRemaining > 0;
+        [Header("Combo boost")]
+        [SerializeField, Min(0.05f)] private float boostDuration = .24f;
+        [SerializeField, Min(5)] private float boostSpeed = 14f;
+        private float boostRemaining;
+        private bool comboJump;
+        private bool boostedThisJump;
         public bool IsGrounded { get; private set; }
         public bool IsCharging { get; private set; }
         public Platform GroundPlatform => ground;
@@ -43,6 +53,7 @@ namespace CloudHop
         {
             body = GetComponent<Rigidbody2D>();
             input = GetComponent<ChargeInput>();
+            if (GetComponent<ComboEffects>() == null) gameObject.AddComponent<ComboEffects>();
         }
         private void OnEnable()
         {
@@ -68,6 +79,8 @@ namespace CloudHop
         }
         public void BeginCharge()
         {
+            if (!playable || Time.timeScale <= 0) return;
+            if (!IsGrounded) { TryUseBoost(); return; }
             if (!playable || !IsGrounded || jumpQueued || IsCharging) return;
             chargeTime = 0f;
             IsCharging = true;
@@ -82,9 +95,26 @@ namespace CloudHop
         }
         public void CancelCharge() { IsCharging = false; chargeTime = 0f; jumpQueued = false; }
 
+        public bool TryUseBoost()
+        {
+            if (!playable || Time.timeScale <= 0 || IsGrounded || jumpQueued || boostedThisJump || !comboJump) return false;
+            if (!Combo.ConsumeBoost()) return false;
+            boostedThisJump = true;
+            boostRemaining = boostDuration;
+            body.linearVelocity = new Vector2(boostSpeed, Mathf.Max(body.linearVelocity.y, 2.4f));
+            BoostUsed?.Invoke();
+            return true;
+        }
+
         private void FixedUpdate()
         {
             if (!playable) return;
+            if (boostRemaining > 0)
+            {
+                boostRemaining = Mathf.Max(0, boostRemaining - Time.fixedDeltaTime);
+                if (boostRemaining == 0 && !IsGrounded)
+                    body.linearVelocity = new Vector2(horizontalSpeed, body.linearVelocity.y);
+            }
             HitProtectionRemaining = Mathf.Max(0, HitProtectionRemaining - Time.fixedDeltaTime);
             Platform support = FindSupport();
             // Ignore the launch contact until the player has actually left the surface.
@@ -97,6 +127,17 @@ namespace CloudHop
             IsGrounded = support != null;
             if (IsGrounded && (!wasGrounded || support != ground))
             {
+                boostRemaining = 0;
+                var zone = support.GetComponent<PerfectLandingZone>();
+                if (comboJump && zone != null)
+                {
+                    var feedback = Combo.Land(support.GetInstanceID(), zone.Contains(body.position.x));
+                    if (feedback == ComboLanding.Perfect) zone.Pulse();
+                    ComboLanded?.Invoke(feedback);
+                }
+                else Combo.Remember(support.GetInstanceID());
+                comboJump = false;
+                boostedThisJump = false;
                 body.linearVelocity = SupportVelocity(support);
                 Landed?.Invoke(support);
                 if (!playable) return;
@@ -108,6 +149,8 @@ namespace CloudHop
                 jumpQueued = false;
                 if (!IsGrounded) return;
                 body.linearVelocity = new Vector2(horizontalSpeed, Mathf.Lerp(minimumJumpSpeed, maximumJumpSpeed, queuedCharge));
+                comboJump = true;
+                boostedThisJump = false;
                 IsGrounded = false;
                 ground = null;
                 awaitingSeparation = true;
@@ -141,6 +184,10 @@ namespace CloudHop
             ground = null;
             IsGrounded = false;
             awaitingSeparation = false;
+            boostRemaining = 0;
+            comboJump = false;
+            boostedThisJump = false;
+            Combo.Reset();
             HitProtectionRemaining = 0;
             HitsTaken = 0;
             CancelCharge();
@@ -154,6 +201,7 @@ namespace CloudHop
             playable = value;
             if (!value)
             {
+                boostRemaining = 0;
                 CancelCharge();
                 body.linearVelocity = Vector2.zero;
                 body.simulated = false;
@@ -162,6 +210,9 @@ namespace CloudHop
         public bool TryKnockback(Vector2 velocity)
         {
             if (!playable || HitProtectionRemaining > 0) return false;
+            boostRemaining = 0;
+            comboJump = false;
+            ComboLanded?.Invoke(Combo.Break());
             CancelCharge();
             IsGrounded = false;
             ground = null;

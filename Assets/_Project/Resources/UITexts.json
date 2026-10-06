@@ -1,5 +1,5 @@
 {
-    "sourceHash": "C8C579FB51576D44886D8E3328EBEC2EFD82E1C219F81A91C7B75B0C7835B94F",
+    "sourceHash": "6B499EEDB8EE8BF665E3711FDCE3A3C7D2E2321A5D7A63737BADFFF2BA1CE249",
     "entries": [
         {
             "key": "common.start",
@@ -35,11 +35,11 @@
         },
         {
             "key": "lobby.title",
-            "text": "Cloud Hop"
+            "text": "클라우드 홉"
         },
         {
             "key": "lobby.practice",
-            "text": "스테이지 선택"
+            "text": "연습하기"
         },
         {
             "key": "lobby.ranking",
@@ -191,7 +191,7 @@
         },
         {
             "key": "character.name.2",
-            "text": "여우 모험가"
+            "text": "구름 여우"
         },
         {
             "key": "hud.score",
@@ -232,6 +232,50 @@
         {
             "key": "ranking.number",
             "text": "{0:00}"
+        },
+        {
+            "key": "combo.count",
+            "text": "콤보 {0}"
+        },
+        {
+            "key": "combo.ready",
+            "text": "부스트 준비 완료"
+        },
+        {
+            "key": "combo.progress",
+            "text": "부스트 충전 {0} / {1}"
+        },
+        {
+            "key": "combo.use_hint",
+            "text": "점프한 뒤 공중에서 스페이스바를 한 번 더 눌러 부스트!"
+        },
+        {
+            "key": "combo.landing_hint",
+            "text": "청록색 중앙에 3번 연속 착지하면 부스트를 얻습니다"
+        },
+        {
+            "key": "combo.perfect",
+            "text": "정확한 착지!  {0} 콤보"
+        },
+        {
+            "key": "combo.broken",
+            "text": "다시 콤보에 도전!"
+        },
+        {
+            "key": "combo.used",
+            "text": "바람 부스트!"
+        },
+        {
+            "key": "combo.shortcut",
+            "text": "부스트로 한 칸 건너뛰기"
+        },
+        {
+            "key": "combo.safe_route",
+            "text": "안전한 길"
+        },
+        {
+            "key": "combo.rejoin",
+            "text": "빠른 길 도착"
         }
     ]
 }

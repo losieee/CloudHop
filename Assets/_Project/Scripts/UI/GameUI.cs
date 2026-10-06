@@ -52,6 +52,7 @@ namespace CloudHop
             run=new TimedRun(()=>Time.realtimeSinceStartupAsDouble);
             Build();
             BuildRankingUI();
+            BuildComboUI();
             HideScreens();
             ApplyAudio();
         }
@@ -62,6 +63,7 @@ namespace CloudHop
         }
         private void OnDestroy()
         {
+            DisposeComboUI();
             if(game!=null)game.StateChanged-=StateChanged;
             if(whiteSprite!=null)Destroy(whiteSprite);
             Time.timeScale=previousTimeScale;
@@ -71,6 +73,7 @@ namespace CloudHop
         private void Update()
         {
             UpdateRunUI();
+            UpdateComboUI();
             scoreLabel.text=UIText.Get("hud.score",scores.Score);
             bestLabel.text=UIText.Get("hud.best",scores.Best);
             stageLabel.text=UIText.Get("hud.stage",stages.CurrentIndex+1,stages.StageCount);
