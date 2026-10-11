@@ -218,8 +218,13 @@ namespace CloudHop
             settings=Screen("Settings",true);
             result=Screen("Results",true);
 
-            Picture(lobby.transform,"UI_Banner_Cream_Blank",new Vector2(0,230),new Vector2(650,180));
-            Label(lobby.transform,UIText.Get("lobby.title"),new Vector2(0,230),new Vector2(510,100),58,Ink);
+            if (assets.lobbyLogo != null)
+            {
+                var logo = Picture(lobby.transform, null, new Vector2(0, 230), new Vector2(720, 280));
+                logo.gameObject.name = "Lobby Logo";
+                logo.sprite = assets.lobbyLogo;
+            }
+            else Label(lobby.transform,UIText.Get("lobby.title"),new Vector2(0,230),new Vector2(510,100),58,Ink);
             Picture(lobby.transform,"UI_Decoration_Cloud",new Vector2(-280,-180),new Vector2(360,140));
             var hero=Picture(lobby.transform,null,new Vector2(-280,-10),new Vector2(240,330));
             lobbyHero=hero;

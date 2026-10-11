@@ -7,6 +7,7 @@ namespace CloudHop
     public sealed class UIAssets : ScriptableObject
     {
         public TMP_FontAsset uiFont;
+        public Sprite lobbyLogo;
         public Sprite[] sprites;
         public Sprite character;
         public CharacterData[] characters;

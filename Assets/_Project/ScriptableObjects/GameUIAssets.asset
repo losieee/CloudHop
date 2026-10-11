@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GameUIAssets
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.UIAssets
   uiFont: {fileID: 11400000, guid: 4d1b32187b00e404e9b04384ee338eff, type: 2}
+  lobbyLogo: {fileID: 21300000, guid: 74495f988583ed144a1d9ad8b527c487, type: 3}
   sprites:
   - {fileID: 21300000, guid: c0523efee13895c4dbca1e404a89fc99, type: 3}
   - {fileID: 21300000, guid: 2de2e8424e136194da1332c619eb017d, type: 3}
