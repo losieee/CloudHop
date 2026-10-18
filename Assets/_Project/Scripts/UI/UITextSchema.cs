@@ -28,6 +28,7 @@ namespace CloudHop
             { "stage.level.1", 0 },
             { "stage.level.2", 0 },
             { "hud.jump", 0 },
+            { "mobile.jump_button", 0 }, { "mobile.jump_hint", 0 }, { "mobile.boost_hint", 0 },
             { "pause.title", 0 },
             { "pause.resume", 0 },
             { "settings.volume", 0 },

@@ -11,13 +11,25 @@ namespace CloudHop
         public string section;
     }
 
+    [Serializable]
+    public struct StageChoiceRoute
+    {
+        public int launchIndex;
+        public int safeIndex;
+        public int rejoinIndex;
+        [Min(.5f)] public float arcHeight;
+    }
+
     [CreateAssetMenu(menuName = "Cloud Hop/Stage Definition")]
     public sealed class StageDefinition : ScriptableObject
     {
         public string stageName;
         public string difficulty;
         public Color skyColor;
+        public bool followElevation;
         public Color platformColor = Color.white;
         public StagePlatformLayout[] platforms;
+        public StageCoinLayout[] coins = new StageCoinLayout[0];
+        public StageChoiceRoute[] choiceRoutes = new StageChoiceRoute[0];
     }
 }

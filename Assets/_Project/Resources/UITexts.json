@@ -1,5 +1,5 @@
 {
-    "sourceHash": "6B499EEDB8EE8BF665E3711FDCE3A3C7D2E2321A5D7A63737BADFFF2BA1CE249",
+    "sourceHash": "E888A1369AE01526452C383E0DE91E6B2B9E942F58D58764BC5E0D49023260D2",
     "entries": [
         {
             "key": "common.start",
@@ -35,11 +35,11 @@
         },
         {
             "key": "lobby.title",
-            "text": "Cloud Hop"
+            "text": "클라우드 홉"
         },
         {
             "key": "lobby.practice",
-            "text": "스테이지 선택"
+            "text": "연습하기"
         },
         {
             "key": "lobby.ranking",
@@ -276,6 +276,18 @@
         {
             "key": "combo.rejoin",
             "text": "빠른 길 도착"
+        },
+        {
+            "key": "mobile.jump_button",
+            "text": "점프"
+        },
+        {
+            "key": "mobile.jump_hint",
+            "text": "길게 눌러 충전 · 떼면 점프"
+        },
+        {
+            "key": "mobile.boost_hint",
+            "text": "공중에서 점프 버튼을 누르면 부스트!"
         }
     ]
 }

@@ -53,6 +53,9 @@ namespace CloudHop
             Build();
             BuildRankingUI();
             BuildComboUI();
+            BuildHudSkin();
+            BuildCoinUI();
+            BuildPlatformUI();
             HideScreens();
             ApplyAudio();
         }
@@ -74,6 +77,9 @@ namespace CloudHop
         {
             UpdateRunUI();
             UpdateComboUI();
+            UpdateHudSkin();
+            UpdatePlatformUI();
+            UpdateCoinUI();
             scoreLabel.text=UIText.Get("hud.score",scores.Score);
             bestLabel.text=UIText.Get("hud.best",scores.Best);
             stageLabel.text=UIText.Get("hud.stage",stages.CurrentIndex+1,stages.StageCount);
@@ -94,6 +100,7 @@ namespace CloudHop
         }
         private void Freeze()
         {
+            if(touchJump!=null)touchJump.gameObject.SetActive(false);
             input.enabled=false;
             player.CancelCharge();
             Time.timeScale=0;
@@ -144,6 +151,7 @@ namespace CloudHop
             input.enabled=true;
             input.ResetGesture();
             hud.SetActive(true);
+            UpdatePlatformUI();
         }
         public void Pause()
         {
@@ -157,6 +165,7 @@ namespace CloudHop
             Time.timeScale=1;
             input.enabled=true;
             input.ResetGesture();
+            UpdatePlatformUI();
         }
         private void ShowSettings(GameObject back)
         {
@@ -277,7 +286,7 @@ namespace CloudHop
             bestLabel=Label(hud.transform,"",new Vector2(327,320),new Vector2(245,55),25,Color.white);
             stageLabel=Label(hud.transform,"",new Vector2(0,325),new Vector2(220,45),23,Color.white);
             Button(hud.transform,"Pause","",new Vector2(555,320),new Vector2(65,65),"UI_Pause_Cloud",Pause);
-            Label(hud.transform,UIText.Get("hud.jump"),new Vector2(0,-260),new Vector2(350,35),20,Color.white);
+            Label(hud.transform,UIText.Get(PlatformEntry.IsMobile ? "mobile.jump_hint" : "hud.jump"),new Vector2(0,-260),new Vector2(350,35),20,Color.white);
             chargeFill=Meter(hud.transform,"Charge",new Vector2(0,-295),new Vector2(330,16),new Color(.15f,.9f,1));
             progressFill=Meter(hud.transform,"Progress",new Vector2(0,-345),new Vector2(520,8),new Color(1,.8f,.15f));
             progressLabel=Label(hud.transform,"",new Vector2(335,-345),new Vector2(120,30),18,Color.white);
@@ -396,9 +405,11 @@ namespace CloudHop
         }
         private Image Meter(Transform parent,string name,Vector2 position,Vector2 size,Color color)
         {
-            var track=Box(parent,name,position,size+new Vector2(8,8),new Color(.07f,.14f,.28f,.85f));
-            var fill=Box(track,"Fill",Vector2.zero,size,color).GetComponent<Image>();
-            fill.sprite=whiteSprite;
+            var frameSize = new Vector2(size.x + 80, name == "Charge" ? 52 : 38);
+            var track = Art(parent,"CloudMeter",position,frameSize).rectTransform;
+            track.name = name;
+            var fill=Box(track,"Fill",new Vector2(0,1),new Vector2(frameSize.x*.735f,frameSize.y*.38f),color).GetComponent<Image>();
+            fill.sprite=HudArt.Fill;
             fill.type=Image.Type.Filled;fill.fillMethod=Image.FillMethod.Horizontal;fill.fillAmount=0;
             return fill;
         }

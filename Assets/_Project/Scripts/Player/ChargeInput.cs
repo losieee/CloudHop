@@ -17,6 +17,7 @@ namespace CloudHop
 
         private void Update()
         {
+            if (PlatformEntry.IsMobile) return;
             bool space = Keyboard.current != null && Keyboard.current.spaceKey.isPressed;
             bool mouse = Mouse.current != null && Mouse.current.leftButton.isPressed;
             if (waitingForRelease)
@@ -31,6 +32,19 @@ namespace CloudHop
             if (next && !held) Pressed?.Invoke();
             if (!next && held) Released?.Invoke();
             held = next;
+        }
+
+        public void BeginTouch()
+        {
+            if (!PlatformEntry.IsMobile || !isActiveAndEnabled || held) return;
+            held = true;
+            Pressed?.Invoke();
+        }
+        public void EndTouch()
+        {
+            if (!PlatformEntry.IsMobile || !isActiveAndEnabled || !held) return;
+            held = false;
+            Released?.Invoke();
         }
 
         public void ResetGesture()

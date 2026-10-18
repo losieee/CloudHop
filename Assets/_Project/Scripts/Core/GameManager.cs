@@ -56,6 +56,8 @@ namespace CloudHop
             if (stages != null)
             {
                 stages.ResetProgress();
+                var collection = stages.CurrentCourse.GetComponent<StageCollectibles>();
+                if (collection != null) collection.ResetCollection();
                 var mechanics = stages.CurrentCourse.GetComponent<StageMechanics>();
                 if (mechanics != null) mechanics.ResetCourse();
             }

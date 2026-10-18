@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &933599 stripped
 Transform:
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
     m_Mode: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.14, g: 0.48, b: 0.65, a: 1}
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &12163825
 PrefabInstance:
@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &12163827 stripped
 Transform:
@@ -940,7 +940,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &26905671
 PrefabInstance:
@@ -964,7 +964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19999999
+      value: 0.90000004
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &26905674 stripped
 GameObject:
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0a4efe5d2ce24e4cb0a77369c146d96, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.CrumblingPlatform
   visual: {fileID: 26905675}
   debugLabel: {fileID: 1619639525}
@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 26905676}
   marker: {fileID: 26905675}
@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 27113654}
   - component: {fileID: 27113657}
   m_Layer: 0
-  m_Name: PatrolBird - Jump 13
+  m_Name: PatrolBird - Jump 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1163,7 +1163,7 @@ Transform:
   m_GameObject: {fileID: 27113652}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.35, y: 1.95, z: 0}
+  m_LocalPosition: {x: 63.849995, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 170390586}
   debugLabel: {fileID: 2020446109}
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 27113654}
   marker: {fileID: 170390586}
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &34264223
 PrefabInstance:
@@ -1499,7 +1499,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &40649348
 GameObject:
@@ -1732,7 +1732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.90000004
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &97013192
 PrefabInstance:
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &101649522
 GameObject:
@@ -2311,7 +2311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39999998
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2388,7 +2388,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &128538857
 GameObject:
@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &148301213
 GameObject:
@@ -2877,7 +2877,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dc9bc6ca53474c44a870999d78b6b47, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PlayerController
 --- !u!4 &155651526 stripped
 Transform:
@@ -3165,7 +3165,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &175487263
 GameObject:
@@ -3404,7 +3404,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &211092991
 GameObject:
@@ -3688,7 +3688,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 1996490965}
   debugLabel: {fileID: 1585726259}
@@ -3778,7 +3778,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 221678896}
   marker: {fileID: 1996490965}
@@ -3987,6 +3987,138 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &229661224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1630683078}
+    m_Modifications:
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 76
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_Name
+      value: Ridge Landing C
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932321849537388961, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 229661229}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 229661228}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 229661227}
+  m_SourcePrefab: {fileID: 100100000, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+--- !u!4 &229661225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 229661224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &229661226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 229661224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &229661227
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229661226}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!114 &229661228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229661226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f46e24cd1287647adb0953ae02393f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PerfectLandingZone
+--- !u!114 &229661229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229661226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45e2bff809e5234ca96fd40a38527cb, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BranchLanding
+  progressIndex: 19
 --- !u!1001 &230597473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4126,7 +4258,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &230597476 stripped
 GameObject:
@@ -4148,7 +4280,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0a4efe5d2ce24e4cb0a77369c146d96, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.CrumblingPlatform
   visual: {fileID: 230597477}
   debugLabel: {fileID: 892581824}
@@ -4164,7 +4296,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 230597478}
   marker: {fileID: 230597477}
@@ -4290,7 +4422,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &247071810
 GameObject:
@@ -4425,7 +4557,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &250974925 stripped
 Transform:
@@ -4518,7 +4650,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc702968c0131b64da303e81d0a74c18, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.WindZone
   visual: {fileID: 521695863}
   debugLabel: {fileID: 2131005548}
@@ -4581,7 +4713,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 260089472}
   marker: {fileID: 521695863}
@@ -4618,7 +4750,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.3
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.y
@@ -4630,7 +4762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19999999
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4707,7 +4839,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &267156520
 GameObject:
@@ -4839,7 +4971,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &280752242
 GameObject:
@@ -4890,7 +5022,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a396e1325cccb4eb8db36d7a6dd752, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BackgroundLayer
   targetCamera: {fileID: 2071802477}
   scrollSpeed: 0.5
@@ -5011,7 +5143,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &287774024
 PrefabInstance:
@@ -5104,7 +5236,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &288121049
 PrefabInstance:
@@ -5128,7 +5260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5205,7 +5337,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &289548755
 GameObject:
@@ -5257,7 +5389,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.05, g: 0.1, b: 0.18, a: 0.98}
@@ -5384,7 +5516,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &303022914
 PrefabInstance:
@@ -5485,7 +5617,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!114 &303056204
 MonoBehaviour:
@@ -5532,7 +5664,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d65394f511d36de489962b04db6fb07c, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PrototypeHUD
   game: {fileID: 1203818314}
   scores: {fileID: 1203818313}
@@ -5557,7 +5689,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
@@ -5574,7 +5706,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
@@ -5649,7 +5781,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 370e68bd84a9e5642b62581a787fdf4f, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickTestControls
   game: {fileID: 1203818314}
   courses:
@@ -5765,7 +5897,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &335892974
 GameObject:
@@ -5978,7 +6110,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &338026401
 GameObject:
@@ -6146,7 +6278,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 1675590369}
   debugLabel: {fileID: 524169156}
@@ -6236,7 +6368,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 351183081}
   marker: {fileID: 1675590369}
@@ -6369,7 +6501,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &356938493 stripped
 Transform:
@@ -6638,7 +6770,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a396e1325cccb4eb8db36d7a6dd752, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BackgroundLayer
   targetCamera: {fileID: 2071802477}
   scrollSpeed: 0.12
@@ -6790,7 +6922,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6921,7 +7053,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &417937535
 PrefabInstance:
@@ -7030,7 +7162,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &422304186
 GameObject:
@@ -7079,7 +7211,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7133,7 +7265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.99999994
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7241,7 +7373,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &422353462 stripped
 GameObject:
@@ -7263,12 +7395,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89730d8a6c404e042a9790af5274e506, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.MovingPlatform
   visual: {fileID: 422353463}
   debugLabel: {fileID: 2087943897}
-  amplitude: 0.25
-  period: 4
+  amplitude: 0.4
+  period: 4.8
 --- !u!50 &422353465
 Rigidbody2D:
   serializedVersion: 5
@@ -7306,7 +7438,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 422353464}
   marker: {fileID: 422353463}
@@ -7382,7 +7514,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
     m_Mode: 0
@@ -7438,7 +7570,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.14, g: 0.48, b: 0.65, a: 1}
@@ -7599,7 +7731,7 @@ Transform:
   m_GameObject: {fileID: 453396975}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.974998, y: 1.45, z: 0}
+  m_LocalPosition: {x: 17.9, y: 1.4499999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7618,7 +7750,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 1037626306}
   debugLabel: {fileID: 711381023}
@@ -7708,7 +7840,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 453396977}
   marker: {fileID: 1037626306}
@@ -7757,7 +7889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7862,7 +7994,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &454065930 stripped
 GameObject:
@@ -7884,7 +8016,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0a4efe5d2ce24e4cb0a77369c146d96, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.CrumblingPlatform
   visual: {fileID: 454065931}
   debugLabel: {fileID: 795833455}
@@ -7900,7 +8032,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 454065932}
   marker: {fileID: 454065931}
@@ -7975,7 +8107,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 1316394844}
   debugLabel: {fileID: 822285793}
@@ -8065,7 +8197,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 454111589}
   marker: {fileID: 1316394844}
@@ -8464,7 +8596,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &487600111
 GameObject:
@@ -8677,7 +8809,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &498217866
 GameObject:
@@ -8817,7 +8949,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &512415858
 PrefabInstance:
@@ -8841,7 +8973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8906,7 +9038,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &513351999
 GameObject:
@@ -9145,7 +9277,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &521695861
 GameObject:
@@ -9364,7 +9496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10000001
+      value: 0.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9441,7 +9573,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &535459962
 PrefabInstance:
@@ -9465,7 +9597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.099999994
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9542,7 +9674,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &547426892
 GameObject:
@@ -9775,7 +9907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0.099999994
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9855,7 +9987,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &576295008 stripped
 Transform:
@@ -10001,7 +10133,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &577544956 stripped
 GameObject:
@@ -10023,7 +10155,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0a4efe5d2ce24e4cb0a77369c146d96, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.CrumblingPlatform
   visual: {fileID: 577544957}
   debugLabel: {fileID: 8394148}
@@ -10039,7 +10171,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 577544958}
   marker: {fileID: 577544957}
@@ -10114,7 +10246,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 458870124}
   debugLabel: {fileID: 565958189}
@@ -10204,7 +10336,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 614214035}
   marker: {fileID: 458870124}
@@ -10338,7 +10470,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &615600297
 PrefabInstance:
@@ -10350,7 +10482,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.y
@@ -10362,7 +10494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.099999994
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10439,7 +10571,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &618784583
 GameObject:
@@ -10554,7 +10686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10634,7 +10766,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &621517906 stripped
 Transform:
@@ -10743,7 +10875,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &622777565 stripped
 Transform:
@@ -11344,7 +11476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.099999994
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11421,7 +11553,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &691860268
 GameObject:
@@ -11652,7 +11784,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6ce8ba8fa81f044b4d4ac170eb7b56, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.LightningZone
   visual: {fileID: 1329115138}
   debugLabel: {fileID: 1738433804}
@@ -11717,7 +11849,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 701784596}
   marker: {fileID: 1329115138}
@@ -11851,7 +11983,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &702749018
 GameObject:
@@ -12096,7 +12228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.70000005
+      value: 1.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12173,7 +12305,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &711381021
 GameObject:
@@ -12381,7 +12513,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &733609760 stripped
 Transform:
@@ -12398,7 +12530,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.y
@@ -12410,7 +12542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12495,7 +12627,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &763887785
 GameObject:
@@ -12525,7 +12657,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12706,7 +12838,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &773513505 stripped
 GameObject:
@@ -12728,7 +12860,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89730d8a6c404e042a9790af5274e506, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.MovingPlatform
   visual: {fileID: 773513506}
   debugLabel: {fileID: 335892976}
@@ -12771,7 +12903,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 773513507}
   marker: {fileID: 773513506}
@@ -13132,7 +13264,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &806855555
 PrefabInstance:
@@ -13236,7 +13368,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &806855557 stripped
 Transform:
@@ -13369,7 +13501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.59999996
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13434,7 +13566,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &850702474
 GameObject:
@@ -13483,7 +13615,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13537,7 +13669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10000001
+      value: 0.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13614,7 +13746,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &872087679
 GameObject:
@@ -13663,7 +13795,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6ce8ba8fa81f044b4d4ac170eb7b56, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.LightningZone
   visual: {fileID: 996765916}
   debugLabel: {fileID: 211703907}
@@ -13728,7 +13860,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 872087681}
   marker: {fileID: 996765916}
@@ -13804,7 +13936,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a396e1325cccb4eb8db36d7a6dd752, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BackgroundLayer
   targetCamera: {fileID: 2071802477}
   scrollSpeed: 0.3
@@ -13909,7 +14041,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &879153818
 PrefabInstance:
@@ -13921,7 +14053,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.y
@@ -13933,7 +14065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19999999
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14018,7 +14150,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &884332329
 GameObject:
@@ -14213,7 +14345,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &888206140 stripped
 Transform:
@@ -14346,7 +14478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14423,7 +14555,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &907181106
 GameObject:
@@ -14615,7 +14747,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &918832497
 PrefabInstance:
@@ -14724,7 +14856,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &920040356
 PrefabInstance:
@@ -14825,7 +14957,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &921621144
 GameObject:
@@ -14940,7 +15072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.099999994
+      value: 1.9000001
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15048,7 +15180,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &922903622 stripped
 GameObject:
@@ -15070,12 +15202,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89730d8a6c404e042a9790af5274e506, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.MovingPlatform
   visual: {fileID: 922903623}
   debugLabel: {fileID: 44874697}
-  amplitude: 0.25
-  period: 4
+  amplitude: 0.4
+  period: 4.8
 --- !u!50 &922903625
 Rigidbody2D:
   serializedVersion: 5
@@ -15113,7 +15245,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 922903624}
   marker: {fileID: 922903623}
@@ -15162,7 +15294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.90000004
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15239,7 +15371,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &936725836
 PrefabInstance:
@@ -15340,7 +15472,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &938410034
 PrefabInstance:
@@ -15364,7 +15496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15444,7 +15576,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &938410036 stripped
 Transform:
@@ -15473,7 +15605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0.19999999
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15578,7 +15710,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &940739164 stripped
 GameObject:
@@ -15600,7 +15732,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0a4efe5d2ce24e4cb0a77369c146d96, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.CrumblingPlatform
   visual: {fileID: 940739165}
   debugLabel: {fileID: 101649524}
@@ -15616,7 +15748,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 940739166}
   marker: {fileID: 940739165}
@@ -15698,7 +15830,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15750,7 +15882,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15900,7 +16032,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &951222176
 PrefabInstance:
@@ -16004,7 +16136,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &951222178 stripped
 Transform:
@@ -16033,7 +16165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16110,7 +16242,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!114 &959830464
 MonoBehaviour:
@@ -16233,7 +16365,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &986304539
 GameObject:
@@ -16705,7 +16837,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &1018420532 stripped
 Transform:
@@ -16985,7 +17117,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1049381757
 GameObject:
@@ -17141,7 +17273,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
     m_Mode: 0
@@ -17197,7 +17329,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.14, g: 0.48, b: 0.65, a: 1}
@@ -17415,7 +17547,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1075934674
 GameObject:
@@ -17445,7 +17577,7 @@ Transform:
   m_GameObject: {fileID: 1075934674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.874985, y: 1.5, z: 0}
+  m_LocalPosition: {x: 81.799995, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17464,7 +17596,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6ce8ba8fa81f044b4d4ac170eb7b56, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.LightningZone
   visual: {fileID: 380880167}
   debugLabel: {fileID: 1087300035}
@@ -17529,7 +17661,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1075934676}
   marker: {fileID: 380880167}
@@ -17762,6 +17894,7 @@ GameObject:
   - component: {fileID: 1095043475}
   - component: {fileID: 1095043474}
   - component: {fileID: 1095043476}
+  - component: {fileID: 1095043477}
   m_Layer: 0
   m_Name: STAGE 1 - SKY MEADOW
   m_TagString: Untagged
@@ -17779,7 +17912,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d452f64b2d8ea142973be47f6fb6e09, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageCourse
   definition: {fileID: 11400000, guid: 07918d52dba89b94890044567785bb4e, type: 2}
   spawnPoint: {fileID: 359859104}
@@ -17849,6 +17982,7 @@ Transform:
   - {fileID: 2112687118}
   - {fileID: 1103665571}
   - {fileID: 1338296287}
+  - {fileID: 1532886057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1095043476
@@ -17861,10 +17995,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9da7084095861c8459c05bca22e4d769, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageMechanics
   game: {fileID: 1203818314}
   gimmicksEnabled: 1
+--- !u!114 &1095043477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095043473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e3e845455f7f54aaed12afa766d0e3, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageCollectibles
 --- !u!1 &1103665570
 GameObject:
   m_ObjectHideFlags: 0
@@ -17913,7 +18059,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 986304541}
   debugLabel: {fileID: 676409188}
@@ -18003,7 +18149,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1103665572}
   marker: {fileID: 986304541}
@@ -18058,7 +18204,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18200,7 +18346,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1119769342
 PrefabInstance:
@@ -18289,7 +18435,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1125955740
 GameObject:
@@ -18431,7 +18577,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.14, g: 0.48, b: 0.65, a: 1}
@@ -18469,7 +18615,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
     m_Mode: 0
@@ -18693,7 +18839,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1147911151
 GameObject:
@@ -18808,7 +18954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.90000004
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18885,7 +19031,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1151563056
 PrefabInstance:
@@ -18909,7 +19055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10000001
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18986,7 +19132,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1153459868
 GameObject:
@@ -19198,7 +19344,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19276,7 +19422,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc80a80b268ae93499bbbdc22ca07c1b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BackgroundSky
   targetCamera: {fileID: 2071802477}
 --- !u!4 &1175113366
@@ -19300,6 +19446,138 @@ Transform:
   - {fileID: 280752243}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1176759192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1630683078}
+    m_Modifications:
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_Name
+      value: Ridge Landing B
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932321849537388961, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1176759197}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1176759196}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1176759195}
+  m_SourcePrefab: {fileID: 100100000, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+--- !u!4 &1176759193 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 1176759192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1176759194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 1176759192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &1176759195
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176759194}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!114 &1176759196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176759194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f46e24cd1287647adb0953ae02393f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PerfectLandingZone
+--- !u!114 &1176759197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176759194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45e2bff809e5234ca96fd40a38527cb, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BranchLanding
+  progressIndex: 18
 --- !u!1 &1182568890
 GameObject:
   m_ObjectHideFlags: 0
@@ -19498,7 +19776,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1194123903
 PrefabInstance:
@@ -19522,7 +19800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.70000005
+      value: 0.19999999
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19599,7 +19877,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1195386373
 PrefabInstance:
@@ -19623,7 +19901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 1.5999999
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19700,7 +19978,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1197059508
 GameObject:
@@ -19848,7 +20126,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1203818312
 GameObject:
@@ -19879,7 +20157,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c290963ef40a124449e29958ad6b3ea8, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.ScoreManager
 --- !u!114 &1203818314
 MonoBehaviour:
@@ -19891,7 +20169,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52c63f89bdac5af458f32e31ad5726ad, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GameManager
   player: {fileID: 155651525}
   scores: {fileID: 1203818313}
@@ -19923,7 +20201,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f72d7c0bb11ebf4b927220789fd532f, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageDirector
   courses:
   - {fileID: 1095043474}
@@ -20174,7 +20452,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6ce8ba8fa81f044b4d4ac170eb7b56, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.LightningZone
   visual: {fileID: 1085464265}
   debugLabel: {fileID: 1410357116}
@@ -20239,7 +20517,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1241570915}
   marker: {fileID: 1085464265}
@@ -20373,7 +20651,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1248848382
 PrefabInstance:
@@ -20397,7 +20675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19999999
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20474,7 +20752,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1252760889
 GameObject:
@@ -20765,7 +21043,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1279688122
 PrefabInstance:
@@ -20874,7 +21152,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1283579728
 PrefabInstance:
@@ -20898,7 +21176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: 0.19999999
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20975,7 +21253,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1299408364
 PrefabInstance:
@@ -21084,7 +21362,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!114 &1300739880
 MonoBehaviour:
@@ -21122,7 +21400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21191,7 +21469,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1311066648
 PrefabInstance:
@@ -21300,7 +21578,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1312580309
 PrefabInstance:
@@ -21409,7 +21687,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1316394842
 GameObject:
@@ -21609,7 +21887,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1323951789
 PrefabInstance:
@@ -21713,7 +21991,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &1323951791 stripped
 Transform:
@@ -21918,7 +22196,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1337162067
 GameObject:
@@ -21949,7 +22227,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
     m_Mode: 0
@@ -21993,7 +22271,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.14, g: 0.48, b: 0.65, a: 1}
@@ -22143,7 +22421,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &1338140141 stripped
 Transform:
@@ -22198,7 +22476,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 459015366}
   debugLabel: {fileID: 1699670149}
@@ -22288,7 +22566,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1338296288}
   marker: {fileID: 459015366}
@@ -22524,7 +22802,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c815030a7ab0188488e7088c4efa064a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GameUI
   assets: {fileID: 11400000, guid: afa394c09d0ec9d47b77e03eccd6949f, type: 2}
   game: {fileID: 1203818314}
@@ -22645,7 +22923,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1361108302
 GameObject:
@@ -22675,7 +22953,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d452f64b2d8ea142973be47f6fb6e09, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageCourse
   definition: {fileID: 11400000, guid: aaa70b086a2629f4b8def49728449023, type: 2}
   spawnPoint: {fileID: 247071811}
@@ -22782,7 +23060,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9da7084095861c8459c05bca22e4d769, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageMechanics
   game: {fileID: 1203818314}
   gimmicksEnabled: 1
@@ -23067,7 +23345,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1385120867
 PrefabInstance:
@@ -23168,7 +23446,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1385656925
 GameObject:
@@ -23181,6 +23459,7 @@ GameObject:
   - component: {fileID: 1385656927}
   - component: {fileID: 1385656926}
   - component: {fileID: 1385656928}
+  - component: {fileID: 1385656929}
   m_Layer: 0
   m_Name: STAGE 2 - WIND RIDGE
   m_TagString: Untagged
@@ -23198,7 +23477,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d452f64b2d8ea142973be47f6fb6e09, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageCourse
   definition: {fileID: 11400000, guid: dff10426b05398d42b21a0eb38b680fc, type: 2}
   spawnPoint: {fileID: 1765971568}
@@ -23278,6 +23557,7 @@ Transform:
   - {fileID: 1399039259}
   - {fileID: 1617247188}
   - {fileID: 260089471}
+  - {fileID: 1630683078}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1385656928
@@ -23290,10 +23570,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9da7084095861c8459c05bca22e4d769, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageMechanics
   game: {fileID: 1203818314}
   gimmicksEnabled: 1
+--- !u!114 &1385656929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385656925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e3e845455f7f54aaed12afa766d0e3, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.StageCollectibles
 --- !u!1001 &1392797376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23316,7 +23608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.59999996
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23393,7 +23685,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1394978329
 PrefabInstance:
@@ -23405,7 +23697,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.y
@@ -23417,7 +23709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.099999994
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23534,7 +23826,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1394978332 stripped
 GameObject:
@@ -23556,7 +23848,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0a4efe5d2ce24e4cb0a77369c146d96, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.CrumblingPlatform
   visual: {fileID: 1394978333}
   debugLabel: {fileID: 1731412301}
@@ -23572,7 +23864,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1394978334}
   marker: {fileID: 1394978333}
@@ -23628,7 +23920,7 @@ Transform:
   m_GameObject: {fileID: 1399039258}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 130.29999, y: 2.25, z: 0}
+  m_LocalPosition: {x: 130.04999, y: 2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23647,7 +23939,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 2089929441}
   debugLabel: {fileID: 1784468217}
@@ -23737,7 +24029,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1399039260}
   marker: {fileID: 2089929441}
@@ -24137,8 +24429,140 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
+--- !u!1001 &1418553450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1532886057}
+    m_Modifications:
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_Name
+      value: Upper Landing A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932321849537388961, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418553455}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418553454}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418553453}
+  m_SourcePrefab: {fileID: 100100000, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+--- !u!4 &1418553451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 1418553450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1418553452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 1418553450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &1418553453
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418553452}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!114 &1418553454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418553452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f46e24cd1287647adb0953ae02393f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PerfectLandingZone
+--- !u!114 &1418553455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418553452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45e2bff809e5234ca96fd40a38527cb, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BranchLanding
+  progressIndex: 11
 --- !u!1 &1431234434
 GameObject:
   m_ObjectHideFlags: 0
@@ -24422,7 +24846,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.y
@@ -24434,7 +24858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24519,7 +24943,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1462645688
 PrefabInstance:
@@ -24628,7 +25052,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1470421301
 PrefabInstance:
@@ -24652,7 +25076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24729,7 +25153,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1487491510
 GameObject:
@@ -24981,8 +25405,140 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
+--- !u!1001 &1517784258
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1532886057}
+    m_Modifications:
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_Name
+      value: Upper Landing B
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932321849537388961, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1517784263}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1517784262}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1517784261}
+  m_SourcePrefab: {fileID: 100100000, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+--- !u!4 &1517784259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 1517784258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1517784260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 1517784258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &1517784261
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517784260}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!114 &1517784262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517784260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f46e24cd1287647adb0953ae02393f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PerfectLandingZone
+--- !u!114 &1517784263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517784260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45e2bff809e5234ca96fd40a38527cb, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BranchLanding
+  progressIndex: 13
 --- !u!1001 &1523933179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25005,7 +25561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.59999996
+      value: -0.10000001
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25082,7 +25638,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1527276430
 GameObject:
@@ -25122,6 +25678,39 @@ Transform:
   - {fileID: 1316580417}
   - {fileID: 1810600274}
   m_Father: {fileID: 1361108304}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1532886056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532886057}
+  m_Layer: 0
+  m_Name: Upper Cloud Route
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1532886057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532886056}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1418553451}
+  - {fileID: 1517784259}
+  m_Father: {fileID: 1095043475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538779612
 GameObject:
@@ -25170,7 +25759,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -25290,7 +25879,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!114 &1551133557
 MonoBehaviour:
@@ -25504,7 +26093,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1573517079
 PrefabInstance:
@@ -25528,7 +26117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25605,7 +26194,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1573650256
 PrefabInstance:
@@ -25706,7 +26295,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1578339132
 PrefabInstance:
@@ -25810,7 +26399,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &1578339134 stripped
 Transform:
@@ -26020,7 +26609,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1598338933
 GameObject:
@@ -26069,7 +26658,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -26194,7 +26783,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc702968c0131b64da303e81d0a74c18, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.WindZone
   visual: {fileID: 1009942012}
   debugLabel: {fileID: 1735276223}
@@ -26257,7 +26846,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1617247189}
   marker: {fileID: 1009942012}
@@ -26495,8 +27084,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
+--- !u!1 &1630683077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1630683078}
+  m_Layer: 0
+  m_Name: Golden Ridge Route
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1630683078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630683077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2079976213}
+  - {fileID: 1176759193}
+  - {fileID: 229661225}
+  m_Father: {fileID: 1385656927}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640960004
 GameObject:
   m_ObjectHideFlags: 0
@@ -26598,7 +27221,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalScale.y
@@ -26606,7 +27229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 84.59999
+      value: 83.799995
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26695,7 +27318,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1642610786
 GameObject:
@@ -26979,7 +27602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 1.0999999
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27056,7 +27679,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1692660462
 GameObject:
@@ -27087,7 +27710,7 @@ Transform:
   m_GameObject: {fileID: 1692660462}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 73.75, y: 1.6500001, z: 0}
+  m_LocalPosition: {x: 73.7, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27106,7 +27729,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 374740427}
   debugLabel: {fileID: 445753096}
@@ -27196,7 +27819,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1692660464}
   marker: {fileID: 374740427}
@@ -27381,7 +28004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10000001
+      value: 0.59999996
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27458,7 +28081,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1710197417
 PrefabInstance:
@@ -27567,7 +28190,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1717781982
 PrefabInstance:
@@ -27668,7 +28291,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1722362342
 GameObject:
@@ -28063,7 +28686,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1735276221
 GameObject:
@@ -28372,7 +28995,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1746952275
 PrefabInstance:
@@ -28481,7 +29104,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1762858531
 GameObject:
@@ -28848,7 +29471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39999998
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28925,7 +29548,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1783584424
 PrefabInstance:
@@ -29034,7 +29657,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1784468215
 GameObject:
@@ -29280,7 +29903,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.14, g: 0.48, b: 0.65, a: 1}
@@ -29318,7 +29941,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
     m_Mode: 0
@@ -29454,7 +30077,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &1810600274 stripped
 Transform:
@@ -29568,7 +30191,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1831966138
 PrefabInstance:
@@ -29672,7 +30295,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &1831966140 stripped
 Transform:
@@ -29781,7 +30404,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &1833450022 stripped
 Transform:
@@ -30430,7 +31053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.20000002
+      value: 1.5999999
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30507,7 +31130,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1871646423
 PrefabInstance:
@@ -30616,7 +31239,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1873401424
 PrefabInstance:
@@ -30717,7 +31340,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1878210643
 GameObject:
@@ -31130,7 +31753,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1892562808
 GameObject:
@@ -31353,7 +31976,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1905053883 stripped
 GameObject:
@@ -31375,7 +31998,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89730d8a6c404e042a9790af5274e506, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.MovingPlatform
   visual: {fileID: 1905053884}
   debugLabel: {fileID: 1502077366}
@@ -31418,7 +32041,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1905053885}
   marker: {fileID: 1905053884}
@@ -31585,7 +32208,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a396e1325cccb4eb8db36d7a6dd752, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BackgroundLayer
   targetCamera: {fileID: 2071802477}
   scrollSpeed: 0.08
@@ -31706,7 +32329,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1939929657
 PrefabInstance:
@@ -31815,7 +32438,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1943069868
 GameObject:
@@ -31866,7 +32489,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a396e1325cccb4eb8db36d7a6dd752, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BackgroundLayer
   targetCamera: {fileID: 2071802477}
   scrollSpeed: 0.22
@@ -32032,7 +32655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.59999996
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32109,7 +32732,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &1978691676
 PrefabInstance:
@@ -32218,7 +32841,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &1979920808
 GameObject:
@@ -32267,7 +32890,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc702968c0131b64da303e81d0a74c18, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.WindZone
   visual: {fileID: 110915075}
   debugLabel: {fileID: 2017422393}
@@ -32330,7 +32953,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 1979920810}
   marker: {fileID: 110915075}
@@ -32561,7 +33184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.70000005
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32638,7 +33261,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &2006053865
 PrefabInstance:
@@ -32742,7 +33365,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &2006053867 stripped
 Transform:
@@ -32777,7 +33400,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
   m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
@@ -32808,7 +33431,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
@@ -32877,7 +33500,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a396e1325cccb4eb8db36d7a6dd752, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BackgroundLayer
   targetCamera: {fileID: 2071802477}
   scrollSpeed: 0.4
@@ -32998,7 +33621,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &2012850128
 GameObject:
@@ -33354,7 +33977,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &2023137256
 PrefabInstance:
@@ -33443,7 +34066,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &2029602194
 GameObject:
@@ -33825,7 +34448,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &2048179950
 PrefabInstance:
@@ -33929,7 +34552,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!4 &2048179952 stripped
 Transform:
@@ -34043,7 +34666,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &2058742253
 GameObject:
@@ -34183,7 +34806,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc702968c0131b64da303e81d0a74c18, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.WindZone
   visual: {fileID: 516794032}
   debugLabel: {fileID: 487600113}
@@ -34246,7 +34869,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 2068070162}
   marker: {fileID: 516794032}
@@ -34302,7 +34925,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 756d749e6f63bda4ea18091d5535ef68, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.FollowCamera
   target: {fileID: 155651526}
   lookAhead: 3
@@ -34429,7 +35052,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc702968c0131b64da303e81d0a74c18, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.WindZone
   visual: {fileID: 148301215}
   debugLabel: {fileID: 338026403}
@@ -34492,7 +35115,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 2078137089}
   marker: {fileID: 148301215}
@@ -34519,6 +35142,138 @@ MonoBehaviour:
   - {x: 10.44, y: 9.8}
   - {x: 11.15, y: 10.34}
   - {x: 8.95, y: 8.4}
+--- !u!1001 &2079976212
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1630683078}
+    m_Modifications:
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_Name
+      value: Ridge Landing A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932321849537388961, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2079976217}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2079976216}
+    - targetCorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2079976215}
+  m_SourcePrefab: {fileID: 100100000, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+--- !u!4 &2079976213 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 2079976212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2079976214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6509521246370304514, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
+  m_PrefabInstance: {fileID: 2079976212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &2079976215
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079976214}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!114 &2079976216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079976214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f46e24cd1287647adb0953ae02393f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PerfectLandingZone
+--- !u!114 &2079976217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079976214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45e2bff809e5234ca96fd40a38527cb, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BranchLanding
+  progressIndex: 17
 --- !u!1 &2087943895
 GameObject:
   m_ObjectHideFlags: 0
@@ -34904,7 +35659,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &2097293320
 PrefabInstance:
@@ -35005,7 +35760,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1 &2107388999
 GameObject:
@@ -35094,7 +35849,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11fbdc9e2de2e148b7e6ad72c4bd511, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.PatrolBird
   visual: {fileID: 156261430}
   debugLabel: {fileID: 685460596}
@@ -35184,7 +35939,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a9791fa2ca1f64a8955dff540da42a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.GimmickArtwork
   mechanic: {fileID: 2112687119}
   marker: {fileID: 156261430}
@@ -35258,7 +36013,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -35441,7 +36196,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -35702,7 +36457,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1001 &2142367646
 PrefabInstance:
@@ -35726,7 +36481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.099999994
+      value: 1.9000001
       objectReference: {fileID: 0}
     - target: {fileID: 2879152102601803978, guid: 0ef2b7f96cd0aca499bd486ab634a890, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35803,7 +36558,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf28951bca0e345a27c740b7d9ca4b, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.Platform
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

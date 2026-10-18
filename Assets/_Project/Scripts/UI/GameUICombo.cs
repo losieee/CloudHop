@@ -31,20 +31,19 @@ namespace CloudHop
                     if (zone == null) zone = platform.gameObject.AddComponent<PerfectLandingZone>();
                     zone.Configure(fraction);
                 }
-                if (course.Definition.difficulty == "EASY" && course.Platforms.Length > 5)
+                if (course.Definition.choiceRoutes.Length > 0)
                 {
                     var guide = course.GetComponent<ComboShortcutGuide>();
                     if (guide == null) guide = course.gameObject.AddComponent<ComboShortcutGuide>();
                     guide.Configure(course);
-                    var keys = new[] { "combo.shortcut", "combo.safe_route", "combo.rejoin" };
-                    for (int i = 0; i < 3; i++)
-                    {
-                        routePlatforms[i] = course.Platforms[i + 3].transform;
-                        routeLabels[i] = Label(hud.transform, UIText.Get(keys[i]), Vector2.zero, new Vector2(250, 32), 16, Color.white);
-                        routeLabels[i].gameObject.name = "Route Caption " + i;
-                        routeLabels[i].color = new Color(1, .93f, .5f);
-                    }
                 }
+            }
+            var keys = new[] { "combo.shortcut", "combo.safe_route", "combo.rejoin" };
+            for (int i = 0; i < 3; i++)
+            {
+                routeLabels[i] = Label(hud.transform, UIText.Get(keys[i]), Vector2.zero, new Vector2(250, 32), 16, Color.white);
+                routeLabels[i].gameObject.name = "Route Caption " + i;
+                routeLabels[i].color = i == 1 ? new Color(.6f, 1, .8f) : new Color(1, .93f, .5f);
             }
         }
         private void UpdateComboUI()
@@ -52,7 +51,7 @@ namespace CloudHop
             comboLabel.text = UIText.Get("combo.count", player.Combo.Count);
             boostLabel.text = player.Combo.BoostReady ? UIText.Get("combo.ready") : UIText.Get("combo.progress", player.Combo.Count % ComboChain.Required, ComboChain.Required);
             boostLabel.color = player.Combo.BoostReady ? new Color(1, .87f, .25f) : Color.white;
-            comboHint.text = player.Combo.BoostReady ? UIText.Get("combo.use_hint") : UIText.Get("combo.landing_hint");
+            comboHint.text = player.Combo.BoostReady ? UIText.Get(PlatformEntry.IsMobile ? "mobile.boost_hint" : "combo.use_hint") : UIText.Get("combo.landing_hint");
             if (Time.time >= noticeUntil) comboNotice.text = "";
             float remaining = Mathf.Max(0, noticeUntil - Time.time);
             comboNotice.transform.localScale = Vector3.one * (1 + .12f * Mathf.Clamp01((remaining - .65f) / .25f));
@@ -61,13 +60,30 @@ namespace CloudHop
         {
             var camera = Camera.main;
             if (camera == null) return;
+            var course = stages.CurrentCourse;
+            float bestDistance = float.PositiveInfinity;
+            bool found = false;
+            foreach (var route in course.Definition.choiceRoutes)
+            {
+                var launch = course.Platforms[route.launchIndex].transform;
+                var target = course.Platforms[route.rejoinIndex].transform;
+                if (player.transform.position.x > target.position.x + 1.5f) continue;
+                float distance = Mathf.Abs(player.transform.position.x - launch.position.x);
+                if (distance >= bestDistance) continue;
+                bestDistance = distance; found = true;
+                routePlatforms[0] = launch;
+                routePlatforms[1] = course.Platforms[route.safeIndex].transform;
+                routePlatforms[2] = target;
+            }
             for (int i = 0; i < routeLabels.Length; i++)
             {
-                if (routeLabels[i] == null || routePlatforms[i] == null) continue;
+                if (routeLabels[i] == null) continue;
+                if (!found) { routeLabels[i].gameObject.SetActive(false); continue; }
                 var point = camera.WorldToViewportPoint(routePlatforms[i].position + Vector3.up * 1.6f);
                 bool visible = routePlatforms[i].gameObject.activeInHierarchy && point.z > 0 && point.x > .08f && point.x < .92f && point.y > .25f && point.y < .75f;
                 routeLabels[i].gameObject.SetActive(visible);
-                routeLabels[i].rectTransform.anchoredPosition = new Vector2((point.x - .5f) * canvas.rect.width, (point.y - .5f) * canvas.rect.height);
+                var canvasPoint = new Vector3((point.x - .5f) * canvas.rect.width, (point.y - .5f) * canvas.rect.height, 0);
+                routeLabels[i].rectTransform.position = canvas.TransformPoint(canvasPoint);
             }
         }
         private void OnComboLanding(ComboLanding result)

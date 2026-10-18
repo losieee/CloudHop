@@ -50,14 +50,14 @@ MonoBehaviour:
   - position: {x: 38.899998, y: 1.3}
     width: 1.5
     section: HIGH STEPS
-  - position: {x: 42.399998, y: 0.19999999}
-    width: 1.5
+  - position: {x: 42.399998, y: -0.3}
+    width: 2.4
     section: HIGH STEPS
-  - position: {x: 46.8, y: -1}
-    width: 1.6
+  - position: {x: 46.8, y: 1.2}
+    width: 2.6
     section: HIGH STEPS
-  - position: {x: 50.5, y: 0.099999994}
-    width: 1.5
+  - position: {x: 50.5, y: 0.5}
+    width: 1.8
     section: HIGH STEPS
   - position: {x: 54.3, y: 0.99999994}
     width: 1.4
@@ -77,11 +77,11 @@ MonoBehaviour:
   - position: {x: 75.99999, y: -0.20000002}
     width: 1.6
     section: WIDE GAPS
-  - position: {x: 79.59999, y: -0.8}
-    width: 1.5
+  - position: {x: 79.59999, y: -1}
+    width: 2.8
     section: WIDE GAPS
-  - position: {x: 84.59999, y: -0.5}
-    width: 1.6
+  - position: {x: 83.799995, y: -0.5}
+    width: 2.1
     section: WIDE GAPS
   - position: {x: 88.29999, y: 0.3}
     width: 1.4
@@ -188,3 +188,12 @@ MonoBehaviour:
   - position: {x: 228.20001, y: -0.3}
     width: 3.4
     section: FINAL EXAM
+  choiceRoutes:
+  - launchIndex: 10
+    safeIndex: 11
+    rejoinIndex: 12
+    arcHeight: 3.5
+  - launchIndex: 19
+    safeIndex: 20
+    rejoinIndex: 21
+    arcHeight: 2.7

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CloudHop
 {
@@ -9,6 +9,7 @@ namespace CloudHop
         private BoxCollider2D surface;
         private LineRenderer marker;
         private Material material;
+        private SpriteRenderer target;
         private float flash;
         public float HalfWidth => Mathf.Min(.8f, surface.bounds.size.x * Fraction * .5f);
         private void Awake()
@@ -21,6 +22,10 @@ namespace CloudHop
             marker.useWorldSpace = true; marker.positionCount = 4;
             marker.startWidth = marker.endWidth = .065f;
             marker.sortingOrder = 25;
+            target = new GameObject("Landing target artwork").AddComponent<SpriteRenderer>();
+            target.transform.SetParent(transform, false);
+            target.sprite = HudArt.Get("LandingTarget");
+            target.sortingOrder = 24;
         }
         public void Configure(float fraction) => Fraction = Mathf.Clamp(fraction, .2f, .7f);
         public bool Contains(float playerCenterX) => Mathf.Abs(playerCenterX - surface.bounds.center.x) <= HalfWidth;
@@ -28,8 +33,18 @@ namespace CloudHop
         private void LateUpdate()
         {
             marker.enabled = surface.enabled;
+            target.enabled = surface.enabled && target.sprite != null;
             var bounds = surface.bounds;
             float x = bounds.center.x, y = bounds.max.y + .05f, half = HalfWidth;
+            if (target.sprite != null)
+            {
+                target.transform.position = new Vector3(x, y + .06f, 0);
+                var scale = transform.lossyScale;
+                target.transform.localScale = new Vector3(half * 2 / target.sprite.bounds.size.x / Mathf.Abs(scale.x),
+                    (.18f + .06f * flash / .32f) / target.sprite.bounds.size.y / Mathf.Abs(scale.y), 1);
+                target.color = new Color(1, 1, 1, flash > 0 ? 1 : .8f);
+            }
+            marker.startWidth = marker.endWidth = flash > 0 ? .065f : .025f;
             marker.SetPosition(0, new Vector3(x-half,y+.09f,0));
             marker.SetPosition(1, new Vector3(x-half,y,0));
             marker.SetPosition(2, new Vector3(x+half,y,0));

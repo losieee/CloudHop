@@ -55,7 +55,7 @@ namespace CloudHop
         }
         private void RenderRunResult()
         {
-            var retry=result.transform.Find("Retry").gameObject;
+            var retry=Array.Find(result.GetComponentsInChildren<Button>(true), button=>button.name=="Retry").gameObject;
             retry.SetActive(true);
             retry.GetComponentInChildren<TMP_Text>().text=run.Completed ? UIText.Get("result.new_run") : UIText.Get("common.retry");
             resultScore.richText=false;

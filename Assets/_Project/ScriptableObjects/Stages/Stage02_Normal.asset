@@ -15,6 +15,7 @@ MonoBehaviour:
   stageName: STAGE 2 - WIND RIDGE
   difficulty: NORMAL
   skyColor: {r: 0.22, g: 0.22, b: 0.4, a: 1}
+  followElevation: 1
   platformColor: {r: 0.8, g: 0.82, b: 1, a: 1}
   platforms:
   - position: {x: 0, y: -0.3}
@@ -44,8 +45,8 @@ MonoBehaviour:
   - position: {x: 31.699997, y: -0.3}
     width: 3.2
     section: CHANGING RHYTHM
-  - position: {x: 35.199997, y: 0.19999999}
-    width: 2.3
+  - position: {x: 35.199997, y: -1}
+    width: 3.6
     section: CLOUD STAIRS
   - position: {x: 38.999996, y: 0.7}
     width: 2.2
@@ -53,47 +54,47 @@ MonoBehaviour:
   - position: {x: 42.599995, y: 1.0999999}
     width: 2
     section: CLOUD STAIRS
-  - position: {x: 46.999996, y: 0.39999998}
+  - position: {x: 46.999996, y: 0.5}
     width: 2.2
-    section: CLOUD STAIRS
-  - position: {x: 50.799995, y: -0.3}
+    section: RIDGE ASCENT
+  - position: {x: 50.799995, y: 1.2}
     width: 2.3
-    section: CLOUD STAIRS
-  - position: {x: 54.199997, y: -0.90000004}
+    section: RIDGE ASCENT
+  - position: {x: 54.199997, y: 1.8}
     width: 2.2
-    section: CLOUD STAIRS
-  - position: {x: 58.299995, y: -0.5}
+    section: RIDGE ASCENT
+  - position: {x: 58.299995, y: 1.2}
     width: 2.1
-    section: CLOUD STAIRS
-  - position: {x: 62.299995, y: -0.3}
+    section: RIDGE ASCENT
+  - position: {x: 62.299995, y: 0.7}
     width: 3.2
-    section: CLOUD STAIRS
-  - position: {x: 67.1, y: -0.3}
+    section: RIDGE ASCENT
+  - position: {x: 67.1, y: 0}
     width: 2.4
-    section: WIDE CROSSINGS
-  - position: {x: 72, y: -0.5}
+    section: LOWER WIND VALLEY
+  - position: {x: 72, y: -0.70000005}
     width: 2.3
-    section: WIDE CROSSINGS
-  - position: {x: 75.4, y: 0}
+    section: LOWER WIND VALLEY
+  - position: {x: 75.4, y: 0.099999994}
     width: 2.1
-    section: WIDE CROSSINGS
-  - position: {x: 80.4, y: 0}
+    section: LOWER WIND VALLEY
+  - position: {x: 80.4, y: 0.90000004}
     width: 2.4
-    section: WIDE CROSSINGS
-  - position: {x: 84, y: 0.39999998}
+    section: LOWER WIND VALLEY
+  - position: {x: 84, y: 0.3}
     width: 2.1
-    section: WIDE CROSSINGS
-  - position: {x: 88.8, y: -0.10000001}
+    section: LOWER WIND VALLEY
+  - position: {x: 88.8, y: -0.5}
     width: 2.2
-    section: WIDE CROSSINGS
-  - position: {x: 92.3, y: -0.5}
+    section: LOWER WIND VALLEY
+  - position: {x: 92.3, y: 0.19999999}
     width: 2.1
-    section: WIDE CROSSINGS
+    section: LOWER WIND VALLEY
   - position: {x: 96.9, y: -0.3}
     width: 3.2
     section: WIDE CROSSINGS
-  - position: {x: 100.6, y: 0.099999994}
-    width: 2
+  - position: {x: 100.6, y: -1}
+    width: 3.6
     section: SMALL ISLANDS
   - position: {x: 104.7, y: -0.3}
     width: 1.9
@@ -101,66 +102,348 @@ MonoBehaviour:
   - position: {x: 108.2, y: 0.3}
     width: 2
     section: SMALL ISLANDS
-  - position: {x: 112.5, y: -0.10000001}
+  - position: {x: 112.5, y: 0.59999996}
     width: 1.8
-    section: SMALL ISLANDS
-  - position: {x: 116.1, y: -0.70000005}
+    section: FLOATING STEPS
+  - position: {x: 116.1, y: 1.0999999}
     width: 2
-    section: SMALL ISLANDS
-  - position: {x: 120.299995, y: -0.20000002}
+    section: FLOATING STEPS
+  - position: {x: 120.299995, y: 1.5999999}
     width: 1.9
-    section: SMALL ISLANDS
-  - position: {x: 124.1, y: 0.19999999}
+    section: FLOATING STEPS
+  - position: {x: 124.1, y: 0.8}
     width: 2
-    section: SMALL ISLANDS
-  - position: {x: 128.2, y: -0.3}
+    section: FLOATING STEPS
+  - position: {x: 128.2, y: 0.099999994}
     width: 3.2
-    section: SMALL ISLANDS
-  - position: {x: 131.9, y: 0.59999996}
+    section: FLOATING STEPS
+  - position: {x: 131.9, y: 0.8}
     width: 2.2
-    section: HIGH AND LOW
-  - position: {x: 136.5, y: -0.5}
+    section: SWAYING RIDGE
+  - position: {x: 136.5, y: 0.3}
     width: 2.2
-    section: HIGH AND LOW
-  - position: {x: 140, y: 0.5}
+    section: SWAYING RIDGE
+  - position: {x: 140, y: 0.99999994}
     width: 2.1
-    section: HIGH AND LOW
-  - position: {x: 144.8, y: -0.8}
+    section: SWAYING RIDGE
+  - position: {x: 144.8, y: 0.19999999}
     width: 2.3
-    section: HIGH AND LOW
-  - position: {x: 148.5, y: 0.099999994}
+    section: SWAYING RIDGE
+  - position: {x: 148.5, y: 0.8}
     width: 2
-    section: HIGH AND LOW
-  - position: {x: 152.9, y: -0.70000005}
+    section: SWAYING RIDGE
+  - position: {x: 152.9, y: 0.19999999}
     width: 2.1
-    section: HIGH AND LOW
-  - position: {x: 156.5, y: 0.19999999}
+    section: SWAYING RIDGE
+  - position: {x: 156.5, y: 0.90000004}
     width: 2
-    section: HIGH AND LOW
-  - position: {x: 160.7, y: -0.3}
+    section: SWAYING RIDGE
+  - position: {x: 160.7, y: 0.3}
     width: 3.2
-    section: HIGH AND LOW
-  - position: {x: 165.2, y: 0}
+    section: SWAYING RIDGE
+  - position: {x: 165.2, y: 0.90000004}
     width: 2.1
-    section: RIDGE FINALE
-  - position: {x: 168.7, y: 0.7}
+    section: SUMMIT DESCENT
+  - position: {x: 168.7, y: 1.5999999}
     width: 1.9
-    section: RIDGE FINALE
-  - position: {x: 173.5, y: 0.099999994}
+    section: SUMMIT DESCENT
+  - position: {x: 173.5, y: 1.9000001}
     width: 2.2
-    section: RIDGE FINALE
-  - position: {x: 177.1, y: -0.6}
+    section: SUMMIT DESCENT
+  - position: {x: 177.1, y: 2.5}
     width: 2
-    section: RIDGE FINALE
-  - position: {x: 181.40001, y: 0.099999994}
+    section: SUMMIT DESCENT
+  - position: {x: 181.40001, y: 1.9000001}
     width: 1.9
-    section: RIDGE FINALE
-  - position: {x: 185.20001, y: 0.59999996}
+    section: SUMMIT DESCENT
+  - position: {x: 185.20001, y: 1.2}
     width: 2.1
-    section: RIDGE FINALE
-  - position: {x: 189.90001, y: -0.10000001}
+    section: SUMMIT DESCENT
+  - position: {x: 189.90001, y: 0.39999998}
     width: 2
-    section: RIDGE FINALE
+    section: SUMMIT DESCENT
   - position: {x: 194.3, y: -0.3}
     width: 3.6
-    section: RIDGE FINALE
+    section: SUMMIT DESCENT
+  coins:
+  - position: {x: 0.7, y: 1.289104}
+    value: 1
+  - position: {x: 1.4, y: 1.713656}
+    value: 1
+  - position: {x: 2.1, y: 1.7536559}
+    value: 1
+  - position: {x: 2.8, y: 1.4091039}
+    value: 1
+  - position: {x: 4.4, y: 1.951376}
+    value: 1
+  - position: {x: 5.3, y: 2.587064}
+    value: 1
+  - position: {x: 6.2, y: 2.5870643}
+    value: 1
+  - position: {x: 7.1, y: 1.9513762}
+    value: 1
+  - position: {x: 8.64, y: 1.4229081}
+    value: 1
+  - position: {x: 9.28, y: 1.8443621}
+    value: 1
+  - position: {x: 9.92, y: 1.944362}
+    value: 1
+  - position: {x: 10.559999, y: 1.722908}
+    value: 1
+  - position: {x: 24.859999, y: 1.5037174}
+    value: 1
+  - position: {x: 25.519999, y: 1.8855761}
+    value: 1
+  - position: {x: 26.179998, y: 1.9255761}
+    value: 1
+  - position: {x: 26.839998, y: 1.6237173}
+    value: 1
+  - position: {x: 43.479996, y: 2.9754992}
+    value: 1
+  - position: {x: 44.359997, y: 3.4632487}
+    value: 1
+  - position: {x: 45.239994, y: 3.3432486}
+    value: 1
+  - position: {x: 46.119995, y: 2.615499}
+    value: 1
+  - position: {x: 47.759995, y: 2.3266006}
+    value: 1
+  - position: {x: 48.519997, y: 2.919901}
+    value: 1
+  - position: {x: 49.279995, y: 3.059901}
+    value: 1
+  - position: {x: 50.039997, y: 2.7466006}
+    value: 1
+  - position: {x: 51.479996, y: 2.8257837}
+    value: 1
+  - position: {x: 52.159996, y: 3.3086758}
+    value: 1
+  - position: {x: 52.839996, y: 3.4286757}
+    value: 1
+  - position: {x: 53.519997, y: 3.1857839}
+    value: 1
+  - position: {x: 55.019997, y: 3.5153983}
+    value: 1
+  - position: {x: 55.839996, y: 3.9230976}
+    value: 1
+  - position: {x: 56.659996, y: 3.8030975}
+    value: 1
+  - position: {x: 57.479996, y: 3.1553984}
+    value: 1
+  - position: {x: 59.099995, y: 2.8845441}
+    value: 1
+  - position: {x: 59.899994, y: 3.2868161}
+    value: 1
+  - position: {x: 60.699997, y: 3.1868162}
+    value: 1
+  - position: {x: 61.499996, y: 2.5845442}
+    value: 1
+  - position: {x: 63.259995, y: 2.7865453}
+    value: 1
+  - position: {x: 64.21999, y: 3.369818}
+    value: 1
+  - position: {x: 65.18, y: 3.2298179}
+    value: 1
+  - position: {x: 66.14, y: 2.3665454}
+    value: 1
+  - position: {x: 68.08, y: 2.1474447}
+    value: 1
+  - position: {x: 69.06, y: 2.7611673}
+    value: 1
+  - position: {x: 70.04, y: 2.6211672}
+    value: 1
+  - position: {x: 71.02, y: 1.7274446}
+    value: 1
+  - position: {x: 76.4, y: 2.6096}
+    value: 1
+  - position: {x: 77.4, y: 3.5544}
+    value: 1
+  - position: {x: 78.4, y: 3.7144003}
+    value: 1
+  - position: {x: 79.4, y: 3.0896}
+    value: 1
+  - position: {x: 81.12, y: 2.37368}
+    value: 1
+  - position: {x: 81.840004, y: 2.6605198}
+    value: 1
+  - position: {x: 82.56, y: 2.54052}
+    value: 1
+  - position: {x: 83.28, y: 2.01368}
+    value: 1
+  - position: {x: 84.96, y: 2.3665452}
+    value: 1
+  - position: {x: 85.92, y: 2.9298182}
+    value: 1
+  - position: {x: 86.880005, y: 2.7698183}
+    value: 1
+  - position: {x: 87.840004, y: 1.8865458}
+    value: 1
+  - position: {x: 89.5, y: 1.189104}
+    value: 1
+  - position: {x: 90.200005, y: 1.713656}
+    value: 1
+  - position: {x: 90.9, y: 1.8536559}
+    value: 1
+  - position: {x: 91.600006, y: 1.6091039}
+    value: 1
+  - position: {x: 109.06, y: 2.3008778}
+    value: 1
+  - position: {x: 109.92, y: 2.9413166}
+    value: 1
+  - position: {x: 110.78, y: 3.0013165}
+    value: 1
+  - position: {x: 111.64, y: 2.4808779}
+    value: 1
+  - position: {x: 113.22, y: 2.2936797}
+    value: 1
+  - position: {x: 113.94, y: 2.8005197}
+    value: 1
+  - position: {x: 114.659996, y: 2.9005198}
+    value: 1
+  - position: {x: 115.38, y: 2.59368}
+    value: 1
+  - position: {x: 116.939995, y: 3.087508}
+    value: 1
+  - position: {x: 117.78, y: 3.741262}
+    value: 1
+  - position: {x: 118.619995, y: 3.8412619}
+    value: 1
+  - position: {x: 119.46, y: 3.3875077}
+    value: 1
+  - position: {x: 121.06, y: 3.1266022}
+    value: 1
+  - position: {x: 121.82, y: 3.4199035}
+    value: 1
+  - position: {x: 122.579994, y: 3.2599034}
+    value: 1
+  - position: {x: 123.34, y: 2.6466024}
+    value: 1
+  - position: {x: 124.92, y: 2.4953983}
+    value: 1
+  - position: {x: 125.74, y: 2.8830974}
+    value: 1
+  - position: {x: 126.56, y: 2.7430973}
+    value: 1
+  - position: {x: 127.38, y: 2.075398}
+    value: 1
+  - position: {x: 145.54001, y: 1.9595115}
+    value: 1
+  - position: {x: 146.28, y: 2.5092673}
+    value: 1
+  - position: {x: 147.02, y: 2.6292672}
+    value: 1
+  - position: {x: 147.76, y: 2.3195114}
+    value: 1
+  - position: {x: 149.38, y: 2.675495}
+    value: 1
+  - position: {x: 150.26, y: 3.1632423}
+    value: 1
+  - position: {x: 151.14, y: 3.0432425}
+    value: 1
+  - position: {x: 152.01999, y: 2.315495}
+    value: 1
+  - position: {x: 153.62, y: 1.9336834}
+    value: 1
+  - position: {x: 154.34, y: 2.480525}
+    value: 1
+  - position: {x: 155.06, y: 2.6205251}
+    value: 1
+  - position: {x: 155.78, y: 2.3536832}
+    value: 1
+  - position: {x: 157.34, y: 2.6675081}
+    value: 1
+  - position: {x: 158.18, y: 3.101262}
+    value: 1
+  - position: {x: 159.02, y: 2.9812622}
+    value: 1
+  - position: {x: 159.86, y: 2.307508}
+    value: 1
+  - position: {x: 161.59999, y: 2.471376}
+    value: 1
+  - position: {x: 162.5, y: 3.2270641}
+    value: 1
+  - position: {x: 163.4, y: 3.3470643}
+    value: 1
+  - position: {x: 164.3, y: 2.8313766}
+    value: 1
+  - position: {x: 165.9, y: 2.5891042}
+    value: 1
+  - position: {x: 166.59999, y: 3.113656}
+    value: 1
+  - position: {x: 167.3, y: 3.253656}
+    value: 1
+  - position: {x: 168, y: 3.009104}
+    value: 1
+  - position: {x: 177.96, y: 4.320878}
+    value: 1
+  - position: {x: 178.82, y: 4.7813168}
+    value: 1
+  - position: {x: 179.68001, y: 4.661317}
+    value: 1
+  - position: {x: 180.54001, y: 3.960878}
+    value: 1
+  - position: {x: 182.16, y: 3.4466023}
+    value: 1
+  - position: {x: 182.92001, y: 3.7599037}
+    value: 1
+  - position: {x: 183.68001, y: 3.6199036}
+    value: 1
+  - position: {x: 184.44002, y: 3.0266025}
+    value: 1
+  - position: {x: 186.14001, y: 3.2068968}
+    value: 1
+  - position: {x: 187.08002, y: 3.740345}
+    value: 1
+  - position: {x: 188.02, y: 3.5803452}
+    value: 1
+  - position: {x: 188.96, y: 2.7268968}
+    value: 1
+  - position: {x: 190.78001, y: 2.255495}
+    value: 1
+  - position: {x: 191.66, y: 2.7232425}
+    value: 1
+  - position: {x: 192.54001, y: 2.5832424}
+    value: 1
+  - position: {x: 193.42, y: 1.835495}
+    value: 1
+  - position: {x: 63.039997, y: 2.8395152}
+    value: 1
+  - position: {x: 63.78, y: 3.7692726}
+    value: 1
+  - position: {x: 64.52, y: 4.269273}
+    value: 5
+  - position: {x: 65.26, y: 4.3395147}
+    value: 1
+  - position: {x: 67, y: 5.5496}
+    value: 1
+  - position: {x: 68, y: 6.3344}
+    value: 1
+  - position: {x: 69, y: 6.3344}
+    value: 5
+  - position: {x: 70, y: 5.5496}
+    value: 1
+  - position: {x: 72, y: 5.4096003}
+    value: 1
+  - position: {x: 73, y: 6.0544004}
+    value: 1
+  - position: {x: 74, y: 5.9144}
+    value: 5
+  - position: {x: 75, y: 4.9896}
+    value: 1
+  - position: {x: 76.88, y: 4.175499}
+    value: 1
+  - position: {x: 77.76, y: 4.4632487}
+    value: 1
+  - position: {x: 78.64, y: 4.1432486}
+    value: 5
+  - position: {x: 79.520004, y: 3.215499}
+    value: 1
+  choiceRoutes:
+  - launchIndex: 8
+    safeIndex: 9
+    rejoinIndex: 10
+    arcHeight: 2.4
+  - launchIndex: 24
+    safeIndex: 25
+    rejoinIndex: 26
+    arcHeight: 2.4

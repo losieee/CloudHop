@@ -1,34 +1,45 @@
+using System.Collections.Generic;
 using UnityEngine;
-
 namespace CloudHop
 {
-    // The ordinary landing remains available. This arc advertises skipping it, not a mandatory new gap.
+    // Optional routes connect real scene platforms; every middle landing remains available.
     public sealed class ComboShortcutGuide : MonoBehaviour
     {
-        private Transform launch, target;
-        private LineRenderer arc;
+        private readonly List<LineRenderer> arcs = new List<LineRenderer>();
+        private StageCourse course;
         private Material material;
-        public void Configure(StageCourse course)
+        public void Configure(StageCourse source)
         {
-            if (arc != null) return;
-            launch = course.Platforms[3].transform; target = course.Platforms[5].transform;
-            arc = new GameObject("Optional boost route").AddComponent<LineRenderer>();
-            arc.transform.SetParent(transform, false);
-            material = new Material(Shader.Find("Sprites/Default")); arc.sharedMaterial = material;
-            arc.useWorldSpace = true; arc.positionCount = 20;
-            arc.startWidth = arc.endWidth = .035f;
-            arc.startColor = arc.endColor = new Color(1, .87f, .25f, .45f);
-            arc.sortingOrder = 2;
+            if (course != null) return;
+            course = source;
+            material = new Material(Shader.Find("Sprites/Default"));
+            foreach (var route in course.Definition.choiceRoutes)
+            {
+                var arc = new GameObject("Optional boost route " + route.launchIndex).AddComponent<LineRenderer>();
+                arc.transform.SetParent(transform, false);
+                arc.sharedMaterial = material;
+                arc.useWorldSpace = true; arc.positionCount = 24;
+                arc.startWidth = arc.endWidth = .035f;
+                arc.startColor = arc.endColor = new Color(1, .87f, .25f, .5f);
+                arc.sortingOrder = 2;
+                arcs.Add(arc);
+            }
         }
         private void LateUpdate()
         {
-            if (arc == null) return;
-            for (int i = 0; i < arc.positionCount; i++)
+            if (course == null) return;
+            for (int n = 0; n < arcs.Count; n++)
             {
-                float t = (float)i / (arc.positionCount - 1);
-                var position = Vector3.Lerp(launch.position, target.position, t);
-                position.y += .7f + Mathf.Sin(Mathf.PI * t) * 2;
-                arc.SetPosition(i, position);
+                var route = course.Definition.choiceRoutes[n];
+                var from = course.Platforms[route.launchIndex].transform.position;
+                var to = course.Platforms[route.rejoinIndex].transform.position;
+                for (int i = 0; i < arcs[n].positionCount; i++)
+                {
+                    float t = (float)i / (arcs[n].positionCount - 1);
+                    var point = Vector3.Lerp(from, to, t);
+                    point.y += .7f + Mathf.Sin(Mathf.PI * t) * route.arcHeight;
+                    arcs[n].SetPosition(i, point);
+                }
             }
         }
         private void OnDestroy() { if (material != null) Destroy(material); }

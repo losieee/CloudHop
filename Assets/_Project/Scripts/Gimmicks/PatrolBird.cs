@@ -30,7 +30,12 @@ namespace CloudHop
         {
             if (!IsActive) return;
             var player = other.GetComponentInParent<PlayerController>();
-            if (player != null && !player.IsGrounded) player.TryKnockback(knockback);
+            if (player != null && !player.IsGrounded && player.TryKnockback(knockback))
+            {
+                var effects = player.GetComponent<BirdHitEffects>();
+                if (effects == null) effects = player.gameObject.AddComponent<BirdHitEffects>();
+                effects.Play((player.transform.position + transform.position) * .5f);
+            }
         }
         public override void ResetMechanic()
         {
