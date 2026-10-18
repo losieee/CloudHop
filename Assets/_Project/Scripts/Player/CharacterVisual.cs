@@ -15,6 +15,8 @@ namespace CloudHop
         private bool touchedGround;
         private bool airborne;
         private float landingUntil;
+        private bool slidingPose;
+        private Quaternion originalRotation;
 
         private void OnEnable()
         {
@@ -34,6 +36,7 @@ namespace CloudHop
 
         private void ResetPose()
         {
+            RestoreSlidePose();
             touchedGround = false;
             airborne = false;
             landingUntil = 0;
@@ -63,6 +66,7 @@ namespace CloudHop
         {
             if (initialized) return;
             initialized = true;
+            originalRotation = transform.localRotation;
             originalScale = transform.localScale;
             originalPosition = transform.localPosition;
             player = GetComponentInParent<PlayerController>();
@@ -86,8 +90,31 @@ namespace CloudHop
             ResetPose();
         }
 
+        private void RestoreSlidePose()
+        {
+            if (!slidingPose) return;
+            slidingPose = false;
+            transform.localRotation = originalRotation;
+            transform.localScale = character.overrideVisualTransform ? character.visualScale : originalScale;
+            transform.localPosition = character.overrideVisualTransform ? character.visualOffset : originalPosition;
+            if (animator != null) animator.enabled = character.animatorController != null;
+        }
+
         private void LateUpdate()
         {
+            if (player != null && character != null && body != null && body.simulated && player.IsSliding)
+            {
+                slidingPose = true;
+                if (animator != null) animator.enabled = false;
+                spriteRenderer.sprite = character.chargeSprite != null ? character.chargeSprite : character.landingSprite != null ? character.landingSprite : character.sprite;
+                var scale = character.overrideVisualTransform ? character.visualScale : originalScale;
+                var offset = character.overrideVisualTransform ? character.visualOffset : originalPosition;
+                transform.localScale = Vector3.Scale(scale, new Vector3(1.05f, .94f, 1));
+                transform.localRotation = originalRotation * Quaternion.Euler(0,0, player.SlideAngle * .28f + Mathf.Sin(Time.time*22)*1.5f);
+                transform.localPosition = offset + Vector3.up * (Mathf.Sin(Time.time*22)*.015f);
+                return;
+            }
+            RestoreSlidePose();
             if (character == null || player == null || body == null ||
                 character.animatorController != null || !body.simulated) return;
             Sprite pose = character.sprite;

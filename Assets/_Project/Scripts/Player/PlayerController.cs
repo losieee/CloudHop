@@ -35,6 +35,8 @@ namespace CloudHop
         private bool boostedThisJump;
         public bool IsGrounded { get; private set; }
         public bool IsCharging { get; private set; }
+        public bool IsSliding => IsGrounded && ground != null && ground.GetComponent<SlidingSlope>() != null;
+        public float SlideAngle => IsSliding ? ground.GetComponent<SlidingSlope>().DownhillAngle(body.position.x) : 0;
         public Platform GroundPlatform => ground;
         public float HitProtectionRemaining { get; private set; }
         public int HitsTaken { get; private set; }
@@ -129,7 +131,7 @@ namespace CloudHop
             {
                 boostRemaining = 0;
                 var zone = support.GetComponent<PerfectLandingZone>();
-                if (comboJump && zone != null)
+                if (comboJump && zone != null && support.GetComponent<SlidingSlope>() == null)
                 {
                     var feedback = Combo.Land(support.GetInstanceID(), zone.Contains(body.position.x));
                     if (feedback == ComboLanding.Perfect) zone.Pulse();
@@ -155,7 +157,11 @@ namespace CloudHop
                 ground = null;
                 awaitingSeparation = true;
             }
-            else if (IsGrounded) body.linearVelocity = SupportVelocity(support);
+            else if (IsGrounded)
+            {
+                var slope = support.GetComponent<SlidingSlope>();
+                body.linearVelocity = slope != null ? slope.VelocityAt(body.position.x) : SupportVelocity(support);
+            }
         }
         private static Vector2 SupportVelocity(Platform platform)
         {

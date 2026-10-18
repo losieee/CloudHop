@@ -108,12 +108,12 @@ MonoBehaviour:
   - position: {x: 116.1, y: 1.0999999}
     width: 2
     section: FLOATING STEPS
-  - position: {x: 120.299995, y: 1.5999999}
+  - position: {x: 120.299995, y: -0.90000004}
     width: 1.9
-    section: FLOATING STEPS
-  - position: {x: 124.1, y: 0.8}
+    section: SLIDE EXIT
+  - position: {x: 124.1, y: -0.10000001}
     width: 2
-    section: FLOATING STEPS
+    section: SLIDE EXIT
   - position: {x: 128.2, y: 0.099999994}
     width: 3.2
     section: FLOATING STEPS
@@ -300,24 +300,6 @@ MonoBehaviour:
     value: 1
   - position: {x: 114.659996, y: 2.9005198}
     value: 1
-  - position: {x: 115.38, y: 2.59368}
-    value: 1
-  - position: {x: 116.939995, y: 3.087508}
-    value: 1
-  - position: {x: 117.78, y: 3.741262}
-    value: 1
-  - position: {x: 118.619995, y: 3.8412619}
-    value: 1
-  - position: {x: 119.46, y: 3.3875077}
-    value: 1
-  - position: {x: 121.06, y: 3.1266022}
-    value: 1
-  - position: {x: 121.82, y: 3.4199035}
-    value: 1
-  - position: {x: 122.579994, y: 3.2599034}
-    value: 1
-  - position: {x: 123.34, y: 2.6466024}
-    value: 1
   - position: {x: 124.92, y: 2.4953983}
     value: 1
   - position: {x: 125.74, y: 2.8830974}
@@ -437,6 +419,22 @@ MonoBehaviour:
   - position: {x: 78.64, y: 4.1432486}
     value: 5
   - position: {x: 79.520004, y: 3.215499}
+    value: 1
+  - position: {x: 117.2, y: 1.4051057}
+    value: 1
+  - position: {x: 117.75, y: 0.9561237}
+    value: 1
+  - position: {x: 118.299995, y: 0.50714785}
+    value: 1
+  - position: {x: 118.85, y: 0.058165763}
+    value: 1
+  - position: {x: 121.06, y: 0.9466023}
+    value: 1
+  - position: {x: 121.82, y: 1.5599036}
+    value: 1
+  - position: {x: 122.579994, y: 1.7199035}
+    value: 1
+  - position: {x: 123.34, y: 1.4266024}
     value: 1
   choiceRoutes:
   - launchIndex: 8

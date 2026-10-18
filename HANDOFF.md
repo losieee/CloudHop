@@ -100,3 +100,10 @@
 - 코인 136개(총 152점), 기존 StageCollectibles로 재시작 복원. 기존 8/24 콤보 지름길 및 상승기류 유지.
 - StageLayoutTests, ChoiceRouteTests 통과. RidgeMapTests는 변경 구간 12~48의 기본 점프, 상단 경로, 활성 이동 발판 진입/이탈, 수집 합산/중복 방지/재시작을 검증해 통과.
 - 세부 배치/편집: Assets/_Project/RIDGE_MAP_GUIDE.md.
+
+## 2스테이지 미끄럼 언덕 (2026-10-18)
+- 29번 발판: 평지 진입 → 얼음 비탈, 30번 평지에서 정지. 31~32번으로 다시 상승.
+- SlidingSlope의 표면 속도를 PlayerController에서 적용. 미끄럼 중에도 충전 점프 가능. 슬라이딩 전용 자세는 세 캐릭터의 chargeSprite에 기울기/흔들림을 합성하고 이탈/재시작 시 복원.
+- SlideTests(세 스킨, 28→29 진입, 자동 이동/정지, 도중 점프, 자세 복원, 출구 점프), StageLayoutTests, RidgeMapTests, ChoiceRouteTests 통과.
+- 아트/충돌은 SlideMapInstaller에서 생성. 재적용 순서와 편집 주의사항: Assets/_Project/SLIDE_GUIDE.md.
+- 현재 2스테이지에만 도입. 3스테이지에는 아직 미끄럼 지형을 배치하지 않음.
