@@ -9,3 +9,5 @@
 - `SlidingSlope`의 이동 속도/각도와 `SlideMapInstaller`의 PolygonCollider2D 및 메시가 지형을 정의합니다. 평지·비탈·출구의 접점은 함께 조정해야 합니다.
 - 맵 재적용 순서는 RidgeMapInstaller 후 SlideMapInstaller입니다. RidgeMapInstaller만 재실행하면 출구 높이와 코인이 기본 능선 배치로 돌아갑니다.
 - 미끄럼 구간 이후 코인 총 가치는 HUD에서 데이터 합산으로 표시됩니다.
+
+2026-10-19: 내리막 수평 길이를 2.45에서 1.55로 줄여 약 39도 → 52도로 변경. 높이 차이 2와 출구 위치는 유지. 경사 접지 기준과 하강 속도, 코인 궤적을 함께 조정.

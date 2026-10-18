@@ -420,13 +420,13 @@ MonoBehaviour:
     value: 5
   - position: {x: 79.520004, y: 3.215499}
     value: 1
-  - position: {x: 117.2, y: 1.4051057}
+  - position: {x: 118, y: 1.3919394}
     value: 1
-  - position: {x: 117.75, y: 0.9561237}
+  - position: {x: 118.35, y: 0.9403284}
     value: 1
-  - position: {x: 118.299995, y: 0.50714785}
+  - position: {x: 118.7, y: 0.4887175}
     value: 1
-  - position: {x: 118.85, y: 0.058165763}
+  - position: {x: 119.05, y: 0.0370967}
     value: 1
   - position: {x: 121.06, y: 0.9466023}
     value: 1

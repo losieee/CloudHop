@@ -23,7 +23,7 @@ namespace CloudHop.Editor
             var zone=platform.GetComponent<PerfectLandingZone>(); if(zone!=null)zone.enabled=true;
             if(platform.GetComponent<SlidingSlope>()==null)platform.gameObject.AddComponent<SlidingSlope>();
             var polygon=platform.GetComponent<PolygonCollider2D>(); if(polygon==null)polygon=platform.gameObject.AddComponent<PolygonCollider2D>();
-            polygon.points=new[]{new Vector2(-1,.3f),new Vector2(.8f,.3f),new Vector2(3.25f,-1.7f),new Vector2(3.25f,-2.6f),new Vector2(-1,-.8f)};
+            polygon.points=new[]{new Vector2(-1,.3f),new Vector2(1.7f,.3f),new Vector2(3.25f,-1.7f),new Vector2(3.25f,-2.6f),new Vector2(-1,-.8f)};
             string folder="Assets/_Project/Art/Slide";
             if(!AssetDatabase.IsValidFolder(folder))AssetDatabase.CreateFolder("Assets/_Project/Art","Slide");
             var material=AssetDatabase.LoadAssetAtPath<Material>(folder+"/Slide.mat");
@@ -32,7 +32,7 @@ namespace CloudHop.Editor
             if(mesh==null){mesh=new Mesh();AssetDatabase.CreateAsset(mesh,folder+"/Slope.asset");}else mesh.Clear();
             var vertices=new List<Vector3>();var colors=new List<Color>();var triangles=new List<int>();
             var rock=new Color(.45f,.48f,.7f);var ice=new Color(.35f,.86f,.96f);
-            var outline=new[]{new Vector2(-1,.3f),new Vector2(.8f,.3f),new Vector2(3.25f,-1.7f),new Vector2(3.05f,-2.4f),new Vector2(2.3f,-2.55f),new Vector2(1.4f,-1.9f),new Vector2(.5f,-2f),new Vector2(-.3f,-1.3f),new Vector2(-1,-.8f)};
+            var outline=new[]{new Vector2(-1,.3f),new Vector2(1.7f,.3f),new Vector2(3.25f,-1.7f),new Vector2(3.05f,-2.4f),new Vector2(2.3f,-2.55f),new Vector2(1.4f,-1.9f),new Vector2(.5f,-2f),new Vector2(-.3f,-1.3f),new Vector2(-1,-.8f)};
             for(int i=0;i<outline.Length;i++)
             {
                 int n=vertices.Count;
@@ -55,7 +55,7 @@ namespace CloudHop.Editor
             // A connected flat floor catches the slide before the next climbing jump.
             SetHeight(course,30,-.6f);SetHeight(course,31,.2f);
             var coins=data.coins.Where(c=>c.position.x<115.1f || c.position.x>124.1f).ToList();
-            for(int i=0;i<4;i++){float x=117.2f+i*.55f;coins.Add(new StageCoinLayout{position=new Vector2(x,1.4f-(x-116.9f)*2f/2.45f+.25f),value=1});}
+            for(int i=0;i<4;i++){float x=118f+i*.35f;coins.Add(new StageCoinLayout{position=new Vector2(x,1.4f-(x-117.8f)*2f/1.55f+.25f),value=1});}
             MeadowMapInstaller.Trail(coins,data.platforms[30].position+Vector2.up*.78f,data.platforms[31].position+Vector2.up*.78f,false);
             data.coins=coins.ToArray();EditorUtility.SetDirty(data);EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
             Debug.Log("SLIDE_INSTALLED");

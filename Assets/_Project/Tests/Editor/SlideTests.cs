@@ -43,7 +43,7 @@ namespace CloudHop.Tests
                 deadline=Time.realtimeSinceStartup+5;
                 while(!player.IsSliding && Time.realtimeSinceStartup<deadline)yield return null;
                 Assert.IsTrue(player.IsSliding,"Slope entered: "+skin);
-                while(player.transform.position.x<117.8f && Time.realtimeSinceStartup<deadline)yield return null;
+                while(player.transform.position.x<118.4f && Time.realtimeSinceStartup<deadline)yield return null;
                 Assert.IsTrue(player.IsSliding,"Stays attached on downhill: "+skin);
                 Assert.Less(player.GetComponent<Rigidbody2D>().linearVelocity.y,0);
                 var data=AssetDatabase.LoadAssetAtPath<CharacterData>("Assets/_Project/ScriptableObjects/"+skin+".asset");

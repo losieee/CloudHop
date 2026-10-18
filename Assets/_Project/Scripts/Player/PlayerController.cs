@@ -173,9 +173,11 @@ namespace CloudHop
             int count = body.GetContacts(contacts);
             for (int i = 0; i < count; i++)
             {
-                if (contacts[i].normal.y < minimumGroundNormal) continue;
+                if (contacts[i].normal.y < .5f) continue;
                 var platform = contacts[i].collider.GetComponentInParent<Platform>();
-                if (platform != null && body.linearVelocity.y - SupportVelocity(platform).y <= 0.2f) return platform;
+                if (platform == null) continue;
+                float requiredNormal = platform.GetComponent<SlidingSlope>() != null ? .5f : minimumGroundNormal;
+                if (contacts[i].normal.y >= requiredNormal && body.linearVelocity.y - SupportVelocity(platform).y <= 0.2f) return platform;
             }
             return null;
         }
