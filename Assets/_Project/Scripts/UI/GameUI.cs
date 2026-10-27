@@ -32,6 +32,9 @@ namespace CloudHop
         private Image chargeFill, progressFill, resultBackground;
         private TMP_Text resultTitle;
         private Button continueButton;
+        private TMP_Text jumpHint;
+        private bool shownJumpHint;
+        private float jumpHintUntil;
         private bool playing;
         private bool muted;
         private float volume;
@@ -55,6 +58,7 @@ namespace CloudHop
             BuildComboUI();
             BuildHudSkin();
             BuildCoinUI();
+            scoreLabel.gameObject.SetActive(false);bestLabel.gameObject.SetActive(false);
             BuildPlatformUI();
             HideScreens();
             ApplyAudio();
@@ -80,6 +84,7 @@ namespace CloudHop
             UpdateHudSkin();
             UpdatePlatformUI();
             UpdateCoinUI();
+            jumpHint.gameObject.SetActive(Time.time<jumpHintUntil && !player.Combo.BoostReady);
             scoreLabel.text=UIText.Get("hud.score",scores.Score);
             bestLabel.text=UIText.Get("hud.best",scores.Best);
             stageLabel.text=UIText.Get("hud.stage",stages.CurrentIndex+1,stages.StageCount);
@@ -146,6 +151,7 @@ namespace CloudHop
             player.gameObject.SetActive(true);
             player.GetComponentInChildren<CharacterVisual>(true).Apply(assets.characters[selectedCharacter]);
             game.SelectStage(index);
+            if(!shownJumpHint){shownJumpHint=true;jumpHintUntil=Time.time+5;}
             playing=true;
             Time.timeScale=1;
             input.enabled=true;
@@ -280,13 +286,11 @@ namespace CloudHop
             }
             Button(selection.transform,"Back",UIText.Get("common.back"),new Vector2(0,-300),new Vector2(240,66),"UI_Medium_Cream",ShowLobby);
 
-            Picture(hud.transform,"UI_Large_White",new Vector2(-440,320),new Vector2(330,85));
             scoreLabel=Label(hud.transform,"",new Vector2(-418,320),new Vector2(245,55),25,Color.white);
-            Picture(hud.transform,"UI_Large_Cyan",new Vector2(305,320),new Vector2(330,85));
             bestLabel=Label(hud.transform,"",new Vector2(327,320),new Vector2(245,55),25,Color.white);
             stageLabel=Label(hud.transform,"",new Vector2(0,325),new Vector2(220,45),23,Color.white);
             Button(hud.transform,"Pause","",new Vector2(555,320),new Vector2(65,65),"UI_Pause_Cloud",Pause);
-            Label(hud.transform,UIText.Get(PlatformEntry.IsMobile ? "mobile.jump_hint" : "hud.jump"),new Vector2(0,-260),new Vector2(350,35),20,Color.white);
+            jumpHint=Label(hud.transform,UIText.Get(PlatformEntry.IsMobile ? "mobile.jump_hint" : "hud.jump"),new Vector2(0,-260),new Vector2(350,35),20,Color.white);
             chargeFill=Meter(hud.transform,"Charge",new Vector2(0,-295),new Vector2(330,16),new Color(.15f,.9f,1));
             progressFill=Meter(hud.transform,"Progress",new Vector2(0,-345),new Vector2(520,8),new Color(1,.8f,.15f));
             progressLabel=Label(hud.transform,"",new Vector2(335,-345),new Vector2(120,30),18,Color.white);

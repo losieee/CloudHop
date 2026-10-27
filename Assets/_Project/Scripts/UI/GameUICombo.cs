@@ -49,7 +49,7 @@ namespace CloudHop
         private void UpdateComboUI()
         {
             comboLabel.text = UIText.Get("combo.count", player.Combo.Count);
-            boostLabel.text = player.Combo.BoostReady ? UIText.Get("combo.ready") : UIText.Get("combo.progress", player.Combo.Count % ComboChain.Required, ComboChain.Required);
+            boostLabel.text = player.Combo.BoostReady ? UIText.Get("combo.ready") + " ×" + player.Combo.BoostCharges : UIText.Get("combo.progress", player.Combo.Count % ComboChain.Required, ComboChain.Required);
             boostLabel.color = player.Combo.BoostReady ? new Color(1, .87f, .25f) : Color.white;
             comboHint.text = player.Combo.BoostReady ? UIText.Get(PlatformEntry.IsMobile ? "mobile.boost_hint" : "combo.use_hint") : UIText.Get("combo.landing_hint");
             if (Time.time >= noticeUntil) comboNotice.text = "";
@@ -60,6 +60,9 @@ namespace CloudHop
         {
             var camera = Camera.main;
             if (camera == null) return;
+            var feedbackPoint=camera.WorldToViewportPoint(player.transform.position+Vector3.up*1.4f);
+            var feedbackCanvasPoint=new Vector3((Mathf.Clamp(feedbackPoint.x,.12f,.88f)-.5f)*canvas.rect.width,(Mathf.Clamp(feedbackPoint.y,.2f,.78f)-.5f)*canvas.rect.height,0);
+            comboNotice.rectTransform.position=canvas.TransformPoint(feedbackCanvasPoint);
             var course = stages.CurrentCourse;
             float bestDistance = float.PositiveInfinity;
             bool found = false;
@@ -80,7 +83,7 @@ namespace CloudHop
                 if (routeLabels[i] == null) continue;
                 if (!found) { routeLabels[i].gameObject.SetActive(false); continue; }
                 var point = camera.WorldToViewportPoint(routePlatforms[i].position + Vector3.up * 1.6f);
-                bool visible = routePlatforms[i].gameObject.activeInHierarchy && point.z > 0 && point.x > .08f && point.x < .92f && point.y > .25f && point.y < .75f;
+                bool visible = (player.Combo.BoostReady || player.IsBoosting) && routePlatforms[i].gameObject.activeInHierarchy && point.z > 0 && point.x > .08f && point.x < .92f && point.y > .25f && point.y < .75f;
                 routeLabels[i].gameObject.SetActive(visible);
                 var canvasPoint = new Vector3((point.x - .5f) * canvas.rect.width, (point.y - .5f) * canvas.rect.height, 0);
                 routeLabels[i].rectTransform.position = canvas.TransformPoint(canvasPoint);

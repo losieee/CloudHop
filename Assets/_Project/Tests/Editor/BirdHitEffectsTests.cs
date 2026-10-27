@@ -39,11 +39,14 @@ namespace CloudHop.Tests
             Object.FindFirstObjectByType<FollowCamera>().ResetPosition();
             yield return null;
             GameUITests.Capture("bird-impact", 1920, 1080);
+            var ring = effect.GetComponentsInChildren<LineRenderer>().First(line => line.name == "Bird impact ring");
+            Assert.Greater(Vector3.Distance(ring.GetPosition(0), ring.GetPosition(16)), 1.5f, "Impact remains readable at gameplay scale");
+            Assert.IsTrue(effect.GetComponentsInChildren<LineRenderer>().Any(line => line.name == "Bird impact debris 0" && line.enabled));
             Time.timeScale = 0;
             for (int i = 0; i < 4; i++) yield return null;
             Assert.IsTrue(effect.IsPlaying, "Pause freezes the effect");
             Time.timeScale = 1;
-            end = Time.time + .5f;
+            end = Time.time + .8f;
             while (Time.time < end) yield return null;
             Assert.IsFalse(effect.IsPlaying);
             effect.Play(player.transform.position);

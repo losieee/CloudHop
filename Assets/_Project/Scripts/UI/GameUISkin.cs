@@ -5,8 +5,8 @@ namespace CloudHop
 {
     public sealed partial class GameUI
     {
-        private Image boostBadge, feedbackPanel;
-        private readonly Image[] comboPips = new Image[3];
+        private Image boostBadge;
+
         private Image Art(Transform parent, string key, Vector2 position, Vector2 size)
         {
             var image = Rect(parent, key, position, size).gameObject.AddComponent<Image>();
@@ -27,18 +27,17 @@ namespace CloudHop
         }
         private void BuildHudSkin()
         {
-            Plate(stageLabel, new Vector2(0, 325), new Vector2(270, 48), 22);
-            Plate(runLabel, new Vector2(0, 265), new Vector2(580, 55), 21);
-            Plate(comboLabel, new Vector2(-455, 250), new Vector2(260, 53), 22);
-            Plate(boostLabel, new Vector2(455, 250), new Vector2(270, 53), 18);
-            boostLabel.rectTransform.anchoredPosition += Vector2.right * 16;
-            boostLabel.rectTransform.sizeDelta = new Vector2(200, 38);
-            boostBadge = Art(hud.transform, "BoostBadge", new Vector2(347, 250), new Vector2(44, 44));
-            for (int i = 0; i < 3; i++)
-                comboPips[i] = Art(hud.transform, "BoostBadge", new Vector2(-481 + i * 26, 213), new Vector2(21, 21));
-            feedbackPanel = Plate(comboNotice, new Vector2(0, 190), new Vector2(450, 58), 25);
-            Plate(comboHint, new Vector2(0, -215), new Vector2(760, 46), 18);
-            Plate(progressLabel, new Vector2(370, -345), new Vector2(125, 36), 17);
+            MinimalLabel(stageLabel,new Vector2(0,340),new Vector2(230,35),22);
+            MinimalLabel(runLabel,new Vector2(-415,330),new Vector2(330,44),19);
+            runLabel.alignment=TextAlignmentOptions.Left;
+            comboLabel.gameObject.SetActive(false);
+            comboHint.gameObject.SetActive(false);
+            MinimalLabel(boostLabel,new Vector2(0,-270),new Vector2(380,34),20);
+            boostBadge=Art(hud.transform,"BoostBadge",new Vector2(-165,-270),new Vector2(32,32));
+            MinimalLabel(comboNotice,Vector2.zero,new Vector2(310,36),22);
+            progressLabel.gameObject.SetActive(false);
+            CompactMeter(progressFill,new Vector2(0,310),new Vector2(220,5));
+            CompactMeter(chargeFill,new Vector2(0,-320),new Vector2(280,14));
             var slider = settings.GetComponentInChildren<Slider>(true);
             var track = (RectTransform)slider.transform;
             track.sizeDelta = new Vector2(420, 55);
@@ -53,12 +52,26 @@ namespace CloudHop
         {
             float charge = player.IsCharging ? player.Charge01 : 0;
             chargeFill.color = Color.Lerp(new Color(.18f, .86f, 1), new Color(1, .83f, .22f), Mathf.InverseLerp(.7f, 1, charge));
-            boostBadge.color = player.Combo.BoostReady ? Color.white : new Color(.6f, .7f, .8f, .65f);
-            boostBadge.transform.localScale = Vector3.one * (player.Combo.BoostReady ? 1 + .06f * Mathf.Sin(Time.time * 5) : 1);
-            int pips = player.Combo.BoostReady ? 3 : player.Combo.Count % ComboChain.Required;
-            for (int i = 0; i < 3; i++) comboPips[i].color = i < pips ? Color.white : new Color(.55f, .65f, .75f, .55f);
-            feedbackPanel.enabled = !string.IsNullOrEmpty(comboNotice.text);
-            boostLabel.color = player.Combo.BoostReady ? new Color(.58f, .28f, .015f) : Ink;
+            bool ready=player.Combo.BoostReady;
+            boostBadge.gameObject.SetActive(ready);
+            boostLabel.gameObject.SetActive(ready);
+            boostBadge.transform.localScale=Vector3.one*(1+.04f*Mathf.Sin(Time.time*5));
+            boostLabel.color=new Color(1,.88f,.35f);
+        }
+        private void MinimalLabel(TMP_Text label,Vector2 position,Vector2 size,int fontSize)
+        {
+            label.rectTransform.anchoredPosition=position;label.rectTransform.sizeDelta=size;
+            label.fontSize=label.fontSizeMax=fontSize;label.fontSizeMin=fontSize*.8f;
+            label.color=Color.white;label.outlineWidth=.15f;
+        }
+        private void CompactMeter(Image fill,Vector2 position,Vector2 size)
+        {
+            var track=(RectTransform)fill.transform.parent;
+            var frameSize=new Vector2(size.x+80,fill==chargeFill?52:34);
+            track.anchoredPosition=position;track.sizeDelta=frameSize;
+            var background=track.GetComponent<Image>();background.sprite=HudArt.Get("CloudMeter");background.type=Image.Type.Simple;
+            background.color=Color.white;
+            fill.rectTransform.anchoredPosition=new Vector2(0,1);fill.rectTransform.sizeDelta=new Vector2(frameSize.x*.735f,frameSize.y*.38f);
         }
     }
 }

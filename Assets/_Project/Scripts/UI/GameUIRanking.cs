@@ -46,7 +46,7 @@ namespace CloudHop
         }
         private void UpdateRunUI()
         {
-            runLabel.text=run.Active || run.Completed ? UIText.Get("hud.run",run.Nickname,TimedRun.Format(run.Seconds)) : UIText.Get("hud.practice");
+            runLabel.text=run.Active || run.Completed ? UIText.Get("hud.run",run.Nickname,TimedRun.Format(run.Seconds)) : UIText.Get("hud.practice").Split('¡¤')[0].Trim();
         }
         private void RecordStageClear(GameState state)
         {

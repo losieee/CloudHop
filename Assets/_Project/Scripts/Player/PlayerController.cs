@@ -32,7 +32,6 @@ namespace CloudHop
         [SerializeField, Min(5)] private float boostSpeed = 14f;
         private float boostRemaining;
         private bool comboJump;
-        private bool boostedThisJump;
         public bool IsGrounded { get; private set; }
         public bool IsCharging { get; private set; }
         public bool IsSliding => IsGrounded && ground != null && ground.GetComponent<SlidingSlope>() != null;
@@ -99,10 +98,9 @@ namespace CloudHop
 
         public bool TryUseBoost()
         {
-            if (!playable || Time.timeScale <= 0 || IsGrounded || jumpQueued || boostedThisJump || !comboJump) return false;
+            if (!playable || Time.timeScale <= 0 || IsGrounded || jumpQueued || !comboJump) return false;
             if (!Combo.ConsumeBoost()) return false;
-            boostedThisJump = true;
-            boostRemaining = boostDuration;
+            boostRemaining += boostDuration;
             body.linearVelocity = new Vector2(boostSpeed, Mathf.Max(body.linearVelocity.y, 2.4f));
             BoostUsed?.Invoke();
             return true;
@@ -139,7 +137,6 @@ namespace CloudHop
                 }
                 else Combo.Remember(support.GetInstanceID());
                 comboJump = false;
-                boostedThisJump = false;
                 body.linearVelocity = SupportVelocity(support);
                 Landed?.Invoke(support);
                 if (!playable) return;
@@ -152,7 +149,6 @@ namespace CloudHop
                 if (!IsGrounded) return;
                 body.linearVelocity = new Vector2(horizontalSpeed, Mathf.Lerp(minimumJumpSpeed, maximumJumpSpeed, queuedCharge));
                 comboJump = true;
-                boostedThisJump = false;
                 IsGrounded = false;
                 ground = null;
                 awaitingSeparation = true;
@@ -194,7 +190,6 @@ namespace CloudHop
             awaitingSeparation = false;
             boostRemaining = 0;
             comboJump = false;
-            boostedThisJump = false;
             Combo.Reset();
             HitProtectionRemaining = 0;
             HitsTaken = 0;

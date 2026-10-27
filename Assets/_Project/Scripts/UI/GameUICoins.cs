@@ -19,7 +19,9 @@ namespace CloudHop
         }
         private void BuildCoinUI()
         {
-            coinPanel = CoinPanel(hud.transform, new Vector2(-455, 165), out coinCount);
+            coinPanel = CoinPanel(hud.transform, new Vector2(430, 330), out coinCount);
+            coinPanel.GetComponent<Image>().enabled=false;
+            coinCount.color=Color.white;coinCount.outlineWidth=.15f;
             resultCoinPanel = CoinPanel(result.transform, new Vector2(0, -62), out resultCoins);
             resultCoinPanel.transform.localScale = Vector3.one * .85f;
         }
@@ -28,7 +30,7 @@ namespace CloudHop
             var collection = stages.CurrentCourse.GetComponent<StageCollectibles>();
             bool visible = collection != null && collection.Total > 0;
             coinPanel.SetActive(visible); resultCoinPanel.SetActive(visible);
-            if (visible) coinCount.text = resultCoins.text = UIText.Get("hud.progress", collection.Collected, collection.Total);
+            if (visible) { coinCount.text=collection.Collected.ToString(); resultCoins.text=UIText.Get("hud.progress",collection.Collected,collection.Total); }
         }
     }
 }

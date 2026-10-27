@@ -10,7 +10,7 @@ namespace CloudHop.Tests
 {
  public sealed class ComboTests
  {
-  [Test] public void RewardsAreBankedCappedAndCannotBeFarmed()
+  [Test] public void RewardsAccumulateAndCannotBeFarmed()
   {
    var c=new ComboChain(); c.Remember(0);
    Assert.AreEqual(ComboLanding.None,c.Land(0,true));
@@ -18,9 +18,17 @@ namespace CloudHop.Tests
    c.Land(3,true);Assert.IsTrue(c.BoostReady);
    Assert.AreEqual(ComboLanding.Broken,c.Land(4,false));Assert.AreEqual(0,c.Count);Assert.IsTrue(c.BoostReady);
    c.Land(5,true);c.Land(6,true);c.Land(7,true);
-   Assert.IsTrue(c.ConsumeBoost());Assert.IsFalse(c.ConsumeBoost());
+   Assert.AreEqual(2,c.BoostCharges);Assert.IsTrue(c.ConsumeBoost());Assert.IsTrue(c.ConsumeBoost());Assert.IsFalse(c.ConsumeBoost());
    Assert.AreEqual(ComboLanding.Broken,c.Land(7,true));
    c.Reset();Assert.AreEqual(0,c.Count);Assert.IsFalse(c.BoostReady);
+  }
+  [Test] public void NinePerfectLandingsBankThreeUses()
+  {
+   var c = new ComboChain();
+   for(int i=1;i<=9;i++) c.Land(i,true);
+   Assert.AreEqual(9,c.Count); Assert.AreEqual(3,c.BoostCharges);
+   for(int i=2;i>=0;i--) { Assert.IsTrue(c.ConsumeBoost()); Assert.AreEqual(i,c.BoostCharges); }
+   Assert.IsFalse(c.ConsumeBoost());
   }
   [UnityTest] public IEnumerator PhysicsEarnsComboAndBoostSkipsTrialPlatform()
   {
@@ -73,6 +81,15 @@ namespace CloudHop.Tests
    float boostStart=Time.fixedTime; yield return Wait(()=>Time.fixedTime>=boostStart+.28f,"boost physics clock"); Assert.IsFalse(player.IsBoosting, "Boost duration="+typeof(PlayerController).GetField("boostDuration",BindingFlags.NonPublic|BindingFlags.Instance).GetValue(player)+", remaining="+typeof(PlayerController).GetField("boostRemaining",BindingFlags.NonPublic|BindingFlags.Instance).GetValue(player)+", elapsed="+(Time.fixedTime-boostStart));
    Assert.AreEqual(5,player.GetComponent<Rigidbody2D>().linearVelocity.x,.05f);
    yield return Wait(()=>player.IsGrounded,"shortcut landing");Assert.AreEqual(target,player.GroundPlatform);
+   player.ResetPlayer(new Vector3(10.2f,.75f,0));
+   yield return Wait(()=>player.IsGrounded,"chain spawn");
+   for(int i=1;i<=9;i++)player.Combo.Land(i,true);
+   Jump(player,.6f);yield return Wait(()=>!player.IsGrounded,"chain takeoff");
+   for(int i=2;i>=0;i--) { Assert.IsTrue(player.TryUseBoost(),"Repeated airborne dash");Assert.AreEqual(i,player.Combo.BoostCharges); }
+   Assert.IsFalse(player.TryUseBoost(),"No fourth dash");
+   float chained=Time.fixedTime;
+   yield return Wait(()=>Time.fixedTime>=chained+.3f,"chained duration");
+   Assert.IsTrue(player.IsBoosting,"Rapid inputs preserve every dash duration");
    player.ResetPlayer(new Vector3(10.2f,.75f,0));Assert.AreEqual(0,player.Combo.Count);Assert.IsFalse(player.Combo.BoostReady);
   }
   [UnityTearDown] public IEnumerator Cleanup(){if(EditorApplication.isPlaying)yield return new ExitPlayMode();Time.timeScale=1;}
