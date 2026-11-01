@@ -41,6 +41,7 @@ namespace CloudHop
         public int HitsTaken { get; private set; }
         public float Charge01 => IsCharging ? Mathf.InverseLerp(minimumChargeTime, maximumChargeTime, chargeTime) : 0f;
         private Rigidbody2D body;
+        private PhysicsMaterial2D airContactMaterial, groundContactMaterial;
         private ChargeInput input;
         private readonly ContactPoint2D[] contacts = new ContactPoint2D[16];
         private float chargeTime;
@@ -53,6 +54,8 @@ namespace CloudHop
         private void Awake()
         {
             body = GetComponent<Rigidbody2D>();
+            airContactMaterial = new PhysicsMaterial2D("Player non-sticking contact") { friction = 0, bounciness = 0 };
+            groundContactMaterial = GetComponent<BoxCollider2D>().sharedMaterial;
             input = GetComponent<ChargeInput>();
             if (GetComponent<ComboEffects>() == null) gameObject.AddComponent<ComboEffects>();
         }
@@ -141,6 +144,11 @@ namespace CloudHop
                 Landed?.Invoke(support);
                 if (!playable) return;
             }
+            // Side contacts may cancel X velocity; resume forward motion once clear.
+            // Knockback clears comboJump, so its backward impulse remains untouched.
+            if (!IsGrounded && comboJump)
+                body.linearVelocity = new Vector2(IsBoosting ? boostSpeed : horizontalSpeed, body.linearVelocity.y);
+            GetComponent<BoxCollider2D>().sharedMaterial = !IsGrounded && comboJump ? airContactMaterial : groundContactMaterial;
             ground = support;
             if (!IsGrounded && IsCharging) CancelCharge();
             if (jumpQueued)
@@ -179,6 +187,7 @@ namespace CloudHop
         }
         public void ResetPlayer(Vector3 position)
         {
+            GetComponent<BoxCollider2D>().sharedMaterial = groundContactMaterial;
             body.simulated = false;
             transform.position = position;
             body.position = position;
@@ -238,6 +247,7 @@ namespace CloudHop
             body.linearVelocity = velocity;
             return true;
         }
+        private void OnDestroy() { if (airContactMaterial != null) Destroy(airContactMaterial); }
         private void OnValidate()
         {
             maximumChargeTime = Mathf.Max(minimumChargeTime + 0.01f, maximumChargeTime);

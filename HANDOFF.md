@@ -107,3 +107,12 @@
 - SlideTests(세 스킨, 28→29 진입, 자동 이동/정지, 도중 점프, 자세 복원, 출구 점프), StageLayoutTests, RidgeMapTests, ChoiceRouteTests 통과.
 - 아트/충돌은 SlideMapInstaller에서 생성. 재적용 순서와 편집 주의사항: Assets/_Project/SLIDE_GUIDE.md.
 - 현재 2스테이지에만 도입. 3스테이지에는 아직 미끄럼 지형을 배치하지 않음.
+
+## 인게임 HUD 간소화 (2026-10-24)
+- 상단 좌측 모드/기록 시간, 중앙 스테이지+진행 바, 우측 코인 획득량+일시정지로 통합.
+- 점수/최고점, 상시 콤보 수/설명, 전체 코인 수는 플레이 중 숨김. 결과 화면의 기록은 유지.
+- 구름 패널 대신 간결한 텍스트와 얇은 진행/충전 게이지 사용. 로비/결과/설정 장식은 유지.
+- 콤보 피드백은 캐릭터 근처에 잠깐 표시. 부스트 준비됐을 때만 배지/상태 표시, 경로 캡션은 준비/사용 중에만 표시.
+- 조작 안내는 앱 실행 후 첫 스테이지 진입에서 5초간 표시. 기존 Excel 문구 키 재사용.
+- GameUITests, PlatformTests(3), HudSkinTests, ComboPresentationTests 총 6개 통과.
+2026-10-24 후속: 상단 진행/하단 충전 게이지에 CloudMeter 리소스 복원. 간소화된 정보 배치 유지. HudSkinTests 및 PC 빌드 성공.
