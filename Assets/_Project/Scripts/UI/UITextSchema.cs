@@ -70,6 +70,16 @@ namespace CloudHop
             { "combo.use_hint", 0 }, { "combo.landing_hint", 0 }, { "combo.perfect", 1 },
             { "combo.broken", 0 }, { "combo.used", 0 }, { "combo.shortcut", 0 },
             { "combo.safe_route", 0 }, { "combo.rejoin", 0 },
+            { "collect.goal", 1 },
+            { "collect.gold", 0 },
+            { "collect.crystal", 1 },
+            { "collect.complete", 1 },
+            { "collect.recall", 0 },
+            { "collect.result", 4 },
+            { "collect.medal.0", 0 },
+            { "collect.medal.1", 0 },
+            { "collect.medal.2", 0 },
+            { "collect.medal.3", 0 },
         };
     }
 }

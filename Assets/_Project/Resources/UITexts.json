@@ -1,5 +1,5 @@
 {
-    "sourceHash": "3960BC9D54433265AF3C6F8F1588BEC144C2436EFC39AE2D9FFE87ABCC10E136",
+    "sourceHash": "490467C56C94C88AD2357B4B7A7D03780AF21312A549D3E5FFBCDA39958B8835",
     "entries": [
         {
             "key": "common.start",
@@ -292,6 +292,46 @@
         {
             "key": "lobby.quit",
             "text": "게임 종료"
+        },
+        {
+            "key": "collect.goal",
+            "text": "하늘 결정 {0}/3 · 1개 이상 모아 골인"
+        },
+        {
+            "key": "collect.gold",
+            "text": "금화 획득! 대쉬 +1"
+        },
+        {
+            "key": "collect.crystal",
+            "text": "하늘 결정 획득! {0}/3"
+        },
+        {
+            "key": "collect.complete",
+            "text": "하늘 결정 {0}/3 · 완전 수집!"
+        },
+        {
+            "key": "collect.recall",
+            "text": "놓친 하늘 결정이 골인 지점으로 돌아왔어요!"
+        },
+        {
+            "key": "collect.result",
+            "text": "은화 {0}  ·  금화 {1}  ·  결정 {2}/3\n수집 메달: {3}"
+        },
+        {
+            "key": "collect.medal.0",
+            "text": "없음 · 코인을 모아 도전하세요"
+        },
+        {
+            "key": "collect.medal.1",
+            "text": "동메달"
+        },
+        {
+            "key": "collect.medal.2",
+            "text": "은메달 · 수집률 50% 이상"
+        },
+        {
+            "key": "collect.medal.3",
+            "text": "금메달 · 수집률 80% 이상"
         }
     ]
 }

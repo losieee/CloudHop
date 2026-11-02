@@ -39,10 +39,19 @@ namespace CloudHop
             scores.RegisterLanding(platform);
             if (stages != null && stages.RegisterLanding(platform))
             {
+                var items=stages.CurrentCourse.GetComponent<StageCollectibles>();
+                if(items!=null && !items.CanFinish) { items.RecallRequiredCrystal(player.transform.position); return; }
                 player.SetPlayable(false);
                 scores.SaveBest();
                 SetState(GameState.StageClear);
             }
+        }
+        private void Update()
+        {
+            if(Time.timeScale<=0 || stages==null || State==GameState.GameOver || State==GameState.StageClear || !player.IsGrounded)return;
+            var items=stages.CurrentCourse.GetComponent<StageCollectibles>();
+            if(items!=null && items.CanFinish && stages.CurrentCourse.IndexOf(player.GroundPlatform)==stages.CurrentCourse.JumpCount)
+                OnLanded(player.GroundPlatform);
         }
         private void EndGame()
         {
@@ -57,7 +66,8 @@ namespace CloudHop
             {
                 stages.ResetProgress();
                 var collection = stages.CurrentCourse.GetComponent<StageCollectibles>();
-                if (collection != null) collection.ResetCollection();
+                if(collection==null)collection=stages.CurrentCourse.gameObject.AddComponent<StageCollectibles>();
+                collection.ResetCollection();
                 var mechanics = stages.CurrentCourse.GetComponent<StageMechanics>();
                 if (mechanics != null) mechanics.ResetCourse();
             }

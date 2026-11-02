@@ -26,6 +26,7 @@ namespace CloudHop
             Count = 0;
             return hadCombo ? ComboLanding.Broken : ComboLanding.None;
         }
+        public void AddBoost() => BoostCharges++;
         public bool ConsumeBoost()
         {
             if (!BoostReady) return false;
