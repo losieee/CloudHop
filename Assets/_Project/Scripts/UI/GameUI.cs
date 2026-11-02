@@ -121,6 +121,15 @@ namespace CloudHop
             HideScreens();
             lobby.SetActive(true);
         }
+        private void QuitGame()
+        {
+            PlayerPrefs.Save();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
         public void ShowStages()
         {
             run.Cancel(); pendingNickname=null;
@@ -244,9 +253,10 @@ namespace CloudHop
             var hero=Picture(lobby.transform,null,new Vector2(-280,-10),new Vector2(240,330));
             lobbyHero=hero;
             hero.sprite=assets.characters[selectedCharacter].sprite;
-            Button(lobby.transform,"Start",UIText.Get("common.start"),new Vector2(260,30),new Vector2(370,84),"UI_Large_Cyan",ShowNameEntry);
-            Button(lobby.transform,"Stages",UIText.Get("lobby.practice"),new Vector2(260,-65),new Vector2(370,84),"UI_Large_White",ShowStages);
-            Button(lobby.transform,"Settings",UIText.Get("common.settings"),new Vector2(260,-160),new Vector2(370,84),"UI_Large_White",()=>ShowSettings(lobby));
+            Button(lobby.transform,"Start",UIText.Get("common.start"),new Vector2(260,30),new Vector2(370,74),"UI_Large_Cyan",ShowNameEntry);
+            Button(lobby.transform,"Stages",UIText.Get("lobby.practice"),new Vector2(260,-55),new Vector2(370,74),"UI_Large_White",ShowStages);
+            Button(lobby.transform,"Settings",UIText.Get("common.settings"),new Vector2(260,-140),new Vector2(370,74),"UI_Large_White",()=>ShowSettings(lobby));
+            Button(lobby.transform,"Quit",UIText.Get("lobby.quit"),new Vector2(260,-310),new Vector2(370,74),"UI_Large_White",QuitGame);
 
             Picture(characterSelection.transform,"UI_Banner_Cream_Blank",new Vector2(0,290),new Vector2(650,125));
             Label(characterSelection.transform,UIText.Get("character.title"),new Vector2(0,290),new Vector2(550,70),32,Ink);

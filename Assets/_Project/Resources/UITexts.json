@@ -1,5 +1,5 @@
 {
-    "sourceHash": "E888A1369AE01526452C383E0DE91E6B2B9E942F58D58764BC5E0D49023260D2",
+    "sourceHash": "3960BC9D54433265AF3C6F8F1588BEC144C2436EFC39AE2D9FFE87ABCC10E136",
     "entries": [
         {
             "key": "common.start",
@@ -288,6 +288,10 @@
         {
             "key": "mobile.boost_hint",
             "text": "공중에서 점프 버튼을 누르면 부스트!"
+        },
+        {
+            "key": "lobby.quit",
+            "text": "게임 종료"
         }
     ]
 }

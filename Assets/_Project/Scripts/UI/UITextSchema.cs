@@ -17,6 +17,7 @@ namespace CloudHop
             { "lobby.title", 0 },
             { "lobby.practice", 0 },
             { "lobby.ranking", 0 },
+            { "lobby.quit", 0 },
             { "character.title", 0 },
             { "character.select", 0 },
             { "character.selected", 0 },

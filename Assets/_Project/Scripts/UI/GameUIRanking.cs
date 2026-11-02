@@ -88,7 +88,7 @@ namespace CloudHop
         }
         private void BuildRankingUI()
         {
-            Button(lobby.transform,"Ranking",UIText.Get("lobby.ranking"),new Vector2(260,-255),new Vector2(370,84),"UI_Large_White",ShowRankings);
+            Button(lobby.transform,"Ranking",UIText.Get("lobby.ranking"),new Vector2(260,-225),new Vector2(370,74),"UI_Large_White",ShowRankings);
             runLabel=Label(hud.transform,"",new Vector2(0,265),new Vector2(600,45),24,Color.white);
             runLabel.richText=false;
             nameEntry=Screen("Nickname Entry",true);
