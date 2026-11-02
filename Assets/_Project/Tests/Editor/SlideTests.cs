@@ -19,45 +19,55 @@ namespace CloudHop.Tests
             SessionState.SetInt("Slide.Best",PlayerPrefs.GetInt("CloudHop.BestScore.v1",0));
             SessionState.SetBool("Slide.HasBest",PlayerPrefs.HasKey("CloudHop.BestScore.v1"));
             EditorSceneManager.OpenScene(PlatformBuilds.AndroidScene);
-            yield return new EnterPlayMode(); yield return Run();
+            yield return new EnterPlayMode(); yield return Run(1);
         }
-        private static IEnumerator Run()
+        [UnityTest] public IEnumerator FirstStageSlopeHasReachableEntryAndExit()
+        {
+            SessionState.SetInt("Slide.Best",PlayerPrefs.GetInt("CloudHop.BestScore.v1",0));
+            SessionState.SetBool("Slide.HasBest",PlayerPrefs.HasKey("CloudHop.BestScore.v1"));
+            EditorSceneManager.OpenScene(PlatformBuilds.PCScene);
+            yield return new EnterPlayMode(); yield return Run(0);
+        }
+        private static IEnumerator Run(int stageIndex)
         {
             float deadline=Time.realtimeSinceStartup+15;
             while(Object.FindFirstObjectByType<GameUI>()==null && Time.realtimeSinceStartup<deadline)yield return null;
             yield return null;yield return null;
             var ui=Object.FindFirstObjectByType<GameUI>();
-            Click("Stages");Click("Stage 2");Click("Character Play");
+            Click("Stages");Click("Stage "+(stageIndex+1));Click("Character Play");
             typeof(GameUI).GetField("playing",Private).SetValue(ui,false);
             var player=Object.FindFirstObjectByType<PlayerController>();
             var game=Object.FindFirstObjectByType<GameManager>();
             var stages=Object.FindFirstObjectByType<StageDirector>();
             var course=stages.CurrentCourse;
+            int slopeIndex=stageIndex==0?15:29;
+            var slopePosition=course.Platforms[slopeIndex].transform.position;
+            Assert.AreEqual(1,course.GetComponentsInChildren<SlidingSlope>(true).Length);
             var visual=player.GetComponentInChildren<CharacterVisual>();
-            yield return Jump(game,player,course.Platforms[28],course.Platforms[29]);
+            yield return Jump(game,player,course.Platforms[slopeIndex-1],course.Platforms[slopeIndex]);
             foreach(string skin in new[]{"CloudAdventurer","GirlCharacter","FoxCharacter"})
             {
                 game.Retry(); Time.timeScale=1; player.GetComponent<ChargeInput>().enabled=false;
                 visual.Apply(AssetDatabase.LoadAssetAtPath<CharacterData>("Assets/_Project/ScriptableObjects/"+skin+".asset"));
-                player.ResetPlayer(new Vector3(115.7f,2.1f,0));
+                player.ResetPlayer(slopePosition+new Vector3(-.4f,.9f,0));
                 deadline=Time.realtimeSinceStartup+5;
                 while(!player.IsSliding && Time.realtimeSinceStartup<deadline)yield return null;
                 Assert.IsTrue(player.IsSliding,"Slope entered: "+skin);
-                while(player.transform.position.x<118.4f && Time.realtimeSinceStartup<deadline)yield return null;
+                while(player.transform.position.x<slopePosition.x+2.3f && Time.realtimeSinceStartup<deadline)yield return null;
                 Assert.IsTrue(player.IsSliding,"Stays attached on downhill: "+skin);
                 Assert.Less(player.GetComponent<Rigidbody2D>().linearVelocity.y,0);
                 var data=AssetDatabase.LoadAssetAtPath<CharacterData>("Assets/_Project/ScriptableObjects/"+skin+".asset");
                 Assert.AreEqual(data.chargeSprite,visual.GetComponent<SpriteRenderer>().sprite);
                 typeof(GameUI).GetField("playing",Private).SetValue(ui,true);
-                GameUITests.Capture("slide-"+skin,1920,1080);
+                GameUITests.Capture("slide-stage"+(stageIndex+1)+"-"+skin,1920,1080);
                 typeof(GameUI).GetField("playing",Private).SetValue(ui,false);
                 deadline=Time.realtimeSinceStartup+5;
-                while(player.GroundPlatform!=course.Platforms[30] && Time.realtimeSinceStartup<deadline)yield return null;
-                Assert.AreEqual(course.Platforms[30],player.GroundPlatform,"Flat exit catches the slide");
+                while(player.GroundPlatform!=course.Platforms[slopeIndex+1] && Time.realtimeSinceStartup<deadline)yield return null;
+                Assert.AreEqual(course.Platforms[slopeIndex+1],player.GroundPlatform,"Flat exit catches the slide");
                 yield return null; yield return null;
                 Assert.IsFalse(player.IsSliding);
                 Assert.Less(player.GetComponent<Rigidbody2D>().linearVelocity.magnitude,.3f);
-                game.Retry(); player.ResetPlayer(new Vector3(115.7f,2.1f,0));
+                game.Retry(); player.ResetPlayer(slopePosition+new Vector3(-.4f,.9f,0));
                 deadline=Time.realtimeSinceStartup+4;
                 while(!player.IsSliding && Time.realtimeSinceStartup<deadline)yield return null;
                 player.BeginCharge();typeof(PlayerController).GetField("chargeTime",Private).SetValue(player,.4f);player.ReleaseCharge();
@@ -67,13 +77,16 @@ namespace CloudHop.Tests
                 game.Retry();yield return null;Assert.IsFalse(player.IsSliding);
                 Assert.Less(Quaternion.Angle(visual.transform.localRotation,Quaternion.identity),.1f);
             }
-            yield return Jump(game,player,course.Platforms[30],course.Platforms[31]);
-            yield return Jump(game,player,course.Platforms[31],course.Platforms[32]);
+            yield return Jump(game,player,course.Platforms[slopeIndex+1],course.Platforms[slopeIndex+2]);
+            yield return Jump(game,player,course.Platforms[slopeIndex+2],course.Platforms[slopeIndex+3]);
         }
 
         private static IEnumerator Jump(GameManager game,PlayerController player,Platform from,Platform to)
         {
             game.Retry();Time.timeScale=1;player.GetComponent<ChargeInput>().enabled=false;
+            // Check terrain reachability independently of the timed bird after the first-stage exit.
+            // Hazard timing and knockback are covered by GimmickPlayTests.
+            from.GetComponentInParent<StageMechanics>().SetEnabled(false);
             var start=from.GetComponent<Collider2D>().bounds;var end=to.GetComponents<Collider2D>().First(c=>c.enabled).bounds;
             if(to.GetComponent<SlidingSlope>()!=null)end=new Bounds(new Vector3(to.transform.position.x,to.transform.position.y,0),new Vector3(2,.6f,1));
             player.ResetPlayer(new Vector3(start.center.x,start.max.y+.48f,0));

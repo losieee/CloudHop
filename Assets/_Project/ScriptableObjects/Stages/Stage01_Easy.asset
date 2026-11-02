@@ -65,13 +65,13 @@ MonoBehaviour:
     section: TRAIL REJOIN
   - position: {x: 54.399998, y: 0.39999998}
     width: 2.8
-    section: TRAIL REJOIN
-  - position: {x: 58.199997, y: -0.3}
+    section: SLIDE EXIT
+  - position: {x: 58.199997, y: -1.5999999}
     width: 3.6
-    section: TRAIL REJOIN
+    section: SLIDE EXIT
   - position: {x: 61.799995, y: -0.70000005}
     width: 3
-    section: VALLEY HOPS
+    section: SLIDE EXIT
   - position: {x: 65.899994, y: -0.90000004}
     width: 2.8
     section: VALLEY HOPS
@@ -254,30 +254,6 @@ MonoBehaviour:
     value: 1
   - position: {x: 50.14, y: 2.6466005}
     value: 1
-  - position: {x: 51.6, y: 2.5091038}
-    value: 1
-  - position: {x: 52.3, y: 2.753656}
-    value: 1
-  - position: {x: 52.999996, y: 2.6136558}
-    value: 1
-  - position: {x: 53.699997, y: 2.0891037}
-    value: 1
-  - position: {x: 55.159996, y: 1.9466007}
-    value: 1
-  - position: {x: 55.92, y: 2.259901}
-    value: 1
-  - position: {x: 56.679996, y: 2.1199012}
-    value: 1
-  - position: {x: 57.44, y: 1.5266006}
-    value: 1
-  - position: {x: 58.92, y: 1.2136799}
-    value: 1
-  - position: {x: 59.639996, y: 1.54052}
-    value: 1
-  - position: {x: 60.359997, y: 1.4605198}
-    value: 1
-  - position: {x: 61.079994, y: 0.9736799}
-    value: 1
   - position: {x: 36.78, y: 3.6149454}
     value: 1
   - position: {x: 37.56, y: 4.472419}
@@ -301,6 +277,30 @@ MonoBehaviour:
   - position: {x: 48.579998, y: 6.2080793}
     value: 5
   - position: {x: 49.739998, y: 4.5720534}
+    value: 1
+  - position: {x: 51.6, y: 2.5091038}
+    value: 1
+  - position: {x: 52.3, y: 2.753656}
+    value: 1
+  - position: {x: 52.999996, y: 2.6136558}
+    value: 1
+  - position: {x: 53.699997, y: 2.0891037}
+    value: 1
+  - position: {x: 56.199997, y: 1.2209678}
+    value: 1
+  - position: {x: 56.55, y: 0.7693548}
+    value: 1
+  - position: {x: 56.899998, y: 0.31774187}
+    value: 1
+  - position: {x: 57.249996, y: -0.13387102}
+    value: 1
+  - position: {x: 58.92, y: 0.17367995}
+    value: 1
+  - position: {x: 59.639996, y: 0.76051986}
+    value: 1
+  - position: {x: 60.359997, y: 0.9405197}
+    value: 1
+  - position: {x: 61.079994, y: 0.7136797}
     value: 1
   choiceRoutes:
   - launchIndex: 3

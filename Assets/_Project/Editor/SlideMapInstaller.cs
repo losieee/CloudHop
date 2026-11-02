@@ -7,6 +7,39 @@ namespace CloudHop.Editor
 {
     public static class SlideMapInstaller
     {
+        [MenuItem("Cloud Hop/맵/1스테이지 미끄럼 언덕 적용")]
+        public static void InstallFirstStage()
+        {
+            if(EditorApplication.isPlaying) return;
+            if(!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+            var scene=EditorSceneManager.OpenScene(PlatformBuilds.SharedScene);
+            var course=Object.FindObjectsByType<StageCourse>(FindObjectsInactive.Include,FindObjectsSortMode.None).Single(c=>c.Definition.difficulty=="EASY");
+            var platform=course.Platforms[15];
+            var mesh=AssetDatabase.LoadAssetAtPath<Mesh>("Assets/_Project/Art/Slide/Slope.asset");
+            var material=AssetDatabase.LoadAssetAtPath<Material>("Assets/_Project/Art/Slide/Slide.mat");
+            if(mesh==null || material==null) throw new System.InvalidOperationException("Existing slide artwork is required.");
+            platform.transform.localScale=Vector3.one;
+            platform.GetComponent<BoxCollider2D>().enabled=false;
+            var art=platform.GetComponent<PlatformArtwork>(); if(art!=null)art.enabled=false;
+            foreach(var sprite in platform.GetComponentsInChildren<SpriteRenderer>(true))sprite.enabled=false;
+            if(platform.GetComponent<SlidingSlope>()==null)platform.gameObject.AddComponent<SlidingSlope>();
+            var polygon=platform.GetComponent<PolygonCollider2D>();
+            if(polygon==null)polygon=platform.gameObject.AddComponent<PolygonCollider2D>();
+            polygon.points=new[]{new Vector2(-1,.3f),new Vector2(1.7f,.3f),new Vector2(3.25f,-1.7f),new Vector2(3.25f,-2.6f),new Vector2(-1,-.8f)};
+            var visual=platform.transform.Find("Ice Slope");
+            if(visual==null){visual=new GameObject("Ice Slope").transform;visual.SetParent(platform.transform,false);}
+            var filter=visual.GetComponent<MeshFilter>();if(filter==null)filter=visual.gameObject.AddComponent<MeshFilter>();filter.sharedMesh=mesh;
+            var renderer=visual.GetComponent<MeshRenderer>();if(renderer==null)renderer=visual.gameObject.AddComponent<MeshRenderer>();renderer.sharedMaterial=material;renderer.sortingOrder=4;
+            SetHeight(course,15,.7f);SetHeight(course,16,-1.3f);SetHeight(course,17,-.4f);
+            var data=course.Definition;
+            var coins=data.coins.Where(c=>c.position.x<=data.platforms[14].position.x || c.position.x>=data.platforms[17].position.x).ToList();
+            MeadowMapInstaller.Trail(coins,data.platforms[14].position+Vector2.up*.78f,data.platforms[15].position+Vector2.up*.78f,false);
+            for(int i=0;i<4;i++)coins.Add(new StageCoinLayout{position=data.platforms[15].position+new Vector2(1.8f+i*.35f,.95f-(.1f+i*.35f)*2f/1.55f),value=1});
+            MeadowMapInstaller.Trail(coins,data.platforms[16].position+Vector2.up*.78f,data.platforms[17].position+Vector2.up*.78f,false);
+            data.coins=coins.ToArray();EditorUtility.SetDirty(data);
+            EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
+            Debug.Log("FIRST_STAGE_SLIDE_INSTALLED: platform 15, flat exit 16");
+        }
         [MenuItem("Cloud Hop/맵/2스테이지 미끄럼 언덕 적용")]
         public static void Install()
         {

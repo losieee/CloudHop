@@ -7,7 +7,7 @@ namespace CloudHop
     public sealed class GimmickMotionEffects : MonoBehaviour
     {
         [SerializeField, Min(.1f)] private float windTravelSpeed = 1.1f;
-        [SerializeField, Min(.01f)] private float windLineWidth = .06f;
+        [SerializeField, Min(.01f)] private float windLineWidth = .12f;
         [SerializeField, Min(.01f)] private float boltCoreWidth = .045f;
         private WindZone wind;
         private LightningZone bolt;
@@ -72,17 +72,17 @@ namespace CloudHop
                 for(int i=0;i<lines.Length;i++)
                 {
                     float phase=Mathf.Repeat(time*windTravelSpeed+i*.137f,1);
-                    float alpha=Mathf.Sin(phase*Mathf.PI)*.9f;
+                    float alpha=Mathf.Sin(phase*Mathf.PI);
                     var line=lines[i];
                     line.widthMultiplier=windLineWidth;
-                    line.startColor=new Color(.45f,.9f,1,0);
+                    line.startColor=new Color(.25f,.85f,1,alpha*.25f);
                     line.endColor=new Color(1,1,1,alpha);
                     for(int p=0;p<8;p++)
                     {
                         float t=p/7f;
-                        float y=Mathf.Lerp(bounds.min.y,bounds.max.y,phase)-(.6f*(1-t));
+                        float y=Mathf.Lerp(bounds.min.y,bounds.max.y,phase)-(1.35f*(1-t));
                         y=Mathf.Max(bounds.min.y,y);
-                        float x=bounds.center.x + Mathf.Sin(time*2+i*2.4f+t*.8f)*bounds.extents.x*.78f;
+                        float x=bounds.center.x + Mathf.Sin(time*2+i*2.4f+t*.8f)*bounds.extents.x*.95f;
                         line.SetPosition(p,new Vector3(x,y,0));
                     }
                 }

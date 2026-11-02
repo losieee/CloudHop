@@ -59,8 +59,8 @@ namespace CloudHop
             else if(mechanic is WindZone wind)
             {
                 index=2; angle=90;
-                dimensions=new Vector2(worldSize.y,worldSize.x);
-                alpha=enabled && wind.IsBlowing ? .28f+.1f*Mathf.Sin(time*6) : .08f;
+                dimensions=new Vector2(worldSize.y*1.2f,worldSize.x*1.25f);
+                alpha=enabled && wind.IsBlowing ? .55f+.12f*Mathf.Sin(time*6) : .08f;
             }
             else if(mechanic is CrumblingPlatform cloud)
             {
