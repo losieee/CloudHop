@@ -11,7 +11,6 @@ namespace CloudHop
         public Sprite[] sprites;
         public Sprite character;
         public CharacterData[] characters;
-        public Sprite[] stageArt;
         public Sprite Find(string name)
         {
             foreach(var sprite in sprites)if(sprite!=null && sprite.name==name)return sprite;

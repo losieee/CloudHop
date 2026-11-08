@@ -43,6 +43,41 @@ namespace CloudHop.Tests
             }
             yield return new ExitPlayMode();
         }
+        [UnityTest]
+        public IEnumerator FirstStageUsesDistantCastle()
+        {
+            EditorSceneManager.OpenScene("Assets/_Project/Scenes/CloudHop.unity");
+            yield return new EnterPlayMode();
+            var layer = GameObject.Find("02 Distant Castle").GetComponent<BackgroundLayer>();
+            var stages = Object.FindFirstObjectByType<StageDirector>();
+            var original = layer.transform.localScale;
+            var view = Camera.main.transform;
+            stages.ActivateStage(1);
+            view.position = stages.CurrentCourse.SpawnPosition;
+            layer.Refresh();
+            Assert.AreEqual(original.x * 5.8f, layer.transform.localScale.x, 0.001f);
+            stages.ActivateStage(0);
+            layer.Refresh();
+            Assert.AreEqual(original.x * 0.43f, layer.transform.localScale.x, 0.001f);
+            var camera = Camera.main.transform;
+            float relativeX = layer.transform.GetChild(3).position.x - camera.position.x;
+            camera.position += Vector3.right;
+            layer.Refresh();
+            Assert.AreEqual(relativeX - 0.018f, layer.transform.GetChild(3).position.x - camera.position.x, 0.001f);
+            stages.ActivateStage(1);
+            layer.Refresh();
+            view.position = stages.CurrentCourse.Platforms[stages.CurrentCourse.JumpCount].transform.position;
+            layer.Refresh();
+            Assert.AreEqual(original.x * 6.6f, layer.transform.localScale.x, 0.001f);
+            stages.ActivateStage(2);
+            var wall = stages.CurrentCourse.transform.Find("Gallery Wall").GetComponent<SpriteRenderer>();
+            Assert.IsNotNull(wall.sprite);
+            Assert.Greater(wall.bounds.size.y, Camera.main.orthographicSize * 2);
+            stages.ActivateStage(0);
+            Assert.IsFalse(wall.gameObject.activeInHierarchy);
+            yield return new ExitPlayMode();
+        }
+
         [UnityTearDown]
         public IEnumerator Restore()
         {

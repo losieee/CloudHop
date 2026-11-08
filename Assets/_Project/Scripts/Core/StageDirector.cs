@@ -17,10 +17,38 @@ namespace CloudHop
         public bool IsLastStage => CurrentIndex == courses.Length - 1;
         public int StageCount => courses.Length;
 
+        private Sprite gateSprite;
+        public Transform CastleGate { get; private set; }
+
+        private void CreateCastleGate()
+        {
+            var finish = CurrentCourse.Platforms[CurrentCourse.JumpCount];
+            foreach (var art in finish.GetComponentsInChildren<SpriteRenderer>(true))
+                if (art.name == "Finish Flag") art.enabled = false;
+            var bounds = finish.GetComponent<Collider2D>().bounds;
+            var texture = Resources.Load<Texture2D>("CastleGate");
+            gateSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
+                new Vector2(.5f, 0), texture.width / 6f);
+            var renderer = new GameObject("Castle Gate").AddComponent<SpriteRenderer>();
+            CastleGate = renderer.transform;
+            CastleGate.SetParent(CurrentCourse.transform, true);
+            CastleGate.position = new Vector3(bounds.center.x, bounds.max.y - .06f, 0);
+            renderer.sprite = gateSprite;
+            renderer.sortingOrder = -15;
+        }
+
+        private void OnDestroy()
+        {
+            if (gateSprite != null) Destroy(gateSprite);
+        }
+
         public void ActivateStage(int index)
         {
             CurrentIndex = Mathf.Clamp(index, 0, courses.Length - 1);
             for (int i = 0; i < courses.Length; i++) courses[i].gameObject.SetActive(i == CurrentIndex);
+            if (CurrentIndex == 1 && CastleGate == null) CreateCastleGate();
+            if (CurrentIndex == 2 && !CurrentCourse.TryGetComponent<CastleGallery>(out _))
+                CurrentCourse.gameObject.AddComponent<CastleGallery>().Configure(gameCamera);
             gameCamera.backgroundColor = CurrentCourse.Definition.skyColor;
             ResetProgress();
         }

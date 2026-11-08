@@ -76,9 +76,15 @@ namespace CloudHop.Tests
             CollectionAssert.Contains(new[]{retrySkin.sprite,retrySkin.chargeSprite,retrySkin.jumpSprite,retrySkin.fallSprite,retrySkin.landingSprite},player.GetComponentInChildren<SpriteRenderer>().sprite);
             var final=stages.CurrentCourse.Platforms[stages.CurrentCourse.JumpCount].GetComponent<BoxCollider2D>().bounds;
             player.ResetPlayer(new Vector3(final.center.x,final.max.y+.48f,0));
+            Object.FindFirstObjectByType<FollowCamera>().ResetPosition();
             deadline=Time.realtimeSinceStartup+3;
             while(game.State!=GameState.StageClear && Time.realtimeSinceStartup<deadline)yield return null;
             Assert.AreEqual(GameState.StageClear,game.State);
+            Assert.IsNotNull(GameObject.Find("Entering Castle"));
+            yield return new WaitForSecondsRealtime(.35f);
+            Capture("castle-entrance",1600,900);
+            yield return new WaitForSecondsRealtime(.85f);
+            Assert.IsNull(GameObject.Find("Entering Castle"));
             yield return null;Capture("07-clear");
             Click("Next");yield return new WaitForSeconds(.3f);
             Assert.AreEqual(2,stages.CurrentIndex);

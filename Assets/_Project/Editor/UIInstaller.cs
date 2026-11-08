@@ -27,7 +27,6 @@ namespace CloudHop.Editor
             if(assets==null){assets=ScriptableObject.CreateInstance<UIAssets>();AssetDatabase.CreateAsset(assets,root+"ScriptableObjects/GameUIAssets.asset");}
             assets.sprites=sprites;
             assets.character=AssetDatabase.LoadAssetAtPath<Sprite>(root+"Art/Characters/CloudAdventurer/Idle.png");
-            assets.stageArt=new[]{1,8,7}.Select(i=>AssetDatabase.LoadAssetAtPath<Sprite>(root+"Art/Platforms/Platform"+i+".png")).ToArray();
             EditorUtility.SetDirty(assets);
             AssetDatabase.SaveAssets();
             string main=root+"Scenes/CloudHop.unity";

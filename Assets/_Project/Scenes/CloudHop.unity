@@ -6843,6 +6843,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: CloudHop.Runtime::CloudHop.BackgroundLayer
   targetCamera: {fileID: 2071802477}
+  stageOneCastle: 1
   scrollSpeed: 0.12
   repeatDistance: 45
   offset: {x: 8, y: 2}

@@ -1,0 +1,1417 @@
+fileFormatVersion: 2
+guid: 25ac02b717e4cd446a564a5fdbeddd07
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1857689285395681582
+    second: GalleryLedge_0
+  - first:
+      213: -7025418866634528196
+    second: GalleryLedge_1
+  - first:
+      213: 2217368910003236987
+    second: GalleryLedge_2
+  - first:
+      213: -1790211150267356378
+    second: GalleryLedge_3
+  - first:
+      213: -6598378976302435277
+    second: GalleryLedge_4
+  - first:
+      213: -6932739802812627688
+    second: GalleryLedge_5
+  - first:
+      213: -277354382160293992
+    second: GalleryLedge_6
+  - first:
+      213: 9223162032358559349
+    second: GalleryLedge_7
+  - first:
+      213: -110094083427694461
+    second: GalleryLedge_8
+  - first:
+      213: 4727056210697421942
+    second: GalleryLedge_9
+  - first:
+      213: 1426865370714745525
+    second: GalleryLedge_10
+  - first:
+      213: -3763848411392954902
+    second: GalleryLedge_11
+  - first:
+      213: -5167118296876520326
+    second: GalleryLedge_12
+  - first:
+      213: -7228549067361744911
+    second: GalleryLedge_13
+  - first:
+      213: -1189146870000443498
+    second: GalleryLedge_14
+  - first:
+      213: 1487306763079033132
+    second: GalleryLedge_15
+  - first:
+      213: -6373609698463140411
+    second: GalleryLedge_16
+  - first:
+      213: 8061264056446555226
+    second: GalleryLedge_17
+  - first:
+      213: 3482840607994975948
+    second: GalleryLedge_18
+  - first:
+      213: -1471439787692321657
+    second: GalleryLedge_19
+  - first:
+      213: 7148381953884303662
+    second: GalleryLedge_20
+  - first:
+      213: -4118467755302435145
+    second: GalleryLedge_21
+  - first:
+      213: 6237897950919765121
+    second: GalleryLedge_22
+  - first:
+      213: 1184248967584975188
+    second: GalleryLedge_23
+  - first:
+      213: 8012846298647235730
+    second: GalleryLedge_24
+  - first:
+      213: -7768532665131332064
+    second: GalleryLedge_25
+  - first:
+      213: -3579680540150650759
+    second: GalleryLedge_26
+  - first:
+      213: 3443379676481533996
+    second: GalleryLedge_27
+  - first:
+      213: 6318838366255361268
+    second: GalleryLedge_28
+  - first:
+      213: -3328828590867444753
+    second: GalleryLedge_29
+  - first:
+      213: -3665636100233292575
+    second: GalleryLedge_30
+  - first:
+      213: -6246592123974167113
+    second: GalleryLedge_31
+  - first:
+      213: 3868104477133121310
+    second: GalleryLedge_32
+  - first:
+      213: 3815672722695439920
+    second: GalleryLedge_33
+  - first:
+      213: -8250027109111095109
+    second: GalleryLedge_34
+  - first:
+      213: 8336378765487368421
+    second: GalleryLedge_35
+  - first:
+      213: -5611867403152462516
+    second: GalleryLedge_36
+  - first:
+      213: 8951655941503161288
+    second: GalleryLedge_37
+  - first:
+      213: 7626954322802034602
+    second: GalleryLedge_38
+  - first:
+      213: -8219986297262498681
+    second: GalleryLedge_39
+  - first:
+      213: -6005140462425814511
+    second: GalleryLedge_40
+  - first:
+      213: -3543189761807086919
+    second: GalleryLedge_41
+  - first:
+      213: -4300068474244663134
+    second: GalleryLedge_42
+  - first:
+      213: 8568536590857120699
+    second: GalleryLedge_43
+  - first:
+      213: -5927945286765661015
+    second: GalleryLedge_44
+  - first:
+      213: -8489966931001095687
+    second: GalleryLedge_45
+  - first:
+      213: -8847797875432078155
+    second: GalleryLedge_46
+  - first:
+      213: -2457385999238050669
+    second: GalleryLedge_47
+  - first:
+      213: 4673158903794018474
+    second: GalleryLedge_48
+  - first:
+      213: -8327513693414761188
+    second: GalleryLedge_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GalleryLedge_0
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 596
+        width: 254
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dee0f8ff692836e0800000000000000
+      internalID: -1857689285395681582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_1
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 658
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3aebe753c2b08e90800000000000000
+      internalID: -7025418866634528196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_2
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 630
+        width: 22
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70fcb8864da5ce10800000000000000
+      internalID: 2217368910003236987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_3
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 596
+        width: 162
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bee5b9174e727e0800000000000000
+      internalID: -1790211150267356378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_4
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 612
+        width: 120
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3347610e749dd64a0800000000000000
+      internalID: -6598378976302435277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_5
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 569
+        width: 111
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815442d61e5f9cf90800000000000000
+      internalID: -6932739802812627688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_6
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 618
+        width: 213
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f007ea8a3a62cf0800000000000000
+      internalID: -277354382160293992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_7
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 617
+        width: 136
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e0a9480014fff70800000000000000
+      internalID: 9223162032358559349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_8
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 626
+        width: 124
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3888b61b30ed87ef0800000000000000
+      internalID: -110094083427694461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_9
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 600
+        width: 94
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6748cef1490e99140800000000000000
+      internalID: 4727056210697421942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_10
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 625
+        width: 227
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba22cbae7e3dc310800000000000000
+      internalID: 1426865370714745525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_11
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 570
+        width: 148
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed2182cfcf14cbc0800000000000000
+      internalID: -3763848411392954902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_12
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 651
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ce04a1945ba48b0800000000000000
+      internalID: -5167118296876520326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_13
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 638
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f70c66fbe80fab90800000000000000
+      internalID: -7228549067361744911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_14
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 645
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f1bdbd83d4f7fe0800000000000000
+      internalID: -1189146870000443498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_15
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 645
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21ac55fe99f3a410800000000000000
+      internalID: 1487306763079033132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_16
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 642
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5be128fb36c87a0800000000000000
+      internalID: -6373609698463140411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_17
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 622
+        width: 52
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a541f1de2fc5fdf60800000000000000
+      internalID: 8061264056446555226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_18
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 642
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc698d08419855030800000000000000
+      internalID: 3482840607994975948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_19
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 643
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78419322f45649be0800000000000000
+      internalID: -1471439787692321657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_20
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 612
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2136186387243360800000000000000
+      internalID: 7148381953884303662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_21
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 622
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b64c4aa56348d6c0800000000000000
+      internalID: -4118467755302435145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_22
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 618
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ca5b5f227719650800000000000000
+      internalID: 6237897950919765121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_23
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 594
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459868e592c4f6010800000000000000
+      internalID: 1184248967584975188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2155
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c0ca63149533f60800000000000000
+      internalID: 8012846298647235730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_25
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 95
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e04d453b0a03490800000000000000
+      internalID: -7768532665131332064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_26
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 128
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97821f2c38b625ec0800000000000000
+      internalID: -3579680540150650759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_27
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 139
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c283b7b629759cf20800000000000000
+      internalID: 3443379676481533996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_28
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 79
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fca2c5f30601b750800000000000000
+      internalID: 6318838366255361268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_29
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 96
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb8e239800adc1d0800000000000000
+      internalID: -3328828590867444753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_30
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 47
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e41fb1636b012dc0800000000000000
+      internalID: -3665636100233292575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_31
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 95
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b554c12f85af49a0800000000000000
+      internalID: -6246592123974167113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_32
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 144
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e172e9127844ea530800000000000000
+      internalID: 3868104477133121310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_33
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 73
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036c86fff1ef3f430800000000000000
+      internalID: 3815672722695439920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_34
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 152
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb027160e04028d80800000000000000
+      internalID: -8250027109111095109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_35
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 65
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8ebf5b154c0b370800000000000000
+      internalID: 8336378765487368421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_36
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 127
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4de08c6454ae12b0800000000000000
+      internalID: -5611867403152462516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_37
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 128
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c39fc0a6abaa3c70800000000000000
+      internalID: 8951655941503161288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_38
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 122
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7ceb81c8268d960800000000000000
+      internalID: 7626954322802034602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_39
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 102
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c1715930ebced80800000000000000
+      internalID: -8219986297262498681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_40
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 73
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ac8c6e09479aca0800000000000000
+      internalID: -6005140462425814511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_41
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 79
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ba00bb2faf04dec0800000000000000
+      internalID: -3543189761807086919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_42
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 67
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a87ac261861354c0800000000000000
+      internalID: -4300068474244663134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_43
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 120
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbba9fe91ae89e670800000000000000
+      internalID: 8568536590857120699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_44
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 86
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4b1665b25bbbda0800000000000000
+      internalID: -5927945286765661015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_45
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 92
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9cddade049d2a80800000000000000
+      internalID: -8489966931001095687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_46
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b44a6eb5be463580800000000000000
+      internalID: -8847797875432078155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_47
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 120
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cc567147c95edd0800000000000000
+      internalID: -2457385999238050669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_48
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 134
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8a89773456ad040800000000000000
+      internalID: 4673158903794018474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GalleryLedge_49
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 132
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ddfc9ba6abe6c80800000000000000
+      internalID: -8327513693414761188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GalleryLedge_0: -1857689285395681582
+      GalleryLedge_1: -7025418866634528196
+      GalleryLedge_10: 1426865370714745525
+      GalleryLedge_11: -3763848411392954902
+      GalleryLedge_12: -5167118296876520326
+      GalleryLedge_13: -7228549067361744911
+      GalleryLedge_14: -1189146870000443498
+      GalleryLedge_15: 1487306763079033132
+      GalleryLedge_16: -6373609698463140411
+      GalleryLedge_17: 8061264056446555226
+      GalleryLedge_18: 3482840607994975948
+      GalleryLedge_19: -1471439787692321657
+      GalleryLedge_2: 2217368910003236987
+      GalleryLedge_20: 7148381953884303662
+      GalleryLedge_21: -4118467755302435145
+      GalleryLedge_22: 6237897950919765121
+      GalleryLedge_23: 1184248967584975188
+      GalleryLedge_24: 8012846298647235730
+      GalleryLedge_25: -7768532665131332064
+      GalleryLedge_26: -3579680540150650759
+      GalleryLedge_27: 3443379676481533996
+      GalleryLedge_28: 6318838366255361268
+      GalleryLedge_29: -3328828590867444753
+      GalleryLedge_3: -1790211150267356378
+      GalleryLedge_30: -3665636100233292575
+      GalleryLedge_31: -6246592123974167113
+      GalleryLedge_32: 3868104477133121310
+      GalleryLedge_33: 3815672722695439920
+      GalleryLedge_34: -8250027109111095109
+      GalleryLedge_35: 8336378765487368421
+      GalleryLedge_36: -5611867403152462516
+      GalleryLedge_37: 8951655941503161288
+      GalleryLedge_38: 7626954322802034602
+      GalleryLedge_39: -8219986297262498681
+      GalleryLedge_4: -6598378976302435277
+      GalleryLedge_40: -6005140462425814511
+      GalleryLedge_41: -3543189761807086919
+      GalleryLedge_42: -4300068474244663134
+      GalleryLedge_43: 8568536590857120699
+      GalleryLedge_44: -5927945286765661015
+      GalleryLedge_45: -8489966931001095687
+      GalleryLedge_46: -8847797875432078155
+      GalleryLedge_47: -2457385999238050669
+      GalleryLedge_48: 4673158903794018474
+      GalleryLedge_49: -8327513693414761188
+      GalleryLedge_5: -6932739802812627688
+      GalleryLedge_6: -277354382160293992
+      GalleryLedge_7: 9223162032358559349
+      GalleryLedge_8: -110094083427694461
+      GalleryLedge_9: 4727056210697421942
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

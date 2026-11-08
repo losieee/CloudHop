@@ -170,7 +170,7 @@ namespace CloudHop
         }
         public void Pause()
         {
-            if(!playing || result.activeSelf)return;
+            if(!playing || castleEntrance != null || result.activeSelf)return;
             Freeze();
             pause.SetActive(true);
         }
@@ -205,13 +205,72 @@ namespace CloudHop
             PlayerPrefs.Save();
             ApplyAudio();
         }
+        private Coroutine castleEntrance;
+        private SpriteRenderer playerArt;
+        private SpriteRenderer entranceArt;
+
+        private void ResetEntrance()
+        {
+            if (castleEntrance != null) StopCoroutine(castleEntrance);
+            castleEntrance = null;
+            if (playerArt != null) playerArt.forceRenderingOff = false;
+            if (entranceArt != null) Destroy(entranceArt.gameObject);
+        }
+
+        private System.Collections.IEnumerator EnterCastle()
+        {
+            var start = playerArt.transform.position;
+            var size = playerArt.transform.lossyScale;
+            var destination = stages.CastleGate.position + Vector3.up * 2.1f;
+            entranceArt = new GameObject("Entering Castle").AddComponent<SpriteRenderer>();
+            entranceArt.sprite = playerArt.sprite;
+            entranceArt.sharedMaterial = playerArt.sharedMaterial;
+            entranceArt.flipX = playerArt.flipX;
+            entranceArt.sortingLayerID = playerArt.sortingLayerID;
+            entranceArt.sortingOrder = Mathf.Max(40, playerArt.sortingOrder);
+            entranceArt.transform.rotation = playerArt.transform.rotation;
+            playerArt.forceRenderingOff = true;
+            float elapsed = 0f;
+            while (elapsed < 1.05f)
+            {
+                float t = Mathf.SmoothStep(0f, 1f, elapsed / 1.05f);
+                entranceArt.transform.position = Vector3.Lerp(start, destination, t)
+                    + Vector3.up * (.065f * Mathf.Abs(Mathf.Sin(t * Mathf.PI * 4f)));
+                entranceArt.transform.localScale = size * Mathf.Lerp(1f, .30f, t);
+                var color = playerArt.color;
+                color.a *= 1f - Mathf.InverseLerp(.55f, 1f, t);
+                entranceArt.color = color;
+                yield return null;
+                elapsed += Time.unscaledDeltaTime;
+            }
+            Destroy(entranceArt.gameObject);
+            castleEntrance = null;
+            ShowResult(GameState.StageClear);
+        }
+
         private void StateChanged(GameState state)
         {
+            if (state == GameState.Ready) ResetEntrance();
             if(!playing || (state!=GameState.GameOver && state!=GameState.StageClear))return;
             RecordStageClear(state);
             Freeze();
             pause.SetActive(false);
             settings.SetActive(false);
+            if (state == GameState.StageClear && stages.CurrentIndex == 1 && stages.CastleGate != null)
+            {
+                playerArt = player.GetComponentInChildren<CharacterVisual>().GetComponentInChildren<SpriteRenderer>();
+                if (playerArt != null)
+                {
+                    hud.SetActive(false);
+                    castleEntrance = StartCoroutine(EnterCastle());
+                    return;
+                }
+            }
+            ShowResult(state);
+        }
+
+        private void ShowResult(GameState state)
+        {
             result.SetActive(true);
             bool clear=state==GameState.StageClear;
             resultBackground.sprite=assets.Find(clear?"UI_Result_Clear":"UI_Result_GameOver");
@@ -289,8 +348,6 @@ namespace CloudHop
                 int index=i;
                 var card=Button(selection.transform,"Stage "+(i+1),"",new Vector2((i-1)*355,-15),new Vector2(310,370),cards[i],()=>ShowCharacters(index));
                 Label(card.transform,UIText.Get("stage.number",i+1),new Vector2(0,117),new Vector2(250,55),40,Ink);
-                var art=Picture(card.transform,null,new Vector2(0,10),new Vector2(245,180));
-                art.sprite=assets.stageArt[i];
                 Label(card.transform,names[i],new Vector2(0,-74),new Vector2(285,40),23,Ink);
                 Label(selection.transform,levels[i],new Vector2((i-1)*355,-230),new Vector2(250,30),20,Color.white);
             }

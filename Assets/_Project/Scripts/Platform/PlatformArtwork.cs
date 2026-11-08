@@ -18,6 +18,13 @@ namespace CloudHop
             Refresh();
         }
 
+        public void SetGalleryLedge(Sprite ledge)
+        {
+            artwork.sprite = ledge;
+            opaqueWidth = ledge.bounds.size.x;
+            Refresh();
+        }
+
         private void LateUpdate() => Refresh();
         private void OnEnable() => Refresh();
         private void OnDisable()

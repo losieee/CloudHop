@@ -1,5 +1,5 @@
 {
-    "sourceHash": "490467C56C94C88AD2357B4B7A7D03780AF21312A549D3E5FFBCDA39958B8835",
+    "sourceHash": "706C1759827F77AED17B2232CC51D7129297A162E199FF5F0694B57EDFC7AF5B",
     "entries": [
         {
             "key": "common.start",
@@ -63,15 +63,15 @@
         },
         {
             "key": "stage.name.0",
-            "text": "하늘 초원"
+            "text": "구름 들판"
         },
         {
             "key": "stage.name.1",
-            "text": "바람 능선"
+            "text": "성문 앞길"
         },
         {
             "key": "stage.name.2",
-            "text": "폭풍 정상"
+            "text": "별빛 회랑"
         },
         {
             "key": "stage.level.0",

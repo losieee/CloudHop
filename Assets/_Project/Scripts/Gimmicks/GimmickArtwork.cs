@@ -12,6 +12,8 @@ namespace CloudHop
         [SerializeField] private Vector2[] opaqueSizes;
         private StageMechanics clock;
         private float previousX;
+        private Sprite galleryLedge;
+        public void SetGalleryLedge(Sprite sprite) => galleryLedge = sprite;
         private void Awake()
         {
             if ((GetComponent<WindZone>() != null || GetComponent<LightningZone>() != null)
@@ -91,6 +93,17 @@ namespace CloudHop
             Vector3 scale=transform.lossyScale;
             artwork.transform.localScale=new Vector3(dimensions.x/opaqueSizes[index].x/Mathf.Abs(scale.x),
                 dimensions.y/opaqueSizes[index].y/Mathf.Abs(scale.y),1);
+            if (galleryLedge != null && (mechanic is MovingPlatform || mechanic is CrumblingPlatform))
+            {
+                artwork.sprite = galleryLedge;
+                float factor = worldSize.x / galleryLedge.bounds.size.x;
+                artwork.transform.localScale = new Vector3(factor / Mathf.Abs(scale.x), factor / Mathf.Abs(scale.y), 1);
+                Color tint = mechanic is MovingPlatform ? new Color(.56f,.91f,1f) : new Color(1f,.79f,.63f);
+                if (mechanic is CrumblingPlatform fragile && fragile.Phase == CloudPhase.Crumbling)
+                    tint = Color.Lerp(tint, new Color(1f,.36f,.29f), .5f + .5f * Mathf.Sin(time * 22f));
+                tint.a = alpha;
+                artwork.color = tint;
+            }
             if(marker!=null)marker.forceRenderingOff=!beam;
         }
     }

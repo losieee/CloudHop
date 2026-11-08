@@ -64,7 +64,9 @@ namespace CloudHop.Editor
                 go.transform.localScale=Vector3.one*(width/sprite.bounds.size.x);
                 tiles[i]=go.transform;
             }
-            layer.AddComponent<BackgroundLayer>().Configure(camera,speed,distance,offset,tiles);
+            var background = layer.AddComponent<BackgroundLayer>();
+            background.Configure(camera,speed,distance,offset,tiles);
+            if (name == "02 Distant Castle") background.SetStageOneCastle();
         }
     }
 }

@@ -48,6 +48,7 @@ namespace CloudHop.Tests
                 var final=stages.CurrentCourse.Platforms[stages.CurrentCourse.JumpCount].GetComponent<BoxCollider2D>().bounds;
                 player.ResetPlayer(new Vector3(final.center.x,final.max.y+.48f,0));
                 yield return WaitFor(game,GameState.StageClear);
+                if(i==1)yield return new WaitForSecondsRealtime(1.15f);
                 if(i<2){Assert.AreEqual(0,new LocalRankingStore().Load().Count);Click("Next");yield return new WaitForSeconds(.25f);}
             }
             Assert.IsTrue(ui.CurrentRun.Completed);
