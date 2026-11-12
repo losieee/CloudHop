@@ -1,5 +1,5 @@
 {
-    "sourceHash": "706C1759827F77AED17B2232CC51D7129297A162E199FF5F0694B57EDFC7AF5B",
+    "sourceHash": "AE2BFD5807CB866BE1B4B71DF2D80328F2807510B68E4031A5842843BB955234",
     "entries": [
         {
             "key": "common.start",
@@ -332,6 +332,14 @@
         {
             "key": "collect.medal.3",
             "text": "금메달 · 수집률 80% 이상"
+        },
+        {
+            "key": "settings.res_auto",
+            "text": "해상도 · 자동 ({0} × {1})"
+        },
+        {
+            "key": "settings.res_size",
+            "text": "해상도 · {0} × {1}"
         }
     ]
 }

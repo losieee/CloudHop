@@ -40,22 +40,40 @@ namespace CloudHop
                 for (int y = 0; y < size; y++) for (int x = 0; x < size; x++)
                 {
                     float u = (x + .5f - size / 2f) / (size / 2f), v = (y + .5f - size / 2f) / (size / 2f);
-                    float radius = Mathf.Sqrt(u * u + v * v);
+                    // A bevelled face with the body extruded down and to the right.
+                    var face = new Vector2((u + .09f) / .76f, (v - .09f) / .82f);
+                    var depth = new Vector2(.21f / .76f, -.19f / .82f);
+                    float along = Mathf.Clamp01(Vector2.Dot(face, depth) / depth.sqrMagnitude);
+                    float bodyRadius = (face - depth * along).magnitude;
+                    float radius = face.magnitude;
                     Color color = Color.clear;
-                    if (radius < .94f)
+                    if (bodyRadius < 1f)
                     {
-                        color = radius > .83f ? new Color(.7f, .33f, .04f) : radius > .71f ? new Color(1, .95f, .49f) : Color.Lerp(new Color(1, .57f, .03f), new Color(1, .87f, .28f), (v + 1) / 2);
-                        bool cloud = Ellipse(u, v, -.27f, -.06f, .21f, .19f) || Ellipse(u, v, 0, .09f, .27f, .28f) || Ellipse(u, v, .27f, -.06f, .21f, .19f) || (Mathf.Abs(u) < .28f && v > -.24f && v < 0);
-                        if (cloud) color = new Color(1, 1, .94f);
-                        color.a = Mathf.Clamp01((.94f - radius) * size);
-                    }
-                    pixels[y * size + x] = color;
+                        float grooves = .5f + .5f * Mathf.Cos(Mathf.Atan2(face.y, face.x) * 40f);
+                        color = Color.Lerp(new Color(.48f,.21f,.035f), new Color(.92f,.53f,.10f), grooves);
+                        if (radius < .97f)
+                        {
+                            float light = Mathf.Clamp01(.52f + .48f * (face.y - face.x));
+                            color = radius > .78f
+                                ? Color.Lerp(new Color(.69f,.37f,.055f), new Color(1f,.98f,.71f), light)
+                                : Color.Lerp(new Color(.96f,.53f,.035f), new Color(1f,.88f,.30f), light);
+                            if (Mathf.Abs(radius - .77f) < .026f) color = new Color(.66f,.35f,.055f);
+                            if (Cloud(face.x - .035f, face.y + .065f)) color = new Color(.65f,.33f,.055f);
+                            if (Cloud(face.x, face.y)) color = new Color(1f,.99f,.82f);
+                        }
+                        if (bodyRadius > .945f) color = new Color(.40f,.23f,.09f);
+                        color.a = Mathf.Clamp01((1f - bodyRadius) * 40f);
+                    }                    pixels[y * size + x] = color;
                 }
                 texture.SetPixels(pixels); texture.Apply();
                 sprite = Sprite.Create(texture, new Rect(0, 0, size, size), new Vector2(.5f, .5f), 128);
                 return sprite;
             }
         }
+        private static bool Cloud(float x, float y) =>
+            Ellipse(x,y,-.28f,-.04f,.22f,.19f) || Ellipse(x,y,0,.09f,.27f,.27f) ||
+            Ellipse(x,y,.28f,-.04f,.22f,.19f) || (Mathf.Abs(x)<.28f && y>-.21f && y<0);
+
         private static bool Ellipse(float x, float y, float cx, float cy, float rx, float ry) => (x-cx)*(x-cx)/(rx*rx)+(y-cy)*(y-cy)/(ry*ry)<1;
     }
 }

@@ -27,7 +27,8 @@ namespace CloudHop
             resultCoinPanel.GetComponent<Image>().enabled=false;
             resultCoins.rectTransform.sizeDelta=new Vector2(680,50);
             resultCoins.rectTransform.anchoredPosition=Vector2.zero;
-            resultCoins.fontSize=16;
+            resultCoins.fontSize=resultCoins.fontSizeMax=16;
+            resultCoins.fontSizeMin=14;
             resultCoinPanel.GetComponent<RectTransform>().anchoredPosition=new Vector2(0,-54);
             resultCoinPanel.transform.GetChild(0).gameObject.SetActive(false);
             collectionGoal=Label(hud.transform,"",new Vector2(0,275),new Vector2(500,30),18,Color.white);

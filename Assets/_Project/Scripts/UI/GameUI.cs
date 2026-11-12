@@ -25,6 +25,7 @@ namespace CloudHop
         private Image lobbyHero;
         private TMP_Text[] characterChoices;
         private int selectedCharacter;
+        private GameObject[] selectionMarks;
         private int pendingStage;
         public int SelectedCharacter => selectedCharacter;
         public bool IsSelectingCharacter => characterSelection != null && characterSelection.activeSelf;
@@ -84,7 +85,7 @@ namespace CloudHop
             UpdateHudSkin();
             UpdatePlatformUI();
             UpdateCoinUI();
-            jumpHint.gameObject.SetActive(Time.time<jumpHintUntil && !player.Combo.BoostReady);
+            jumpHint.gameObject.SetActive(Time.time<jumpHintUntil && player.Combo.Count == 0 && !player.Combo.BoostReady);
             scoreLabel.text=UIText.Get("hud.score",scores.Score);
             bestLabel.text=UIText.Get("hud.best",scores.Best);
             stageLabel.text=UIText.Get("hud.stage",stages.CurrentIndex+1,stages.StageCount);
@@ -106,6 +107,7 @@ namespace CloudHop
         private void Freeze()
         {
             if(touchJump!=null)touchJump.gameObject.SetActive(false);
+            hud.GetComponent<CanvasGroup>().interactable=false;
             input.enabled=false;
             player.CancelCharge();
             Time.timeScale=0;
@@ -120,6 +122,7 @@ namespace CloudHop
             foreach(var course in FindObjectsByType<StageCourse>(FindObjectsInactive.Include,FindObjectsSortMode.None))course.gameObject.SetActive(false);
             HideScreens();
             lobby.SetActive(true);
+            FocusButton(lobby,"Start");
         }
         private void QuitGame()
         {
@@ -136,6 +139,7 @@ namespace CloudHop
             Freeze();
             HideScreens();
             selection.SetActive(true);
+            FocusButton(selection,"Stage 1");
         }
         public void ShowCharacters(int stageIndex)
         {
@@ -144,6 +148,7 @@ namespace CloudHop
             HideScreens();
             characterSelection.SetActive(true);
             SelectCharacter(selectedCharacter);
+            FocusButton(characterSelection,"Character "+selectedCharacter);
         }
         public void SelectCharacter(int index)
         {
@@ -152,7 +157,10 @@ namespace CloudHop
             PlayerPrefs.Save();
             lobbyHero.sprite=assets.characters[selectedCharacter].sprite;
             for(int i=0;i<characterChoices.Length;i++)
+            {
+                selectionMarks[i].SetActive(i == selectedCharacter);
                 characterChoices[i].text=i==selectedCharacter ? UIText.Get("character.selected") : UIText.Get("character.select");
+            }
         }
         public void StartStage(int index)
         {
@@ -163,6 +171,7 @@ namespace CloudHop
             if(!shownJumpHint){shownJumpHint=true;jumpHintUntil=Time.time+5;}
             playing=true;
             Time.timeScale=1;
+            hud.GetComponent<CanvasGroup>().interactable=true;
             input.enabled=true;
             input.ResetGesture();
             hud.SetActive(true);
@@ -173,25 +182,40 @@ namespace CloudHop
             if(!playing || castleEntrance != null || result.activeSelf)return;
             Freeze();
             pause.SetActive(true);
+            FocusButton(pause,"Resume");
         }
         public void Resume()
         {
             pause.SetActive(false);
             Time.timeScale=1;
+            hud.GetComponent<CanvasGroup>().interactable=true;
             input.enabled=true;
             input.ResetGesture();
             UpdatePlatformUI();
         }
+        private TMP_Text resolutionLabel;
+        private void UpdateResolution(int step)
+        {
+            var sizes = PCResolution.Options();
+            int index = (PCResolution.Selected(sizes) + step + sizes.Count) % sizes.Count;
+            if (step != 0) PCResolution.Apply(sizes[index], true);
+            var size = index == 0 ? PCResolution.Desktop : sizes[index];
+            resolutionLabel.text = UIText.Get(index == 0 ? "settings.res_auto" : "settings.res_size", size.x, size.y);
+        }
+
         private void ShowSettings(GameObject back)
         {
+            if (resolutionLabel != null) UpdateResolution(0);
             settingsReturn=back;
             back.SetActive(false);
             settings.SetActive(true);
+            FocusButton(settings,"Sound");
         }
         private void CloseSettings()
         {
             settings.SetActive(false);
             settingsReturn.SetActive(true);
+            FocusButton(settingsReturn,settingsReturn == lobby ? "Settings" : "Pause Settings");
         }
         private void ApplyAudio()
         {
@@ -280,6 +304,7 @@ namespace CloudHop
             continueButton.gameObject.SetActive(clear);
             continueButton.GetComponentInChildren<TMP_Text>().text=run.Completed?UIText.Get("common.rankings"):stages.IsLastStage?UIText.Get("common.home"):UIText.Get("common.next_stage");
             RenderRunResult();
+            FocusButton(result,clear ? "Next" : "Retry");
         }
 
         private void Build()
@@ -297,6 +322,7 @@ namespace CloudHop
             lobby=Screen("Lobby",false);
             selection=Screen("Stage Selection",true);
             hud=Screen("HUD",false);
+            hud.AddComponent<CanvasGroup>();
             pause=Screen("Pause",true);
             settings=Screen("Settings",true);
             result=Screen("Results",true);
@@ -320,20 +346,22 @@ namespace CloudHop
             Picture(characterSelection.transform,"UI_Banner_Cream_Blank",new Vector2(0,290),new Vector2(650,125));
             Label(characterSelection.transform,UIText.Get("character.title"),new Vector2(0,290),new Vector2(550,70),32,Ink);
             characterChoices=new TMP_Text[assets.characters.Length];
+            selectionMarks=new GameObject[assets.characters.Length];
             for(int i=0;i<assets.characters.Length;i++)
             {
                 int index=i;
                 float x=(i-1)*340;
-                Picture(characterSelection.transform,"UI_Decoration_Cloud",new Vector2(x,-125),new Vector2(300,105));
+                Picture(characterSelection.transform,"UI_Decoration_Cloud",new Vector2(x,-112),new Vector2(280,85));
                 var portrait=Picture(characterSelection.transform,null,new Vector2(x,45),new Vector2(270,310));
                 portrait.sprite=assets.characters[i].sprite;
                 var pick=portrait.gameObject.AddComponent<Button>();
                 portrait.raycastTarget=true;
                 pick.onClick.AddListener(()=>SelectCharacter(index));
                 var nav=pick.navigation;nav.mode=Navigation.Mode.None;pick.navigation=nav;
-                Label(characterSelection.transform,UIText.Get("character.name."+i),new Vector2(x,-170),new Vector2(310,40),25,Color.white);
-                var button=Button(characterSelection.transform,"Character "+i,UIText.Get("character.select"),new Vector2(x,-220),new Vector2(260,65),"UI_Large_White",()=>SelectCharacter(index));
+                Label(characterSelection.transform,UIText.Get("character.name."+i),new Vector2(x,-179),new Vector2(310,40),25,Color.white);
+                var button=Button(characterSelection.transform,"Character "+i,UIText.Get("character.select"),new Vector2(x,-239),new Vector2(260,65),"UI_Large_White",()=>SelectCharacter(index));
                 characterChoices[i]=button.GetComponentInChildren<TMP_Text>();
+                selectionMarks[i]=Picture(button.transform,"UI_Checkbox_Checked",new Vector2(86,0),new Vector2(34,34)).gameObject;
             }
             Button(characterSelection.transform,"Character Back",UIText.Get("common.back"),new Vector2(-180,-320),new Vector2(260,70),"UI_Medium_Cream",ShowLobby);
             Button(characterSelection.transform,"Character Play",UIText.Get("common.start"),new Vector2(180,-320),new Vector2(300,75),"UI_Large_Cyan",BeginCharacterPlay);
@@ -349,7 +377,7 @@ namespace CloudHop
                 var card=Button(selection.transform,"Stage "+(i+1),"",new Vector2((i-1)*355,-15),new Vector2(310,370),cards[i],()=>ShowCharacters(index));
                 Label(card.transform,UIText.Get("stage.number",i+1),new Vector2(0,117),new Vector2(250,55),40,Ink);
                 Label(card.transform,names[i],new Vector2(0,-74),new Vector2(285,40),23,Ink);
-                Label(selection.transform,levels[i],new Vector2((i-1)*355,-230),new Vector2(250,30),20,Color.white);
+                Label(card.transform,levels[i],new Vector2(0,-127),new Vector2(220,30),19,Ink);
             }
             Button(selection.transform,"Back",UIText.Get("common.back"),new Vector2(0,-300),new Vector2(240,66),"UI_Medium_Cream",ShowLobby);
 
@@ -384,13 +412,19 @@ namespace CloudHop
             slider.targetGraphic=track.GetComponent<Image>();
             slider.value=volume;
             slider.onValueChanged.AddListener(v=>{volume=v;SaveAudio();});
+            if (!PlatformEntry.IsMobile)
+            {
+                Button(settings.transform,"Resolution Previous","‹",new Vector2(-205,-157),new Vector2(62,64),null,()=>UpdateResolution(-1));
+                Button(settings.transform,"Resolution Next","›",new Vector2(205,-157),new Vector2(62,64),null,()=>UpdateResolution(1));
+                resolutionLabel=Label(settings.transform,"",new Vector2(0,-157),new Vector2(350,58),26,Color.white);
+            }
             Button(settings.transform,"Settings Back",UIText.Get("common.back"),new Vector2(0,-240),new Vector2(270,74),"UI_Medium_Cream",CloseSettings);
 
             resultBackground=Picture(result.transform,"UI_Result_GameOver",new Vector2(0,0),new Vector2(760,450));
-            resultTitle=Label(result.transform,UIText.Get("result.over"),new Vector2(0,155),new Vector2(410,95),42,Color.white);
-            resultScore=Label(result.transform,"",new Vector2(0,12),new Vector2(580,100),30,Ink);
-            Button(result.transform,"Result Home",UIText.Get("common.home"),new Vector2(-115,-122),new Vector2(210,70),null,ShowLobby);
-            Button(result.transform,"Retry",UIText.Get("common.retry"),new Vector2(115,-122),new Vector2(210,70),null,RetryOrNewRun);
+            resultTitle=Label(result.transform,UIText.Get("result.over"),new Vector2(0,132),new Vector2(410,62),42,Color.white);
+            resultScore=Label(result.transform,"",new Vector2(0,30),new Vector2(580,90),24,Ink);
+            Button(result.transform,"Result Home",UIText.Get("common.home"),new Vector2(-107,-123),new Vector2(175,66),null,ShowLobby);
+            Button(result.transform,"Retry",UIText.Get("common.retry"),new Vector2(108,-123),new Vector2(194,66),null,RetryOrNewRun);
             continueButton=Button(result.transform,"Next",UIText.Get("common.next_stage"),new Vector2(0,-285),new Vector2(370,85),"UI_Large_Cyan",
                 ContinueFromResult);
         }
@@ -450,6 +484,12 @@ namespace CloudHop
             material.SetFloat("_UnderlaySoftness",.15f);
             return label;
         }
+        private static void FocusButton(GameObject screen, string name)
+        {
+            if (!PlatformEntry.IsMobile && UnityEngine.EventSystems.EventSystem.current != null)
+                screen.transform.Find(name).GetComponent<Button>().Select();
+        }
+
         private Button Button(Transform parent,string name,string text,Vector2 position,Vector2 size,string sprite,Action action)
         {
             var image=Picture(parent,sprite,position,size);
@@ -462,9 +502,17 @@ namespace CloudHop
             colors.highlightedColor=new Color(.88f,.97f,1);
             colors.pressedColor=new Color(.7f,.85f,.95f);
             button.colors=colors;
-            var navigation=button.navigation;navigation.mode=Navigation.Mode.None;button.navigation=navigation;
+            colors.selectedColor=new Color(1f,.80f,.45f);
+            button.colors=colors;
             button.onClick.AddListener(()=>action());
-            if(!string.IsNullOrEmpty(text))Label(image.transform,text,new Vector2(12,0),size*.8f,30,Ink);
+            if (!string.IsNullOrEmpty(text))
+            {
+                var label = Label(image.transform, text, Vector2.zero, size, 30, sprite == null && parent == settings?.transform ? Color.white : Ink);
+                var area = label.rectTransform;
+                area.anchorMin = Vector2.zero;
+                area.anchorMax = Vector2.one;
+                area.offsetMin = area.offsetMax = Vector2.zero;
+            }
             return button;
         }
         private RectTransform Box(Transform parent,string name,Vector2 position,Vector2 size,Color color)

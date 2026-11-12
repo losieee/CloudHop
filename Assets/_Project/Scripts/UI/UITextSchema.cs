@@ -6,6 +6,8 @@ namespace CloudHop
     {
         public static readonly IReadOnlyDictionary<string, int> Arguments = new Dictionary<string, int>
         {
+            { "settings.res_auto", 2 },
+            { "settings.res_size", 2 },
             { "common.start", 0 },
             { "common.back", 0 },
             { "common.settings", 0 },

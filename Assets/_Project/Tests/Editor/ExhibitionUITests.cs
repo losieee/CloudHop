@@ -6,11 +6,26 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.EventSystems;
 
 namespace CloudHop.Tests
 {
     public sealed class ExhibitionUITests
     {
+        private Keyboard menuKeyboard;
+        private InputSettings.BackgroundBehavior backgroundBefore;
+        private InputSettings.EditorInputBehaviorInPlayMode routingBefore;
+        private IEnumerator Press(Key key)
+        {
+            InputSystem.QueueStateEvent(menuKeyboard, new KeyboardState(key));
+            yield return null;
+            yield return null;
+            InputSystem.QueueStateEvent(menuKeyboard, new KeyboardState());
+            yield return null;
+            yield return null;
+        }
         private static readonly string[] Keys={LocalRankingStore.DefaultKey,LocalRankingStore.DefaultKey+".backup"};
         [UnityTest] public IEnumerator FullExhibitionRunRegistersOnlyAfterThreeStages()
         {
@@ -20,6 +35,8 @@ namespace CloudHop.Tests
                 SessionState.SetString("ExTest.Value."+key,PlayerPrefs.GetString(key,""));
                 PlayerPrefs.DeleteKey(key);
             }
+            SessionState.SetInt("ExTest.Character",PlayerPrefs.GetInt("CloudHop.Character",0));
+            SessionState.SetBool("ExTest.HasCharacter",PlayerPrefs.HasKey("CloudHop.Character"));
             SessionState.SetInt("ExTest.Best",PlayerPrefs.GetInt("CloudHop.BestScore.v1",0));
             SessionState.SetBool("ExTest.HasBest",PlayerPrefs.HasKey("CloudHop.BestScore.v1"));
             EditorSceneManager.OpenScene("Assets/_Project/Scenes/CloudHop.unity");
@@ -28,13 +45,28 @@ namespace CloudHop.Tests
             var game=Object.FindFirstObjectByType<GameManager>();
             var stages=Object.FindFirstObjectByType<StageDirector>();
             var player=Object.FindFirstObjectByType<PlayerController>(FindObjectsInactive.Include);
-            Click("Start");yield return null;
+            backgroundBefore = InputSystem.settings.backgroundBehavior;
+            routingBefore = InputSystem.settings.editorInputBehaviorInPlayMode;
+            InputSystem.settings.backgroundBehavior = InputSettings.BackgroundBehavior.IgnoreFocus;
+            InputSystem.settings.editorInputBehaviorInPlayMode = InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
+            menuKeyboard = InputSystem.AddDevice<Keyboard>();
+            yield return null;
+            Assert.AreEqual("Start", EventSystem.current.currentSelectedGameObject.name);
+            yield return Press(Key.Enter);
             var field=GameObject.Find("Nickname").GetComponent<TMP_InputField>();
             field.text="   ";Click("Name Next");Assert.IsFalse(ui.IsSelectingCharacter);
             field.text="구름여우1";
             yield return null;GameUITests.Capture("08-nickname");
-            Click("Name Next");Assert.IsTrue(ui.IsSelectingCharacter);Assert.IsFalse(ui.CurrentRun.Active);
-            Click("Character Play");yield return new WaitForSeconds(.4f);
+            yield return Press(Key.Enter);Assert.IsTrue(ui.IsSelectingCharacter);Assert.IsFalse(ui.CurrentRun.Active);
+            yield return Press(Key.RightArrow);
+            yield return Press(Key.RightArrow);
+            Assert.AreEqual("Character 2", EventSystem.current.currentSelectedGameObject.name);
+            yield return Press(Key.Enter);
+            Assert.AreEqual(2,ui.SelectedCharacter);
+            yield return Press(Key.DownArrow);
+            Assert.AreEqual("Character Play", EventSystem.current.currentSelectedGameObject.name);
+            yield return Press(Key.Enter);
+            yield return new WaitForSeconds(.4f);
             Assert.IsTrue(ui.CurrentRun.Active);
             Click("Pause");double pausedAt=ui.CurrentRun.Seconds;
             yield return new WaitForSecondsRealtime(.2f);Assert.Greater(ui.CurrentRun.Seconds,pausedAt+.15);Click("Resume");
@@ -72,7 +104,14 @@ namespace CloudHop.Tests
         }
         [UnityTearDown] public IEnumerator Restore()
         {
+            if(menuKeyboard != null && menuKeyboard.added)
+            {
+                InputSystem.RemoveDevice(menuKeyboard);
+                InputSystem.settings.backgroundBehavior = backgroundBefore;
+                InputSystem.settings.editorInputBehaviorInPlayMode = routingBefore;
+            }
             if(EditorApplication.isPlaying)yield return new ExitPlayMode();
+            if(SessionState.GetBool("ExTest.HasCharacter",false))PlayerPrefs.SetInt("CloudHop.Character",SessionState.GetInt("ExTest.Character",0));else PlayerPrefs.DeleteKey("CloudHop.Character");
             foreach(string key in Keys)
                 if(SessionState.GetBool("ExTest.Has."+key,false))PlayerPrefs.SetString(key,SessionState.GetString("ExTest.Value."+key,""));else PlayerPrefs.DeleteKey(key);
             if(SessionState.GetBool("ExTest.HasBest",false))PlayerPrefs.SetInt("CloudHop.BestScore.v1",SessionState.GetInt("ExTest.Best",0));else PlayerPrefs.DeleteKey("CloudHop.BestScore.v1");

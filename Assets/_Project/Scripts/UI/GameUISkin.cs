@@ -27,6 +27,9 @@ namespace CloudHop
         }
         private void BuildHudSkin()
         {
+            var strip = Box(hud.transform,"Stage information backdrop",new Vector2(0,308),new Vector2(360,100),new Color(.055f,.12f,.23f,.72f));
+            strip.GetComponent<Image>().raycastTarget=false;
+            strip.SetAsFirstSibling();
             MinimalLabel(stageLabel,new Vector2(0,340),new Vector2(230,35),22);
             MinimalLabel(runLabel,new Vector2(-415,330),new Vector2(330,44),19);
             runLabel.alignment=TextAlignmentOptions.Left;
@@ -42,10 +45,11 @@ namespace CloudHop
             var track = (RectTransform)slider.transform;
             track.sizeDelta = new Vector2(420, 55);
             var image = track.GetComponent<Image>(); image.sprite = HudArt.Get("CloudMeter"); image.color = Color.white;
-            var area = Rect(track, "Volume Fill Area", new Vector2(0, 1), new Vector2(309, 20));
+            var area = Rect(track, "Volume Fill Area", Vector2.zero, Vector2.zero);
+            FitMeterInterior(area);
             slider.fillRect.SetParent(area, false);
             slider.fillRect.sizeDelta = Vector2.zero;
-            var fill = slider.fillRect.GetComponent<Image>(); fill.sprite = HudArt.Fill; fill.color = new Color(.2f, .85f, 1);
+            var fill = slider.fillRect.GetComponent<Image>(); fill.sprite = HudArt.Fill; fill.type = Image.Type.Filled; fill.fillMethod = Image.FillMethod.Horizontal; fill.fillOrigin = 0; fill.fillAmount = volume; fill.color = new Color(.2f, .85f, 1);
             slider.value = volume;
         }
         private void UpdateHudSkin()
@@ -54,7 +58,7 @@ namespace CloudHop
             chargeFill.color = Color.Lerp(new Color(.18f, .86f, 1), new Color(1, .83f, .22f), Mathf.InverseLerp(.7f, 1, charge));
             bool ready=player.Combo.BoostReady;
             boostBadge.gameObject.SetActive(ready);
-            boostLabel.gameObject.SetActive(ready);
+            boostLabel.gameObject.SetActive(ready || player.Combo.Count > 0);
             boostBadge.transform.localScale=Vector3.one*(1+.04f*Mathf.Sin(Time.time*5));
             boostLabel.color=new Color(1,.88f,.35f);
         }
@@ -71,7 +75,15 @@ namespace CloudHop
             track.anchoredPosition=position;track.sizeDelta=frameSize;
             var background=track.GetComponent<Image>();background.sprite=HudArt.Get("CloudMeter");background.type=Image.Type.Simple;
             background.color=Color.white;
-            fill.rectTransform.anchoredPosition=new Vector2(0,1);fill.rectTransform.sizeDelta=new Vector2(frameSize.x*.735f,frameSize.y*.38f);
+            FitMeterInterior(fill.rectTransform);
+        }
+
+        private static void FitMeterInterior(RectTransform interior)
+        {
+            // Bounds of the well in the cropped 2124 x 276 frame, bottom-left origin.
+            interior.anchorMin = new Vector2(257f / 2124f, 60f / 276f);
+            interior.anchorMax = new Vector2(1867f / 2124f, 184f / 276f);
+            interior.offsetMin = interior.offsetMax = Vector2.zero;
         }
     }
 }

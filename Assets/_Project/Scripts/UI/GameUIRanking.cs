@@ -76,6 +76,7 @@ namespace CloudHop
         private void ShowRankings()
         {
             Freeze();HideScreens();rankingScreen.SetActive(true);
+            FocusButton(rankingScreen,"Ranking Home");
             var entries=rankings.Load();
             rankingHeading.text=UIText.Get("ranking.title");
             for(int i=0;i<10;i++)
@@ -110,6 +111,10 @@ namespace CloudHop
             nicknameInput.targetGraphic=field.GetComponent<Image>();
             nicknameInput.lineType=TMP_InputField.LineType.SingleLine;
             // Validate on confirmation so Korean IME composition is not interrupted.
+            nicknameInput.onSubmit.AddListener(_ =>
+            {
+                if (nameEntry.activeInHierarchy && nicknameInput.isFocused) ConfirmNickname();
+            });
             nicknameInput.characterLimit=24;
             nicknameInput.richText=false;
             nameError=Label(nameEntry.transform,"",new Vector2(0,-30),new Vector2(960,38),19,Color.white);

@@ -45,7 +45,7 @@ namespace CloudHop
         public void Recall(Vector3 position) { origin = transform.parent.InverseTransformPoint(position); transform.localPosition = origin; }
         private void Update()
         {
-            float size = IsCrystal ? 2f : value > 1 ? 1.35f : 1;
+            float size = IsCrystal ? 2f : value > 1 ? 1.55f : 1.14f;
             if (Collected)
             {
                 age += Time.deltaTime;
@@ -64,7 +64,9 @@ namespace CloudHop
             else
             {
                 transform.localPosition = origin + Vector3.up * Mathf.Sin(Time.time * 2 + phase) * .055f;
-                art.transform.localScale = new Vector3(size * (.85f + .15f * Mathf.Sin(Time.time * 3 + phase)), size, 1);
+                float swing = Mathf.Sin(Time.time * 3 + phase);
+                float width = IsCrystal ? .85f + .15f * swing : .95f + .05f * swing;
+                art.transform.localScale = new Vector3(size * width, size, 1);
                 art.color = Color.white;
             }
         }

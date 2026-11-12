@@ -26,6 +26,11 @@ namespace CloudHop
                 Screen.orientation = ScreenOrientation.AutoRotation;
                 Application.targetFrameRate = 60;
             }
+            else
+            {
+                var sizes = PCResolution.Options();
+                PCResolution.Apply(sizes[PCResolution.Selected(sizes)], false);
+            }
             SceneManager.LoadSceneAsync("CloudHop", LoadSceneMode.Single);
         }
     }

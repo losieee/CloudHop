@@ -32,20 +32,20 @@ namespace CloudHop
             get
             {
                 if (sprites.TryGetValue("Fill", out var sprite) && sprite != null) return sprite;
-                var texture = new Texture2D(256, 32, TextureFormat.RGBA32, false);
+                var texture = new Texture2D(402, 32, TextureFormat.RGBA32, false);
                 texture.name = "HUD glossy capsule"; texture.hideFlags = HideFlags.DontSave;
                 texture.wrapMode = TextureWrapMode.Clamp;
-                var pixels = new Color[256 * 32];
-                for (int y = 0; y < 32; y++) for (int x = 0; x < 256; x++)
+                var pixels = new Color[402 * 32];
+                for (int y = 0; y < 32; y++) for (int x = 0; x < 402; x++)
                 {
-                    float dx = x < 16 ? 15.5f - x : x > 239 ? x - 239.5f : 0;
+                    float dx = x < 16 ? 15.5f - x : x > 385 ? x - 385.5f : 0;
                     float dy = y - 15.5f;
                     float alpha = Mathf.Clamp01(16 - Mathf.Sqrt(dx * dx + dy * dy));
                     float light = y > 17 ? 1 : .72f + y / 64f;
-                    pixels[y * 256 + x] = new Color(light, light, light, alpha);
+                    pixels[y * 402 + x] = new Color(light, light, light, alpha);
                 }
                 texture.SetPixels(pixels); texture.Apply(false, true);
-                sprite = Sprite.Create(texture, new Rect(0, 0, 256, 32), new Vector2(.5f, .5f));
+                sprite = Sprite.Create(texture, new Rect(0, 0, 402, 32), new Vector2(.5f, .5f));
                 sprite.name = "Glossy fill"; sprite.hideFlags = HideFlags.DontSave;
                 sprites["Fill"] = sprite; return sprite;
             }
