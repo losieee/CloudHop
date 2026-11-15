@@ -59,8 +59,11 @@ namespace CloudHop
                 var walls = CurrentCourse.GetComponentsInChildren<DashWall>(true);
                 if (walls.Length == 0)
                 {
-                    DashWall.Place(CurrentCourse, 4);
-                    if (CurrentIndex == 2) DashWall.Place(CurrentCourse, 12);
+                    int[] wallPositions = CurrentIndex == 1
+                        ? new[] { 8, 16, 24, 32, 44 }
+                        : new[] { 8, 16, 24, 32, 40, 48, 55 };
+                    foreach (int position in wallPositions)
+                        DashWall.Place(CurrentCourse, position);
                 }
                 else foreach (var wall in walls) wall.Restore();
             }

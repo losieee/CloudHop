@@ -50,6 +50,11 @@ namespace CloudHop
         private bool playable;
         private bool awaitingSeparation;
         private Platform ground;
+        private Collider2D reboundLanding;
+        private Vector2 reboundStart;
+        private float reboundElapsed;
+        private float reboundDuration;
+        private float reboundApex;
 
         private void Awake()
         {
@@ -101,7 +106,7 @@ namespace CloudHop
 
         public bool TryUseBoost()
         {
-            if (!playable || Time.timeScale <= 0 || IsGrounded || jumpQueued || !comboJump) return false;
+            if (!playable || reboundLanding != null || Time.timeScale <= 0 || IsGrounded || jumpQueued || !comboJump) return false;
             if (!Combo.ConsumeBoost()) return false;
             boostRemaining += boostDuration;
             body.linearVelocity = new Vector2(boostSpeed, Mathf.Max(body.linearVelocity.y, 2.4f));
@@ -112,6 +117,11 @@ namespace CloudHop
         private void FixedUpdate()
         {
             if (!playable) return;
+            if (reboundLanding != null)
+            {
+                UpdateWallRebound();
+                return;
+            }
             if (boostRemaining > 0)
             {
                 boostRemaining = Mathf.Max(0, boostRemaining - Time.fixedDeltaTime);
@@ -167,6 +177,55 @@ namespace CloudHop
                 body.linearVelocity = slope != null ? slope.VelocityAt(body.position.x) : SupportVelocity(support);
             }
         }
+        public void ReboundFromWall(Platform platform)
+        {
+            if (!playable || platform == null) return;
+            var landing = platform.GetComponent<Collider2D>();
+            if (landing == null || !landing.enabled) return;
+            reboundLanding = landing;
+            reboundStart = body.position;
+            reboundElapsed = 0;
+            reboundDuration = Mathf.Clamp(Vector2.Distance(body.position, landing.bounds.center) / 7f, .55f, .85f);
+            reboundApex = Mathf.Max(body.position.y, landing.bounds.max.y + 1f) + 1.3f;
+            boostRemaining = 0;
+            comboJump = false;
+            CancelCharge();
+            IsGrounded = false;
+            ground = null;
+            awaitingSeparation = false;
+            body.linearVelocity = Vector2.zero;
+            HitProtectionRemaining = reboundDuration + .3f;
+        }
+
+        private void UpdateWallRebound()
+        {
+            float step = Time.fixedDeltaTime;
+            reboundElapsed = Mathf.Min(reboundDuration, reboundElapsed + step);
+            float t = reboundElapsed / reboundDuration;
+            var playerBounds = GetComponent<BoxCollider2D>().bounds;
+            float footOffset = body.position.y - playerBounds.min.y;
+            var targetBounds = reboundLanding.bounds;
+            var end = new Vector2(targetBounds.center.x - (playerBounds.center.x - body.position.x), targetBounds.max.y + footOffset + .05f);
+            // A raised quadratic arc stays above the landing surface on approach.
+            var control = new Vector2(reboundStart.x, reboundApex);
+            Vector2 next = (1-t)*(1-t)*reboundStart + 2*(1-t)*t*control + t*t*end;
+            // Once the player overlaps the destination horizontally, keep their feet above its top.
+            float halfWidth = playerBounds.extents.x;
+            float centerOffset = playerBounds.center.x - body.position.x;
+            if (next.x + centerOffset + halfWidth >= targetBounds.min.x &&
+                next.x + centerOffset - halfWidth <= targetBounds.max.x)
+                next.y = Mathf.Max(next.y, end.y);
+            if (t >= 1)
+            {
+                body.position = end;
+                body.linearVelocity = new Vector2(0, -1f);
+                reboundLanding = null;
+                HitProtectionRemaining = .3f;
+                return;
+            }
+            // Compensate the next physics step's gravity while retaining collision detection.
+            body.linearVelocity = (next - body.position) / step - Physics2D.gravity * body.gravityScale * step;
+        }
         private static Vector2 SupportVelocity(Platform platform)
         {
             if (platform != null && platform.TryGetComponent<MovingPlatform>(out var moving)) return moving.Velocity;
@@ -188,6 +247,7 @@ namespace CloudHop
         public void ResetPlayer(Vector3 position)
         {
             GetComponent<BoxCollider2D>().sharedMaterial = groundContactMaterial;
+            reboundLanding = null;
             body.simulated = false;
             transform.position = position;
             body.position = position;
@@ -213,6 +273,7 @@ namespace CloudHop
             playable = value;
             if (!value)
             {
+                reboundLanding = null;
                 boostRemaining = 0;
                 CancelCharge();
                 body.linearVelocity = Vector2.zero;
@@ -221,7 +282,7 @@ namespace CloudHop
         }
         public bool TryKnockback(Vector2 velocity)
         {
-            if (!playable || HitProtectionRemaining > 0) return false;
+            if (!playable || reboundLanding != null || HitProtectionRemaining > 0) return false;
             boostRemaining = 0;
             comboJump = false;
             ComboLanded?.Invoke(Combo.Break());
@@ -237,7 +298,7 @@ namespace CloudHop
         // Wind supports the player even during hit protection; horizontal momentum is preserved.
         public bool ApplyUpdraft(float liftSpeed)
         {
-            if (!playable) return false;
+            if (!playable || reboundLanding != null) return false;
             CancelCharge();
             IsGrounded = false;
             ground = null;
