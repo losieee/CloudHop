@@ -5,7 +5,8 @@ namespace CloudHop
 {
     public sealed partial class GameUI
     {
-        private Image boostBadge;
+        private Image boostBadge, boostGlint;
+        private TMP_Text boostCharges;
 
         private Image Art(Transform parent, string key, Vector2 position, Vector2 size)
         {
@@ -27,16 +28,25 @@ namespace CloudHop
         }
         private void BuildHudSkin()
         {
-            var strip = Box(hud.transform,"Stage information backdrop",new Vector2(0,308),new Vector2(360,100),new Color(.055f,.12f,.23f,.72f));
-            strip.GetComponent<Image>().raycastTarget=false;
-            strip.SetAsFirstSibling();
-            MinimalLabel(stageLabel,new Vector2(0,340),new Vector2(230,35),22);
+            var panel = Art(hud.transform, "InfoPanel", new Vector2(0,310), new Vector2(380,120));
+            panel.transform.SetAsFirstSibling();
+            stageLabel.rectTransform.anchoredPosition = new Vector2(0,341);
+            stageLabel.rectTransform.sizeDelta = new Vector2(245,34);
+            stageLabel.fontSize = stageLabel.fontSizeMax = 22;
+            stageLabel.fontSizeMin = 19;
+            stageLabel.color = Ink;
+            stageLabel.outlineWidth = 0;
             MinimalLabel(runLabel,new Vector2(-415,330),new Vector2(330,44),19);
             runLabel.alignment=TextAlignmentOptions.Left;
             comboLabel.gameObject.SetActive(false);
             comboHint.gameObject.SetActive(false);
             MinimalLabel(boostLabel,new Vector2(0,-270),new Vector2(380,34),20);
-            boostBadge=Art(hud.transform,"BoostBadge",new Vector2(-165,-270),new Vector2(32,32));
+            var meter = chargeFill.transform.parent;
+            boostBadge = Art(meter, "BoostBadge", new Vector2(-244,0), new Vector2(94,94));
+            boostGlint = Picture(boostBadge.transform, "UI_Sparkles", new Vector2(-31,29), new Vector2(42,42));
+            var countPlate = Art(boostBadge.transform, "InfoPanel", new Vector2(29,-43), new Vector2(72,34));
+            boostCharges = Label(countPlate.transform, "", Vector2.zero, new Vector2(64,31), 26, Ink);
+            boostBadge.gameObject.SetActive(false);
             MinimalLabel(comboNotice,Vector2.zero,new Vector2(310,36),22);
             progressLabel.gameObject.SetActive(false);
             CompactMeter(progressFill,new Vector2(0,310),new Vector2(220,5));
@@ -58,7 +68,14 @@ namespace CloudHop
             chargeFill.color = Color.Lerp(new Color(.18f, .86f, 1), new Color(1, .83f, .22f), Mathf.InverseLerp(.7f, 1, charge));
             bool ready=player.Combo.BoostReady;
             boostBadge.gameObject.SetActive(ready);
-            boostLabel.gameObject.SetActive(ready || player.Combo.Count > 0);
+            boostLabel.gameObject.SetActive(!ready && player.Combo.Count > 0);
+            if (ready)
+            {
+                boostCharges.SetText("×{0}", player.Combo.BoostCharges);
+                float shimmer = .5f + .5f * Mathf.Sin(Time.time * 5f);
+                boostGlint.color = new Color(1,1,1,.25f + .75f * shimmer);
+                boostGlint.transform.localScale = Vector3.one * (.65f + .55f * shimmer);
+            }
             boostBadge.transform.localScale=Vector3.one*(1+.04f*Mathf.Sin(Time.time*5));
             boostLabel.color=new Color(1,.88f,.35f);
         }

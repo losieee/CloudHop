@@ -72,7 +72,7 @@ namespace CloudHop
             else {
                 Collected+=value;
                 if(value>1) { GoldCount++;player.Combo.AddBoost();Notice=UIText.Get("collect.gold");sound.PlayOneShot(goldSound); }
-                else SilverCount++;
+                else { SilverCount++; CloudAudio.Cue("silverCoin", .38f); }
             }
             if(value!=1)NoticeUntil=Time.time+1.5f;
         }

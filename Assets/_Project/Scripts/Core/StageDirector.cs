@@ -52,7 +52,21 @@ namespace CloudHop
             gameCamera.backgroundColor = CurrentCourse.Definition.skyColor;
             ResetProgress();
         }
-        public void ResetProgress() { Progress = 0; Changed?.Invoke(); }
+        public void ResetProgress()
+        {
+            if (CurrentIndex > 0)
+            {
+                var walls = CurrentCourse.GetComponentsInChildren<DashWall>(true);
+                if (walls.Length == 0)
+                {
+                    DashWall.Place(CurrentCourse, 4);
+                    if (CurrentIndex == 2) DashWall.Place(CurrentCourse, 12);
+                }
+                else foreach (var wall in walls) wall.Restore();
+            }
+            Progress = 0;
+            Changed?.Invoke();
+        }
         public bool RegisterLanding(Platform platform)
         {
             int index = CurrentCourse.IndexOf(platform);

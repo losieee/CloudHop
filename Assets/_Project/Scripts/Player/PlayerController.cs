@@ -141,7 +141,7 @@ namespace CloudHop
                 else Combo.Remember(support.GetInstanceID());
                 comboJump = false;
                 body.linearVelocity = SupportVelocity(support);
-                Landed?.Invoke(support);
+                if (!wasGrounded) CloudAudio.Cue("footstep00", .35f); Landed?.Invoke(support);
                 if (!playable) return;
             }
             // Side contacts may cancel X velocity; resume forward motion once clear.
@@ -156,7 +156,7 @@ namespace CloudHop
                 jumpQueued = false;
                 if (!IsGrounded) return;
                 body.linearVelocity = new Vector2(horizontalSpeed, Mathf.Lerp(minimumJumpSpeed, maximumJumpSpeed, queuedCharge));
-                comboJump = true;
+                CloudAudio.Cue("cloth1", .48f); comboJump = true;
                 IsGrounded = false;
                 ground = null;
                 awaitingSeparation = true;

@@ -14,7 +14,7 @@ namespace CloudHop
         {
             if (!IsActive || Phase != HazardPhase.Active) return;
             var player = other.GetComponentInParent<PlayerController>();
-            if (player != null && !player.IsGrounded) player.TryKnockback(knockback);
+            if (player != null && !player.IsGrounded && player.TryKnockback(knockback)) CloudAudio.Cue("chop", .6f);
         }
     }
 }

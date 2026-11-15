@@ -37,7 +37,7 @@ namespace CloudHop
             if (timer > 0) return;
             if (Phase == CloudPhase.Crumbling)
             {
-                Phase = CloudPhase.Gone;
+                CloudAudio.Cue("bookClose", .4f); Phase = CloudPhase.Gone;
                 timer = respawnDelay;
                 surface.enabled = false;
             }

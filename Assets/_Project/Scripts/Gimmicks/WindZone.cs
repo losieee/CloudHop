@@ -32,7 +32,10 @@ namespace CloudHop
             if (!IsBlowing) return;
             var player = other.GetComponentInParent<PlayerController>();
             if (player != null && player.ApplyUpdraft(liftSpeed))
+                {
+                if (Time.time - lastAppliedTime > .25f) CloudAudio.Cue("cloth3", .5f);
                 lastAppliedTime = Time.time;
+            }
         }
 
         protected override void LateUpdate()

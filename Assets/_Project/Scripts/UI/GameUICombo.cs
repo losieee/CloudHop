@@ -49,7 +49,7 @@ namespace CloudHop
         private void UpdateComboUI()
         {
             comboLabel.text = UIText.Get("combo.count", player.Combo.Count);
-            boostLabel.text = player.Combo.BoostReady ? UIText.Get("combo.ready") + " ×" + player.Combo.BoostCharges : UIText.Get("combo.progress", player.Combo.Count % ComboChain.Required, ComboChain.Required);
+            boostLabel.text = UIText.Get("combo.progress", player.Combo.Count % ComboChain.Required, ComboChain.Required);
             boostLabel.color = player.Combo.BoostReady ? new Color(1, .87f, .25f) : Color.white;
             comboHint.text = player.Combo.BoostReady ? UIText.Get(PlatformEntry.IsMobile ? "mobile.boost_hint" : "combo.use_hint") : UIText.Get("combo.landing_hint");
             if (Time.time >= noticeUntil) comboNotice.text = "";

@@ -45,6 +45,7 @@ namespace CloudHop
 
         private void Awake()
         {
+            gameObject.AddComponent<CloudAudio>();
             previousTimeScale=Time.timeScale;
             previousVolume=AudioListener.volume;
             input=player.GetComponent<ChargeInput>();
@@ -121,7 +122,7 @@ namespace CloudHop
             player.gameObject.SetActive(false);
             foreach(var course in FindObjectsByType<StageCourse>(FindObjectsInactive.Include,FindObjectsSortMode.None))course.gameObject.SetActive(false);
             HideScreens();
-            lobby.SetActive(true);
+            lobby.SetActive(true); CloudAudio.Theme("Lobby");
             FocusButton(lobby,"Start");
         }
         private void QuitGame()
@@ -167,7 +168,7 @@ namespace CloudHop
             HideScreens();
             player.gameObject.SetActive(true);
             player.GetComponentInChildren<CharacterVisual>(true).Apply(assets.characters[selectedCharacter]);
-            game.SelectStage(index);
+            game.SelectStage(index); CloudAudio.Theme(stages.CurrentIndex == 0 ? "Meadow" : stages.CurrentIndex == 1 ? "CastleApproach" : "CastleHall");
             if(!shownJumpHint){shownJumpHint=true;jumpHintUntil=Time.time+5;}
             playing=true;
             Time.timeScale=1;
@@ -276,7 +277,7 @@ namespace CloudHop
         {
             if (state == GameState.Ready) ResetEntrance();
             if(!playing || (state!=GameState.GameOver && state!=GameState.StageClear))return;
-            RecordStageClear(state);
+            CloudAudio.Cue(state == GameState.GameOver ? "dropLeather" : stages.CurrentIndex == 1 ? "doorOpen_1" : "handleCoins", .55f); RecordStageClear(state);
             Freeze();
             pause.SetActive(false);
             settings.SetActive(false);
@@ -502,9 +503,9 @@ namespace CloudHop
             colors.highlightedColor=new Color(.88f,.97f,1);
             colors.pressedColor=new Color(.7f,.85f,.95f);
             button.colors=colors;
-            colors.selectedColor=new Color(1f,.80f,.45f);
+            colors.selectedColor=new Color(.82f,.94f,1f);
             button.colors=colors;
-            button.onClick.AddListener(()=>action());
+            button.onClick.AddListener(()=>{ CloudAudio.Cue("beltHandle1", .32f); action(); });
             if (!string.IsNullOrEmpty(text))
             {
                 var label = Label(image.transform, text, Vector2.zero, size, 30, sprite == null && parent == settings?.transform ? Color.white : Ink);

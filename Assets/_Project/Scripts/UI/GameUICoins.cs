@@ -31,7 +31,7 @@ namespace CloudHop
             resultCoins.fontSizeMin=14;
             resultCoinPanel.GetComponent<RectTransform>().anchoredPosition=new Vector2(0,-54);
             resultCoinPanel.transform.GetChild(0).gameObject.SetActive(false);
-            collectionGoal=Label(hud.transform,"",new Vector2(0,275),new Vector2(500,30),18,Color.white);
+            collectionGoal=Label(hud.transform,"",new Vector2(0,275),new Vector2(340,30),18,Ink);
             collectionNotice=Label(hud.transform,"",new Vector2(0,215),new Vector2(600,40),24,Color.white);
         }
         private void UpdateCoinUI()
@@ -42,7 +42,7 @@ namespace CloudHop
             if (visible) {
                 coinCount.text=collection.Collected.ToString();
                 collectionGoal.text=UIText.Get("collect.goal",collection.Crystals);
-                collectionGoal.color=collection.CanFinish?new Color(.7f,1,1):Color.white;
+                collectionGoal.color=collection.CanFinish?new Color(.03f,.34f,.36f):Ink;
                 collectionNotice.text=Time.time<collection.NoticeUntil?collection.Notice:"";
                 resultCoins.text=UIText.Get("collect.result",collection.SilverCount,collection.GoldCount,collection.Crystals,UIText.Get("collect.medal."+collection.Medal));
             }
