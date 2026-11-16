@@ -10,6 +10,7 @@ namespace CloudHop
         [SerializeField] private float opaqueWidth = 1;
         private SpriteRenderer marker;
         private BoxCollider2D surface;
+        private float galleryDepth;
 
         public void Configure(SpriteRenderer renderer, float width)
         {
@@ -18,10 +19,11 @@ namespace CloudHop
             Refresh();
         }
 
-        public void SetGalleryLedge(Sprite ledge)
+        public void SetGalleryLedge(Sprite ledge, float depth = 0)
         {
             artwork.sprite = ledge;
             opaqueWidth = ledge.bounds.size.x;
+            galleryDepth = depth;
             Refresh();
         }
 
@@ -43,7 +45,7 @@ namespace CloudHop
             float worldWidth = surface.size.x * Mathf.Abs(scale.x);
             float size = worldWidth / Mathf.Max(opaqueWidth, 0.001f);
             artwork.transform.localScale = new Vector3(size / Mathf.Abs(scale.x),
-                size / Mathf.Abs(scale.y), 1);
+                (galleryDepth > 0 ? galleryDepth / artwork.sprite.bounds.size.y : size) / Mathf.Abs(scale.y), 1);
             artwork.transform.localPosition = new Vector3(surface.offset.x,
                 surface.offset.y + surface.size.y * 0.5f, 0);
             artwork.sortingLayerID = marker.sortingLayerID;

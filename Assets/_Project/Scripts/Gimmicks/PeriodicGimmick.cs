@@ -10,6 +10,13 @@ namespace CloudHop
         [SerializeField, Min(0.2f)] private float warningDuration = 1.2f;
         [SerializeField, Min(0.1f)] private float activeDuration = 1.2f;
         [SerializeField, Min(0)] private float phaseOffset;
+        public void CopyTimingFrom(PeriodicGimmick source)
+        {
+            safeDuration = source.safeDuration;
+            warningDuration = source.warningDuration;
+            activeDuration = source.activeDuration;
+            phaseOffset = source.phaseOffset;
+        }
         private float CycleTime => Mathf.Repeat(Elapsed + phaseOffset, safeDuration + warningDuration + activeDuration);
         public HazardPhase Phase => CycleTime < safeDuration ? HazardPhase.Safe :
             CycleTime < safeDuration + warningDuration ? HazardPhase.Warning : HazardPhase.Active;

@@ -27,6 +27,8 @@ namespace CloudHop.Tests
    try {
     foreach(var course in courses) {
      course.gameObject.SetActive(true);
+     if(course.Definition.difficulty=="HARD")
+      foreach(var platform in course.Platforms)CastleGallery.ConfigureSurface(course,platform);
      for(int i=0;i<course.Platforms.Length-1;i++) {
       var from=course.Platforms[i];var to=course.Platforms[i+1];
       if(from.GetComponent<SlidingSlope>()!=null || to.GetComponent<SlidingSlope>()!=null)continue;

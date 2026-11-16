@@ -116,3 +116,11 @@
 - 조작 안내는 앱 실행 후 첫 스테이지 진입에서 5초간 표시. 기존 Excel 문구 키 재사용.
 - GameUITests, PlatformTests(3), HudSkinTests, ComboPresentationTests 총 6개 통과.
 2026-10-24 후속: 상단 진행/하단 충전 게이지에 CloudMeter 리소스 복원. 간소화된 정보 배치 유지. HudSkinTests 및 PC 빌드 성공.
+
+## 3스테이지 성 회랑 발판 / 마법 봉인 (2026-11-16)
+- 기존 CastleGallery 런타임 테마 적용 시 발판을 두꺼운 석조형(0.8) / 얇은 선반형(0.28)으로 구분. 시작·종점·폭 2.4 이상·인덱스 3의 배수는 두꺼운 형태, 나머지는 얇은 형태. 이동/붕괴 발판에도 동일한 두께 표현 적용.
+- 충돌체는 아래쪽으로만 두께를 변경하므로 착지면 높이와 발판 폭은 유지. 기본 스프라이트는 기존 Resources/GalleryLedge 사용.
+- 3스테이지의 번개 4개를 MagicSealZone으로 교체. 황금 문양이 깜박이는 예고 후 보라색 마법 장벽이 켜짐. 원래 위치·판정 범위·주기·넉백·피격 보호 규칙 유지. 재시작/재진입 시 중복 생성 없음.
+- 기존 성 배경과 마찬가지로 StageDirector가 3스테이지에 진입할 때 적용. 편집 씬의 원본 번개는 배치 정보로 남지만 플레이에서는 비활성화 후 제거됨. 기믹 실험 씬의 번개는 유지.
+- Cloud Hop > Check Castle Changes: CastleGalleryTests 1개 + PlatformEdgeTests 2개 통과. 봉인 예고/피격/연속 피격 보호/재시작, 발판 높이/두께, 변경 두께를 반영한 기본 연결 420개 출발 위치 검사. 결과 Logs/castle-checks.xml, 화면 UIPreview/castle-seal-{safe,warning,active}.png.
+- 별도로 실행한 기존 ChoiceRouteTests는 2스테이지 8→9에서 실패(기존 DashWall이 놓인 구간, 예상 착지 9번 대신 8번). 이번 3스테이지 변경의 성공 검사와 구분. 결과 Logs/castle-initial-checks.xml. 사람의 전체 완주 및 새 Windows/Android 빌드는 미실행.

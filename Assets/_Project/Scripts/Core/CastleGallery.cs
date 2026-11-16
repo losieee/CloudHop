@@ -18,12 +18,14 @@ namespace CloudHop
             var cut = new Rect(stone.width * .009f, stone.height * .22f,
                 stone.width * .982f, stone.height * .48f);
             ledge = Sprite.Create(stone, cut, new Vector2(.5f, 1f), 100f, 0, SpriteMeshType.FullRect);
+            var course = GetComponent<StageCourse>();
             foreach (var platform in GetComponentsInChildren<Platform>(true))
             {
+                float depth = ConfigureSurface(course, platform);
                 var gimmick = platform.GetComponent<GimmickArtwork>();
                 if (gimmick != null && gimmick.enabled)
                 {
-                    gimmick.SetGalleryLedge(ledge);
+                    gimmick.SetGalleryLedge(ledge, depth);
                     continue;
                 }
                 var art = platform.GetComponent<PlatformArtwork>();
@@ -34,8 +36,10 @@ namespace CloudHop
                     renderer.transform.SetParent(platform.transform, false);
                     art.Configure(renderer, ledge.bounds.size.x);
                 }
-                art.SetGalleryLedge(ledge);
+                art.SetGalleryLedge(ledge, depth);
             }
+            foreach (var bolt in GetComponentsInChildren<LightningZone>(true))
+                MagicSealZone.Replace(bolt);
             var texture = Resources.Load<Texture2D>("CastleGallery");
             panel = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
                 Vector2.one * .5f, 100f, 0, SpriteMeshType.FullRect);
@@ -49,6 +53,21 @@ namespace CloudHop
                 walls[i] = wall;
             }
             LateUpdate();
+        }
+
+        public static float ConfigureSurface(StageCourse course, Platform platform)
+        {
+            int index = course.IndexOf(platform);
+            var surface = platform.GetComponent<BoxCollider2D>();
+            float width = surface.size.x * Mathf.Abs(platform.transform.lossyScale.x);
+            bool thick = index == 0 || index == course.JumpCount || width >= 2.4f || index % 3 == 0;
+            float depth = thick ? .8f : .28f;
+            // Resize downwards only: landing height, coins and route trajectories stay aligned.
+            float top = surface.offset.y + surface.size.y * .5f;
+            float height = depth / Mathf.Abs(platform.transform.lossyScale.y);
+            surface.size = new Vector2(surface.size.x, height);
+            surface.offset = new Vector2(surface.offset.x, top - height * .5f);
+            return depth;
         }
 
         private void LateUpdate()

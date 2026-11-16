@@ -13,7 +13,8 @@ namespace CloudHop
         private StageMechanics clock;
         private float previousX;
         private Sprite galleryLedge;
-        public void SetGalleryLedge(Sprite sprite) => galleryLedge = sprite;
+        private float galleryDepth;
+        public void SetGalleryLedge(Sprite sprite, float depth = 0) { galleryLedge = sprite; galleryDepth = depth; }
         private void Awake()
         {
             if ((GetComponent<WindZone>() != null || GetComponent<LightningZone>() != null)
@@ -97,7 +98,8 @@ namespace CloudHop
             {
                 artwork.sprite = galleryLedge;
                 float factor = worldSize.x / galleryLedge.bounds.size.x;
-                artwork.transform.localScale = new Vector3(factor / Mathf.Abs(scale.x), factor / Mathf.Abs(scale.y), 1);
+                artwork.transform.localScale = new Vector3(factor / Mathf.Abs(scale.x),
+                    (galleryDepth > 0 ? galleryDepth / galleryLedge.bounds.size.y : factor) / Mathf.Abs(scale.y), 1);
                 Color tint = mechanic is MovingPlatform ? new Color(.56f,.91f,1f) : new Color(1f,.79f,.63f);
                 if (mechanic is CrumblingPlatform fragile && fragile.Phase == CloudPhase.Crumbling)
                     tint = Color.Lerp(tint, new Color(1f,.36f,.29f), .5f + .5f * Mathf.Sin(time * 22f));
